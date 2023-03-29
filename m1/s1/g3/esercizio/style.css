@@ -1,0 +1,19 @@
+body {padding: 0; margin: 0;}
+
+/* Header  */
+
+header {text-align: center;}
+header img {width: 20%;}
+.part {text-align: center; background-color: rgba(225, 207, 9, 0.1); padding: 8px; margin: 20px 0 80px; border-top: 2px solid orange;}
+
+/* Main  */
+
+main, article {width: 800px; margin: 0 auto;}
+figure {margin: 0;}
+figure img {width: 100%; border-radius: 20px; box-shadow: 2px 2px 15px #0000005c;}
+figcaption {color: lightslategray; text-align: center; margin-top: 10px;}
+.featured {padding-left: 10px; border-left: 1px solid orange;}
+.featured p {color: brown;}
+.bordered {border-bottom: 1px solid teal; padding-bottom: 20px;}
+
+.link {color: teal;}
