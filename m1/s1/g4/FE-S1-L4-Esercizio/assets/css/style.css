@@ -2,11 +2,91 @@
 
 body {
     padding: 30px;
+    font-family: 'Poppins', sans-serif;
+    background-image: url(../img/sfondo.png);
+    background-position: top left;
+    background-size: auto;
+    background-repeat: repeat-y;
+}
+
+* {box-sizing: border-box;}
+
+.to-uppercase {
+    text-transform: uppercase;
+}
+
+.bold {
+    font-weight: 600;
 }
 
 /* HEADER */
 
+#header {
+    background-image: linear-gradient(225deg, #0599bc, #036f88);
+    text-align: center;
+    padding: 40px;
+}
+
+#header img {
+    width: 70%;
+}
+
+#header-list a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+}
+
+#header-list li a::after {
+    content: '\21D0'
+}
+#header-list li a::before {
+    content: '\21D2'
+}
+
+.style-none {
+    list-style-type: none;
+}
+
+h1 {
+    margin: 30px auto;
+    font-size: 1.3rem;
+    color: white;
+}
+
 /* MAIN */
+
+main {
+    background-color: white;
+    padding: 30px;
+    margin-top: 30px;
+}
+
+main section {
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+}
+
+h2 {
+    font-size: 2.2rem;
+    font-weight: 500;
+    line-height: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.author, .author a {
+    color: grey;
+    font-size: 1.4rem;
+    font-weight: 300;
+    text-decoration: none;
+    line-height: 1.8rem;
+}
+
+.main-list {
+    margin: 20px auto;
+}
 
 /* ELEMENTI NEL MAIN - ARTICLE */
 
