@@ -18,7 +18,7 @@
 
     <!-- Header  -->
 
-    <header id="header">
+    <header id="header" class="shadow">
         <img src="assets/img/logo.svg" alt="logo di Epicode">
         <h1 class="to-uppercase bold">Epicode - Il blog dei developers</h1>
         <nav>
@@ -32,13 +32,13 @@
 
     <!-- Main  -->
 
-    <main>
+    <main class="shadow">
 
         <h2> Come creare un template per i post</h2>
-        <p class="author">di <a href="#" rel="author">Mario Rossi</a> - pubblicato il <datetime>25-10-2020</datetime></p>
+        <p class="author">di <a href="#" rel="author"><i class="fas fa-pen rossi"></i>Mario Rossi</a> - <i class="fas fa-clock"></i>pubblicato il <datetime>25-10-2020</datetime></p>
 
         <section>
-            <p>La prima cosa da fare è da suddividere in blocchi la pagina identificando le parti comuni da applicare a tutte le pagine</p><br>
+            <p>La prima cosa da fare è da suddividere in blocchi la pagina identificando le <span>parti comuni</span> da applicare a tutte le pagine</p><br>
             <p><q>Le varie aree saranno quindi suddivise in:</q></p>
 
             <ul class="main-list">
@@ -48,7 +48,7 @@
                 <li>Formattazione del codice</li>
             </ul>
 
-            <p>Il testo dell'articolo dovrà essere formattato per identificare tutte le partia selezionare con i <abbr title="Cascade Style Sheet">CSS</abbr>. Perciò i passi saranno:</p>
+            <p>Il testo dell'articolo dovrà essere formattato per identificare tutte le partia <span>selezionare con i CSS</span>. Perciò i passi saranno:</p>
 
             <ol class="main-list">
                 <li>Progettare il markup ssegnando ad ogni specifico testo il tag appropiato</li>
@@ -100,19 +100,18 @@
         </section>
 
         <section>
-            <p>Un testyo di validazione potrà ssere fatto tramite il tool esterno <a href="#">link esterno</a>dedicato allo scopo. 
+            <p class="paragraph">Un test di validazione potrà ssere fatto tramite il <a href="#">tool online</a>dedicato allo scopo. 
             Una volta ottimizzato il tutto, avremo raggiunto il nostro obiettivo ed essere stati dei veri developers come loro:</p>
-            <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/RbGpUemSXAA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/RbGpUemSXAA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </section>    
-    </main>
+    
 
     <article>
-        <p>Vuoi rimanere aggiornato su altre novità del blog? Iscriviti alla nostra newsletter:</p>
+        <h3>novità</h3>
+        <p class="paragraph">Vuoi rimanere aggiornato su altre novità del blog? Iscriviti alla nostra newsletter:</p>
         <form action="">
-            <label for="email">Inserisci l'e-mail:</label>
             <input type="email" id='email' placeholder="Inserisci l'email" required>
-            <input type="submit">
-            <input type="reset">
+            <input type="submit" value="Iscriviti!">
         </form>
     </article>
 
@@ -120,27 +119,28 @@
 
         <h3>Articoli Correlati:</h3>
 
-        <section>
-            <h4>Validare il codice <abbr title="Hyper Text Markup Language">HTML</abbr></h4>
-            <p>Categoria: develop</p>
-            <p>Data: 18-9-2020</p>
+        <section class="article">
+            <h4><a href="#" class="article-link">Validare il codice HTML</a></h4>
+            <p><i class="fas fa-tag tag"></i>Categoria: develop</p>
+            <p class="right"><i class="fas fa-calendar-alt tag"></i>Data: 18-9-2020</p>
         </section>
-        <section>
-            <h4>Correggere la sintassi</h4>
-            <p>Categoria: develop</p>
-            <p>Data: 16-9-2020</p>
+        <section class="article">
+            <h4><a href="#" class="article-link">Correggere la sintassi</a></h4>
+            <p><i class="fas fa-tag tag"></i>Categoria: develop</p>
+            <p class="right"><i class="fas fa-calendar-alt tag"></i>Data: 16-9-2020</p>
         </section>
-        <section>
-            <h4>Meno KB nella pagina</h4>
-            <p>Categoria: ottimizzazione</p>
-            <p>Data: 30-9-2020</p>
+        <section class="article">
+            <h4><a href="#" class="article-link">Meno KB nella pagina</a></h4>
+            <p><i class="fas fa-tag tag"></i>Categoria: ottimizzazione</p>
+            <p class="right"><i class="fas fa-calendar-alt tag"></i>Data: 30-9-2020</p>
         </section>
     </aside>
+</main>
 
-    <footer>
-        <p>Blog Epicode &copy; 2021</p>
+    <footer class="shadow">
+        <p class="footer-para">Blog Epicode &copy; 2021</p>
         <p>Testata online di Mario Rossi, registrata con protocollo n. 213/2018 - <address>Luigi Einaudi 2 - MIlano .</address>  P.IVA 00112233.</p>
-        <p>Mail:<a href="mailto:info@epicode.school">info@Epicode.school</a></p>
+        <p><a class='footer-mail' href="mailto:info@epicode.school">info@Epicode.school</a></p>
     </footer>
 </body>
 </html>
