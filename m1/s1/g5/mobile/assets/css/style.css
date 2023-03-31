@@ -1,0 +1,151 @@
+/* Generals  */
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --orange: #f04c2f;
+    --border: 1px solid #dee1e3;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #393d41;
+    line-height: 1.65;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    color: #25a2c3;
+    line-height: 1.5;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Header  */
+
+#header {
+    background-color: black;
+    padding: 30px;
+}
+
+#header img {
+    width: 40%;
+}
+
+h1{
+    font-size: 2rem;
+}
+
+/* Sections  */
+
+.section {
+    padding: 50px;
+}
+
+.section:first-of-type{
+    background-image: url(../images/banner.jpg);
+    background-size: cover;
+}
+
+.main-para {
+    margin: 15px auto 35px;
+}
+
+button {
+    background-color: var(--orange);
+    color: white;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 30px;
+    font-weight: bold;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.rounded {
+    border-radius: 100%;
+    width: 70%;
+    margin-bottom: 40px;
+}
+
+#orange-section {
+    background-color: #e22d0e;
+    color: white;
+}
+
+h2 {
+    color: white;
+    font-size: 1.8rem;
+}
+
+q {
+    font-size: 1rem;
+    line-height: 1.5;
+    font-style: italic;
+    display: block;
+    margin: 30px auto;
+}
+
+q::before, q::after {
+    content: '"';
+}
+
+#role {
+    font-size: .8rem;
+}
+
+/* Artcles Sections  */
+
+#article-container {
+    padding: 50px 30px;
+}
+
+.img-container {
+    margin-bottom: 20px;
+}
+
+.img-container img {
+    width: 100%;
+}
+
+.article {
+    border: var(--border);
+    margin-bottom: 30px;
+}
+
+.article-para {
+    margin: 30px;
+}
+
+/* Footer  */
+
+#footer {
+    background-color: #25a2c3;
+    padding: 50px;
+    color: #c8e7f0;
+}
+
+#footer a {
+    color: #c8e7f0;
+}
+
+#footer-para-container {
+    margin: 30px auto;
+}
+
+.footer-para {
+    display: inline-block;
+    padding-top: 25px;
+    border-top: 1px solid white;
+}
+
+.footer-icon {
+    color: white;
+    display: inline-block;
+    margin-right: 5px;
+}
