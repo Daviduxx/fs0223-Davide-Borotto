@@ -1,1 +1,10 @@
-/* Your styles here */
+
+
+#header {
+    background-color: black;
+    text-align: center;
+}
+
+#header img {
+    width: 40%;
+}
