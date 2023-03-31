@@ -167,7 +167,7 @@ q::before, q::after {
 
 /* Media Queries  */
 
-@media screen and (max-width: 1160px) {
+@media screen and (max-width: 1130px) {
     .item {text-align: center;}
     .section {padding: 25px;}
 }
