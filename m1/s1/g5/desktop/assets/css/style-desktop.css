@@ -28,10 +28,12 @@ h1, h2, h3 {
 #header {
     background-color: black;
     padding: 30px;
+    text-align: start;
 }
 
 #header img {
-    width: 40%;
+    width: 15%;
+    min-width: 200px;
 }
 
 h1{
@@ -47,6 +49,7 @@ h1{
 .section:first-of-type{
     background-image: url(../images/banner.jpg);
     background-size: cover;
+    background-position: center;
 }
 
 .main-para {
@@ -69,7 +72,7 @@ button:hover {
 
 .rounded {
     border-radius: 100%;
-    width: 70%;
+    width: 80%;
     margin-bottom: 40px;
 }
 
@@ -99,6 +102,13 @@ q::before, q::after {
     font-size: .8rem;
 }
 
+.item {
+    display: inline-block;
+    text-align: left;
+    margin: 0 25px;
+    max-width: 500px;
+}
+
 /* Artcles Sections  */
 
 #article-container {
@@ -111,15 +121,20 @@ q::before, q::after {
 
 .img-container img {
     width: 100%;
+    min-height: 265px;
+    object-fit: cover;
 }
 
 .article {
     border: var(--border);
-    margin-bottom: 30px;
+    margin: 0px 20px 30px;
+    display: inline-block;
+    max-width: 400px;
+    min-height: 415px;
 }
 
 .article-para {
-    margin: 30px;
+    margin-bottom: 30px;
 }
 
 /* Footer  */
@@ -148,4 +163,11 @@ q::before, q::after {
     color: white;
     display: inline-block;
     margin-right: 5px;
+}
+
+/* Media Queries  */
+
+@media screen and (max-width: 1160px) {
+    .item {text-align: center;}
+    .section {padding: 25px;}
 }
