@@ -1,10 +1,61 @@
+/* Generals  */
 
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #393d41;
+    line-height: 1.65;
+    font-size: 1.2rem;
+    text-align: center;
+}
+h1, h2, h3 {
+    color: #25a2c3;
+    line-height: 1.5;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Header  */
 
 #header {
     background-color: black;
-    text-align: center;
+    padding: 30px;
 }
 
 #header img {
     width: 40%;
+}
+
+h1{
+    font-size: 2rem;
+}
+
+/* Sections  */
+
+.section {
+    padding: 50px;
+}
+
+.section:first-of-type{
+    background-image: url(../images/banner.jpg);
+    background-size: cover;
+}
+
+.main-para {
+    margin: 30px auto;
+}
+
+button {
+    background-color: #f04c2f;
+    color: white;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 30px;
+}
+
+button:hover {
+    cursor: pointer;
 }
