@@ -16,6 +16,7 @@ body {
     font-size: 1.2rem;
     text-align: center;
 }
+
 h1, h2, h3 {
     color: #25a2c3;
     line-height: 1.5;
@@ -107,6 +108,7 @@ q::before, q::after {
 .img-container {
     margin-bottom: 20px;
 }
+
 .img-container img {
     width: 100%;
 }
