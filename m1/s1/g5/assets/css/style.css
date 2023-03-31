@@ -18,7 +18,7 @@ body {
 }
 h1, h2, h3 {
     color: #25a2c3;
-    line-height: 1;
+    line-height: 1.5;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -128,13 +128,10 @@ q::before, q::after {
     color: #c8e7f0;
 }
 
-#footer h2 {
-    color: white;
-}
-
 #footer a {
     color: #c8e7f0;
 }
+
 #footer-para-container {
     margin: 30px auto;
 }
