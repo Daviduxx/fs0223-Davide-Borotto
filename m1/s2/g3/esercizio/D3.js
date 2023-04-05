@@ -254,6 +254,6 @@ console.log(myArray)
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-myArray[9] = 100;
+myArray[myArray.length - 1] = 100;
 console.log(myArray)
 console.log(myArray.length)
