@@ -249,11 +249,6 @@ Usa uno più for loop per raggiungere il risultato
 Una volta fatto crea un conosle.log per controllare la proprietà length di "characters" prima e dopo l'operazione
 */
 
-let nome1;
-let nome2;
-for(let i = 0; i < femaleCharacters.length; i++){
-  femaleCharacters[i].name
-}
 
 // for(let i = 0; i < characters.length; i++){
 //   for(let j = 0; j < femaleCharacters.length; j++){
