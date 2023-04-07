@@ -96,7 +96,8 @@ console.log(cars)
     Successivamente, rimuovi l'ultimo elemento della proprietà "trims" da ogni auto.
 */
 
-// USANDO UN PROTOTYPE
+// METODO 1: USANDO UN PROTOTYPE
+
 function NewCar(brand, model, color, trims, licensePlate){
   this.brand = brand;
   this.model = model;
@@ -110,16 +111,17 @@ cars.push(lastCar);
 console.log('ESERCIZIO 6 (PROTOTYPE)');
 console.log(cars);
 
-//scrivendo il nuovo oggetto
+//METODO 2: scrivendo il nuovo oggetto
+
 // let newElement = {
 //   brand: 'Fiat',
 //   model: 'punto',
 //   color: 'red',
 //   trims: ['style', 'sport', 'city'],
+//   licensePlate: randomNumber
 // }
 
 // cars.push(newElement);
-// myFunction(randomNumber, 4)
 
 // console.log('ESERCIZIO 6 (scrivendo oggetto)')
 // console.log(cars);
@@ -149,7 +151,7 @@ console.log(justTrims);
 
 console.log('ESERCIZIO 8')
 for(let i = 0; i < cars.length; i++){
-  if(cars[i].color.startsWith('b') == true){
+  if(cars[i].color.startsWith('b')){
     console.log('Fizz')
   }
   else {
@@ -176,10 +178,11 @@ while(numericArray[j] != 32){
     dell'alfabeto italiano.
     es. [f, b, e] --> [6, 2, 5]
 */
-const charactersArray = ["a", "n", "u", "z", "d", 'b', 'c']
+const charactersArray = ["a", "n", "u", "z", "d", 'b', 'c', 'z', 'v', 'u']
 
 for(let x in charactersArray){
   
+ // ho messo tutti i casi per testare che funzionasse con tutte le lettere
   switch(charactersArray[x]){
 
     case 'a':
