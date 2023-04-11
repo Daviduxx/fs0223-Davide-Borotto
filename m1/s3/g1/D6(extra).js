@@ -130,19 +130,20 @@ console.log(latestShoppingCart());
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 function loopUntil(n){
-    let primoNumero = 0;
-    // let secondoNumero = 0;
-    // let terzoNumero = 0;
-    while(primoNumero > n && secondoNumero > n && terzoNumero > n){
-         primoNumero = Math.floor(Math.random() * 9);
-         let secondoNumero = Math.floor(Math.random() * 9);
-         let terzoNumero = Math.floor(Math.random() * 9);
-         console.log(primoNumero);
-         console.log(secondoNumero);
-         console.log(terzoNumero);
+
+    let counter = 0;
+    let numero;
+    while(counter < 3){
+        numero = Math.floor(Math.random() * 10);
+        if(numero > n){
+            console.log(numero);
+            counter++;
+        }
+        else counter = 0;
     }
+
 }
-loopUntil(5);
+loopUntil(5)
 
 /* EXTRA 7
 Crea una funzione chiamata "average" che riceve un array come parametro e ne ritorna la media aritmetica. La funzione salta automaticamente i valori non numerici nell'array.
@@ -150,11 +151,42 @@ Crea una funzione chiamata "average" che riceve un array come parametro e ne rit
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+const secondArray = [3, 56, 21, 56, 20, 'c', 'fd', 4];
+
+function avarage(){
+    let somma = 0;
+    let counter = 0;
+    for (let i = 0; i < secondArray.length; i++){
+        if(typeof secondArray[i] != 'number'){
+            secondArray[i] == 0;
+            counter++;
+        }
+        else somma += secondArray[i]
+    }
+    console.log(somma);
+    let media = somma / (secondArray.length - counter);
+    console.log(media);
+}
+avarage();
+
 /* EXTRA 8
  Crea una funzione chiamata "longest" che trova la stringa più lunga all'interno di un array di stringhe fornito come parametro.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+const thirdArray = ['ciao', 'mi', 'chiamo0000', 'davideeeeeeeeeee'];
+
+function longest(){
+    let longestWord = thirdArray[0];
+    for (let i = 0; i < thirdArray.length; i++){
+        if(thirdArray[i].length > longestWord.length){
+            longestWord = thirdArray[i];
+        }
+    }
+    console.log(longestWord)
+}
+longest();
 
 /* EXTRA 9
  Crea una funzione per creare un filtro anti-spam per la tua casella email. La funzione riceve un parametro stringa chiamato "emailContent", e torna un valore booleano.
@@ -163,11 +195,35 @@ Crea una funzione chiamata "average" che riceve un array come parametro e ne rit
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+function antiSpam(emailContent){
+    let verify = true;
+    if(emailContent.includes('spam') || emailContent.includes('scam')){
+        verify = false;
+    }
+    console.log(verify);
+    return verify;
+}
+antiSpam('scam')
+
 /* EXTRA 10
  Scrivi una funzione che riceve una data come parametro, e calcola il numero di giorni passati da quella data.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+function trovaData(inputUtente){
+    let now = new Date();
+    let nuovaData = new Date(inputUtente);
+    let tempo = now - nuovaData; //ms
+    tempo = tempo / 1000 // secondi
+    tempo = tempo / 60 // minuti
+    tempo = tempo / 60 // ore
+    tempo = tempo / 24 // giorni
+    console.log(tempo)
+    console.log(nuovaData)
+    console.log(now)
+}
+trovaData('2023-04-10')
 
 /* EXTRA 11
  Scrivi una funzione chiamata "matrixGenerator" che riceve come paremetri due numeri interi, "x" e "y".
@@ -178,3 +234,26 @@ Crea una funzione chiamata "average" che riceve un array come parametro e ne rit
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+let primoArray = [];
+let secondoArray = [];
+let terzoArray = [];
+
+function matrixGenerator(x,y){
+    for(let i = 0; i <= x; i++ ){
+        primoArray.push(i);
+    }
+    console.log(primoArray)
+    for(let i = 0; i <= y; i++ ){
+        secondoArray.push(i);
+    }
+    console.log(secondoArray)
+
+    for(let i = 0; i < primoArray.length; i++){
+        for (let k = 0; k < secondoArray.length; k++){
+            terzoArray.push(primoArray[i].toString() + secondoArray[k].toString())
+        }
+    }
+    console.log(terzoArray)
+}
+matrixGenerator(2,3)
