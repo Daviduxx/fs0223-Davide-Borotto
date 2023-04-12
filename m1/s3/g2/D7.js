@@ -217,11 +217,32 @@ const movies = [
   Scrivi una funzione per trovare il film più vecchio nell'array fornito.
 */
 
+// Usando un ciclo for
+
+// function piuVecchio(){
+//   let current = null;
+//   for (let movie of movies){
+//       if(current == null || current.Year > movie.Year){
+//         current = movie;
+//       }
+//   }
+//   return current;
+// }
+
+// console.log(piuVecchio())
+
+// Usando reduce
+
 function piuVecchio(){
-  let film = movies.reduce((a,b) => parseInt(a['Years']) < parseInt(b['Years']) ? a : b);
-  console.log(film)
+  return movies.reduce(function(current, movie){
+    if(current.Year > movie.Year){
+      return movie;
+    } else {
+      return current;
+    }
+  })
 }
-piuVecchio()
+console.log(piuVecchio());
 
 /* ESERCIZIO 11
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
@@ -248,6 +269,7 @@ titoliFilm()
 /* ESERCIZIO 13
   Scrivi una funzione per ottenere dall'array fornito solamente i film usciti nel millennio corrente.
 */
+
 
 function filmNuovi(){
   let titoliNuovi = [];
@@ -287,3 +309,9 @@ function sommaAnni(){
   console.log(somma)
 }
 sommaAnni()
+
+
+function sommaAnniReduce(){
+  return movies.reduce(function(p,c){ return p + Number(c.Year);},0);
+}
+console.log(sommaAnniReduce());
