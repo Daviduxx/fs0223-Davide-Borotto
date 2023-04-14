@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form id="myForm">
+
+        <!-- action="" method="" -->
+        <!-- Action indica la pagina verso cui inviare i dati. Method indica la modalità con cui i dati sono stati inviati.
+        Se i dati vegnono inviati con method get vengono aggiunte delle coppie chiave valore sull'url. 
+        Di solito si sceglie di lavorare con il metodo post. 
+        Anche se togliamo questi due attributi il form ha un funzionamento di default. Action default è la pagina stessa, method default è get-->
+
+        <input type="text" name="nome" placeholder="nome">
+        <input type="text" name="cognome" placeholder="cognome">
+        <input type="email" name="email" placeholder="email">
+        <input type="password" name="password" placeholder="password">
+        <button type="button">Mostra/Nascondi</button>
+
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
