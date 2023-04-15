@@ -67,20 +67,16 @@ function dice(){
   let numeroCasuale = Math.floor(Math.random() * 6) + 1;
   return numeroCasuale;
 }
-dice()
 
 /* ESERCIZIO 2
   Crea una funzione chiamata "whoIsBigger" che riceve due numeri come parametri e ritorna il maggiore dei due.
 */
 
 function whoIsBigger(a,b){
-  let biggerNUmber;
-  if(a > b){
-    return biggerNUmber = a;
-  }
-  else return biggerNUmber = b;
+  let biggerNUmber = (a > b) ? a : b;
+  return biggerNUmber;
 }
-console.log(whoIsBigger(76,52));
+console.log(whoIsBigger(16,9));
 
 /* ESERCIZIO 3
   Crea una funzione chiamata "splitMe" che riceve una stringa come parametro e ritorna un'array contenente ogni parola della stringa.
@@ -99,10 +95,8 @@ console.log(splitMe('ei ciao mondo'));
 */
 
 function deleteOne(stringa, booleano){
-  if(booleano){
-    return stringa.slice(1);
-  }
-  else return stringa.slice(0, stringa.length - 1)
+  let newString = (booleano) ? stringa.slice(1) : stringa.slice(0, stringa.length - 1);
+  return newString;
 }
 console.log(deleteOne('ciao mondo ciao ei', false))
 
@@ -133,9 +127,9 @@ console.log(isThisAnEmail('info@mail.it'));
 
 function whatDayIsIt(){
   let oggi = new Date();
-  console.log(oggi.getDay());
+  return oggi.getDay();
 }
-whatDayIsIt();
+console.log(whatDayIsIt());
 
 /* ESERCIZIO 8
   Scrivi una funzione chiamata "rollTheDices" che riceve un numero come parametro.
@@ -163,7 +157,7 @@ function rollTheDices(n){
   obj.values = myArray;
   return obj;
 }
-console.log(rollTheDices(3))
+console.log(rollTheDices(5))
 
 
 /* ESERCIZIO 9
@@ -177,7 +171,7 @@ function howManyDays(data){
   let diffGiorni = Math.floor(diff / (1000 * 60 * 60 * 24));
   return diffGiorni;
 }
-console.log(howManyDays('2022-04-14'));
+console.log(howManyDays('2021-04-14'));
 
 /* ESERCIZIO 10
   Scrivi una funzione chiamata "isTodayMyBirthday" che deve ritornare true se oggi è il tuo compleanno, falso negli altri casi.
@@ -191,7 +185,7 @@ function isTodayMyBirthday(data){
   }
   else return false;
 }
-console.log(isTodayMyBirthday('2033-04-14'));
+console.log(isTodayMyBirthday('04-20'));
 
 // Arrays & Oggetti
 
@@ -394,9 +388,9 @@ console.log(sumAllTheYears());
 */
 
 function searchByTitle(stringa){
-  return movies.filter((movie) => movie.Title == stringa);
+  return movies.filter((movie) => movie.Title.includes(stringa));
 }
-console.log(searchByTitle('Avengers: Endgame'));
+console.log(searchByTitle('The Lord of the Rings:'));
 
 /* ESERCIZIO 18
   Scrivi una funzione chiamata "searchAndDivide" che riceve una stringa come parametro e ritorna un oggetto contenente due array: "match" e "unmatch".
@@ -405,13 +399,19 @@ console.log(searchByTitle('Avengers: Endgame'));
 
 function searchAndDivide(stringa){
   let obj = {}
-  let match = movies.filter((movie) => movie.Title == stringa);
-  let unmatch = movies.filter((movie) => movie.Title != stringa);
+  let match = [];
+  let unmatch = [];
+  for (let movie of movies){
+    if (movie.Title.includes(stringa)){
+      match.push(movie);
+    }
+    else unmatch.push(movie)
+  }
   obj.match = match;
   obj.unmatch = unmatch;
-  return obj;
+   return obj;
 }
-console.log(searchAndDivide('Avengers: Endgame'));
+console.log(searchAndDivide('The Lord of the Rings'));
 
 /* ESERCIZIO 19
   Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
@@ -421,7 +421,7 @@ function removeIndex(n){
   movies.splice(n,1);
   return movies;
 }
-console.log(removeIndex(3));
+console.log(removeIndex(0));
 
 // DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina)
 
@@ -430,7 +430,7 @@ console.log(removeIndex(3));
 */
 
 function container(){
-  let myContainer = document.getElementById('container');
+  let myContainer = document.getElementById('container'); 
 }
 
 /* ESERCIZIO 21
@@ -450,7 +450,6 @@ function printTable(){
   for (let td of table){
     console.log(td.innerText);
   }
-
 }
 
 /* ESERCIZIO 23
@@ -490,7 +489,7 @@ function deleteList(){
 function addClass(){
   let rows = document.querySelectorAll('tr');
   for (letrow of rows){
-    rows.addClass('test');
+    letrow.classList.add('test');
   }
 }
 
