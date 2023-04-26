@@ -1,10 +1,26 @@
-#aside{
+aside{
     padding: 15px;
     background-color: #FAF7E3;
     border-radius: 10px;
+    width: 100%;
 }
 
-#aside p{
+aside p{
     margin-bottom: 20px;
     font-weight: 100;
 }
+
+@media screen and (min-width: 576px){
+    aside h2 {text-align: left;}
+}
+
+@media screen and (min-width: 768px){
+    aside{width: 100%;}
+    main {padding: 10px;}
+}
+
+@media screen and (min-width: 1200px){
+    aside{display: flex; flex-direction: row-reverse;}
+    .aside-text{margin-left: 10px;}
+}
+

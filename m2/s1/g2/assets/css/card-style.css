@@ -45,10 +45,11 @@ main {
 
 @media screen and (min-width: 576px){
     .card-container{width: 260px;}
+    #cards{display: flex; flex-wrap: wrap; justify-content: space-between;}
 }
 
 @media screen and (min-width: 768px){
-    .card-container{width: 170px; border-radius: 25px;}
+    .card-container{width: 200px; border-radius: 25px;}
     .text-container{padding: 1rem;}
     h2{flex-grow: 2;}
     .card-container img {border-radius: 25px 25px 0 0;}
