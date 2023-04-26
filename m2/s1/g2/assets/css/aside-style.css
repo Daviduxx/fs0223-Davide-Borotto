@@ -1,0 +1,10 @@
+#aside{
+    padding: 15px;
+    background-color: #FAF7E3;
+    border-radius: 10px;
+}
+
+#aside p{
+    margin-bottom: 20px;
+    font-weight: 100;
+}
