@@ -1,0 +1,95 @@
+/*
+1 creazione del testo e formattazione di 1 parola da far ruotare
+2 inserimento delle altre 2 parole
+3 sovrapporre le 3 parole
+4 mostrare 1 parola e nascondere le altre 2
+5 animare 1 parola (fadein - fadeout con spostamento)
+6 animare le altre 2 parole
+7 ritardare progressivamente l'animazione delle altre 2 parole 
+*/
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#testoAlternato{
+    border: 1px solid black;
+    padding: 20px;
+    width: 420px;
+    /* animation: pazzerella 10s linear infinite; */
+}
+
+p{
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+span{
+    color: rgb(32, 83, 100);
+}
+
+.parole{
+    position: relative;
+}
+
+i{
+    display: inline-block;
+    width: 160px;
+}
+
+#prima, #seconda, #terza {
+    position: absolute;
+    left: 10px;
+}
+
+#prima{
+    opacity: 1;
+    animation: primaAnimazione 5s linear infinite 2s;
+}
+
+#seconda, #terza{
+    opacity: 0;
+}
+
+#seconda{
+    animation: primaAnimazione 5s linear infinite 4s;
+}
+
+#terza{
+    animation: primaAnimazione 5s linear infinite 6s;
+}
+@keyframes primaAnimazione{
+    0%{
+        top: -40px;
+        opacity: 0;
+    }
+    25%{
+        top: -10px;
+        opacity: 1;
+    }
+    50%{
+        top: 30px;
+        opacity: 0;
+    }
+    75%{
+        top: 30px;
+        opacity: 0;
+    }
+    100%{
+        top: 30px;
+        opacity: 0;
+    }
+}
+
+/* @keyframes pazzerella {
+    0%{
+        transform: rotate(0deg) skew(0deg) rotateZ(0deg)
+    }
+    100%{
+        transform: rotate(360deg) skew(30deg) rotateZ(360deg);
+    }
+} */
+
