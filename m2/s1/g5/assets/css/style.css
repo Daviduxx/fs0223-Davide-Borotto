@@ -122,6 +122,7 @@ section{
     display: flex;
     flex-wrap: wrap;
     margin-top: 30px;
+    justify-content: center;
 }
 
 .main-articles{
@@ -130,6 +131,7 @@ section{
     width: 360px;
     margin-bottom: 30px;
     margin-left: 40px;
+    justify-content: space-around;
 }
 
 .content img{
@@ -190,7 +192,7 @@ section{
 
 #more-articles .main-articles{
     height: 130px;
-    width: 500px;
+    width: 670px;
 }
 
 .summary{
@@ -234,6 +236,7 @@ section{
 
 aside{
     margin-left: 10px;
+    order: 2;
 }
 
 #sticky{
@@ -261,6 +264,7 @@ aside{
 
 footer{
     padding-top: 30px;
+    margin-bottom: 30px;
 }
 
 footer a{
@@ -280,10 +284,10 @@ footer a{
     background-color: var(--secondary);
 }
 
-/* #m {
+#m {
     margin-left: 250px;
     overflow: hidden;
-} */
+}
 
 .summary + div{
     display: flex;
@@ -291,8 +295,21 @@ footer a{
 }
 
 @media screen and (max-width: 730px){
-    #main-menu, #m{display: none;}
-    #hero-section{display: block;}
+    #main-menu{display: none;}
+    svg{display: none;}
+    #hero-section{display: block; margin: 0; padding: 0 0 0 20px;}
     h2{font-size: 3.5rem;}
     h3{font-size: 1rem}
+    .main-articles{max-width: 360px;}
+}
+
+@media screen and (max-width: 903px){
+    #sticky{display: block; position: static;}
+    #second-section{display: block;}
+    .main-articles{margin-left: 0;}
+    #m{display: none;}
+}
+
+@media screen and (max-width: 552px){
+    #signin{display: none;}
 }

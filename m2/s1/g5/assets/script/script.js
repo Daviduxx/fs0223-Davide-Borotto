@@ -4,7 +4,7 @@ let button = document.getElementById('startedLink')
 window.addEventListener('scroll', function(){
     
     let scrolled = window.scrollY;
-    console.log(scrolled);
+
     if(scrolled > 300){
         nav.classList.add('scrolled')
         button.classList.add('scrolledButton')
@@ -15,19 +15,19 @@ window.addEventListener('scroll', function(){
     }
 } )
 
-// let svg = document.querySelector('g[aria-label]');
-// let letters = svg.ariaLabel;
-// let text = document.getElementById('m');
-// console.log(letters)
+let svg = document.querySelector('g[aria-label]');
+let letters = svg.ariaLabel;
+let text = document.getElementById('m');
+console.log(letters)
 
-// let lettersArray = letters.split('');
-// console.log(lettersArray);
+let lettersArray = letters.split('');
+console.log(lettersArray);
 
-// const changeLetters = setInterval(function (){
-//     let n = Math.floor(Math.random() * lettersArray.length);
-//     let z = Math.floor(Math.random() * lettersArray.length);
-//     lettersArray[n] = 'M';
-//     lettersArray[z] = '';
-//     let newString = lettersArray.join('&nbsp');
-//     text.innerHTML = newString;;
-// }, 400)
+const changeLetters = setInterval(function (){
+    let n = Math.floor(Math.random() * lettersArray.length);
+    let z = Math.floor(Math.random() * lettersArray.length);
+    lettersArray[n] = 'M';
+    lettersArray[z] = '';
+    let newString = lettersArray.join('&nbsp');
+    text.innerHTML = newString;;
+}, 400)
