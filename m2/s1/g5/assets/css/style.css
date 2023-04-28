@@ -166,3 +166,53 @@ section{
     font-size: .9rem;
     font-weight: 300;
 }
+
+/* SECONDA SEZIONE */
+
+#second-section{
+    display: flex;
+    justify-content: space-between;
+}
+
+aside{
+    background-color: red;
+    width: 350px;
+    height: 700px;
+}
+
+#more-articles .main-articles{
+    height: 130px;
+    width: 500px;
+}
+
+.summary{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 280px;
+    color: grey;
+    font-weight: 300;
+}
+
+.main-articles .number-container{
+    width: 200px;
+    height: 135px;
+}
+
+.main-articles .number-container img{
+    width: 100%;
+}
+
+.metadata{
+    display: flex;
+    align-items: center;
+}
+
+.metadata a{
+    background-color: lightgray;
+    color: grey;
+    font-size: .9rem;
+    padding: 5px 8px;
+    border-radius: 50px;
+    margin-left: 5px;
+}
