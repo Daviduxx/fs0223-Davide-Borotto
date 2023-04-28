@@ -56,6 +56,7 @@ nav{
     right: 0;
     background-color: var(--primary);
     z-index: 1;
+    transition: background 500ms;
 }
 
 #menu{
@@ -67,7 +68,7 @@ nav{
     margin-right: 20px;
 }
 
-#started a:last-of-type{
+#started a{
     margin: 0;
     color: white;
     background-color: var(--text);
@@ -257,4 +258,13 @@ footer a{
     display: inline-block;
     margin-right: 5px;
     margin-bottom: 5px;
+}
+
+.scrolled{
+    background-color: white;
+    transition: background 500ms;
+}
+
+ #started .scrolledButton{
+    background-color: var(--secondary);
 }
