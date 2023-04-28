@@ -27,7 +27,8 @@ const changeLetters = setInterval(function (){
     let n = Math.floor(Math.random() * lettersArray.length);
     let z = Math.floor(Math.random() * lettersArray.length);
     lettersArray[n] = 'M';
-    lettersArray[z] = '';
+    lettersArray[z] = '&nbsp';
     let newString = lettersArray.join('&nbsp');
-    text.innerHTML = newString;;
+    svg.ariaLabel = newString;
+    text.innerHTML = newString;
 }, 400)

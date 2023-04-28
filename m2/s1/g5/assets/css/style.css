@@ -93,6 +93,7 @@ nav{
     flex-direction: column;
     justify-content: space-evenly;
     max-width: 530px;
+    padding-left: 30px;
 }
 
 #tagline button{
@@ -285,8 +286,9 @@ footer a{
 }
 
 #m {
-    margin-left: 250px;
+    
     overflow: hidden;
+    width: 460px;
 }
 
 .summary + div{
