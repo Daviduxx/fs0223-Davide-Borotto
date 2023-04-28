@@ -9,6 +9,7 @@ h2{
     font-size: 6rem;
     letter-spacing: -3px;
     font-weight: 500;
+    margin-top: 50px;
 }
 
 h3{
@@ -57,6 +58,7 @@ nav{
     background-color: var(--primary);
     z-index: 1;
     transition: background 500ms;
+    flex-wrap: wrap;
 }
 
 #menu{
@@ -212,18 +214,27 @@ section{
 .metadata{
     display: flex;
     align-items: center;
+    width: 250px;
+    overflow: hidden;
 }
 
 .metadata a{
     background-color: lightgray;
     color: grey;
-    font-size: .9rem;
+    font-size: .8rem;
     padding: 5px 8px;
     border-radius: 50px;
     margin-left: 5px;
 }
 
+.content{
+    padding-right: 10px;
+}
 /* ASIDE */
+
+aside{
+    margin-left: 10px;
+}
 
 #sticky{
     position: sticky;
@@ -267,4 +278,21 @@ footer a{
 
  #started .scrolledButton{
     background-color: var(--secondary);
+}
+
+/* #m {
+    margin-left: 250px;
+    overflow: hidden;
+} */
+
+.summary + div{
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 730px){
+    #main-menu, #m{display: none;}
+    #hero-section{display: block;}
+    h2{font-size: 3.5rem;}
+    h3{font-size: 1rem}
 }

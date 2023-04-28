@@ -9,8 +9,25 @@ window.addEventListener('scroll', function(){
         nav.classList.add('scrolled')
         button.classList.add('scrolledButton')
     }
-    else if(scrolled < 300){
+    else{
         nav.classList.remove('scrolled')
         button.classList.remove('scrolledButton')
     }
 } )
+
+// let svg = document.querySelector('g[aria-label]');
+// let letters = svg.ariaLabel;
+// let text = document.getElementById('m');
+// console.log(letters)
+
+// let lettersArray = letters.split('');
+// console.log(lettersArray);
+
+// const changeLetters = setInterval(function (){
+//     let n = Math.floor(Math.random() * lettersArray.length);
+//     let z = Math.floor(Math.random() * lettersArray.length);
+//     lettersArray[n] = 'M';
+//     lettersArray[z] = '';
+//     let newString = lettersArray.join('&nbsp');
+//     text.innerHTML = newString;;
+// }, 400)
