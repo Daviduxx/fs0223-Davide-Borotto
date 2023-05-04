@@ -1,0 +1,223 @@
+/* CSS Reset */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  -webkit-text-size-adjust: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+body {
+  font-family: "EB Garamond", serif;
+}
+
+.padding-inline-sm {
+  padding-inline: 5px;
+}
+
+.padding-inline-normal {
+  padding-inline: 10px;
+}
+
+.padding-inline-md {
+  padding-inline: 15px;
+}
+
+.padding-inline-lg {
+  padding-inline: 20px;
+}
+
+.padding-inline-xl {
+  padding-inline: 30px;
+}
+
+.padding-inline-xxl {
+  padding-inline: 50px;
+}
+
+.padding-block-sm {
+  padding-block: 5px;
+}
+
+.padding-block-normal {
+  padding-block: 10px;
+}
+
+.padding-block-md {
+  padding-block: 15px;
+}
+
+.padding-block-lg {
+  padding-block: 20px;
+}
+
+.padding-block-xl {
+  padding-block: 30px;
+}
+
+.padding-block-xxl {
+  padding-block: 50px;
+}
+
+.margin-inline-sm {
+  margin-inline: 5px;
+}
+
+.margin-inline-normal {
+  margin-inline: 10px;
+}
+
+.margin-inline-md {
+  margin-inline: 15px;
+}
+
+.margin-inline-lg {
+  margin-inline: 20px;
+}
+
+.margin-inline-xl {
+  margin-inline: 30px;
+}
+
+.margin-inline-xxl {
+  margin-inline: 50px;
+}
+
+.margin-block-sm {
+  margin-block: 5px;
+}
+
+.margin-block-normal {
+  margin-block: 10px;
+}
+
+.margin-block-md {
+  margin-block: 15px;
+}
+
+.margin-block-lg {
+  margin-block: 20px;
+}
+
+.margin-block-xl {
+  margin-block: 30px;
+}
+
+.margin-block-xxl {
+  margin-block: 50px;
+}
+
+nav {
+  max-height: 80px;
+  background-color: #2a0334;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+nav img {
+  width: 10%;
+}
+nav .nav:last-of-type {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+nav li {
+  display: inline-block;
+  color: #f4f4f4;
+  padding: 5px 10px;
+  margin: 0 10px;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+nav li a {
+  color: #f4f4f4;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 5rem;
+  color: #f4f4f4;
+  letter-spacing: 5px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 800;
+  text-align: center;
+}
+
+#hero-section {
+  background-color: #640fc5;
+  height: 80vh;
+  padding: 50px;
+}
+#hero-section #headline {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 40px;
+  height: 80%;
+}
+#hero-section #img-container {
+  background-image: url("../img/violet.jpeg");
+  background-size: cover;
+  width: 300px;
+  max-height: 100%;
+}
+#hero-section #text-container {
+  padding: 40px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  height: 100%;
+}
+#hero-section #text-container p {
+  font-size: 2rem;
+  color: #f4f4f4;
+}
+
+#grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+#grid .grid-item {
+  width: 300px;
+  height: 300px;
+  text-align: center;
+}
+#grid .grid-item img {
+  width: 80%;
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */
