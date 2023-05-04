@@ -42,6 +42,24 @@ body {
   font-family: "EB Garamond", serif;
 }
 
+.buttonColor-blue {
+  background-color: #0e6cff;
+  color: #f4f4f4;
+  font-size: 1rem;
+}
+
+.buttonColor-orange {
+  background-color: #ff8700;
+  color: #f4f4f4;
+  font-size: 1rem;
+}
+
+.buttonColor-green {
+  background-color: #4caf50;
+  color: #f4f4f4;
+  font-size: 1rem;
+}
+
 .padding-inline-sm {
   padding-inline: 5px;
 }
@@ -193,6 +211,9 @@ h1 {
   background-size: cover;
   width: 300px;
   max-height: 100%;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px #a5a5a5;
+  border: 2px solid white;
 }
 #hero-section #text-container {
   padding: 40px;
@@ -216,6 +237,10 @@ h1 {
   width: 300px;
   height: 300px;
   text-align: center;
+  border-radius: 15px;
+  box-shadow: 2px 2px 5px #a5a5a5;
+  border: 0;
+  flex-basis: 50%;
 }
 #grid .grid-item img {
   width: 80%;

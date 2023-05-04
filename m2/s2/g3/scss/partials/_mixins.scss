@@ -10,9 +10,13 @@
     text-align: $align;
 }
 
-// @mixin floating{
-//     border-radius: ;
-//     box-shadow: ;
-//     border: ;
-// }
+@mixin floating($border: none, $radius: 10px, $shadow: 2px 2px 5px #a5a5a5){
+    border-radius: $radius;
+    box-shadow: $shadow;
+    border: $border;
+}
 
+@mixin grid($base: 33%){
+    flex-basis: $base;
+}
+ 
