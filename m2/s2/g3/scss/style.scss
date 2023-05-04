@@ -4,6 +4,7 @@
 @import 'partials/_font.scss';
 @import 'partials/_buttons.scss';
 @import 'partials/_spacing.scss';
+@import 'partials/_animation.scss';
 
 // NAVBAR
 
@@ -46,6 +47,7 @@ h1{
         flex-wrap: wrap;
         padding: 40px;
         height: 80%;
+        @include animation;
     }
     background-color: $bg-hero;
     height: 80vh;
@@ -75,7 +77,7 @@ h1{
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 50px;
-    
+    @include animation(2s);
     .grid-item{
         width: 300px;
         height: 300px;

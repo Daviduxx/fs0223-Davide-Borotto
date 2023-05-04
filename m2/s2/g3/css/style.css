@@ -156,6 +156,16 @@ body {
   margin-block: 50px;
 }
 
+@keyframes animazione {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
 nav {
   max-height: 80px;
   background-color: #2a0334;
@@ -205,6 +215,7 @@ h1 {
   flex-wrap: wrap;
   padding: 40px;
   height: 80%;
+  animation: animazione 4s ease-in 2s;
 }
 #hero-section #img-container {
   background-image: url("../img/violet.jpeg");
@@ -232,6 +243,7 @@ h1 {
   flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 50px;
+  animation: animazione 2s ease-in 2s;
 }
 #grid .grid-item {
   width: 300px;
