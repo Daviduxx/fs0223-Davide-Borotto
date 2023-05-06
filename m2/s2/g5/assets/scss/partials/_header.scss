@@ -3,6 +3,21 @@
     .navbar-brand{
         @include standardContainer;
     }
+    #more{
+        width: 100px;
+        color: white;
+        
+    }
+    #moreMenu{
+        // top: 105px;
+        // left: 120px;
+        z-index: 1;
+        background-color: black;
+        a{
+        color: white;
+        text-decoration: none;
+        }
+    }
 }
 
 #navbarNav a, #navbarLeft{
@@ -34,8 +49,7 @@
     background-color: black;
     border: $border;
     padding: 10px;
-    z-index: 1;
-    display: none;
+    z-index: 9;
 }
 
 #myDropButton{

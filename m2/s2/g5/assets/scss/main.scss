@@ -4,6 +4,7 @@
 @import 'partials/mixins';
 @import 'partials/header';
 @import 'partials/carousel';
+@import 'partials/footer';
 
 body{
     background-color: $background;
@@ -21,3 +22,4 @@ button{
 a{
     font-size: $font-little;
 }
+

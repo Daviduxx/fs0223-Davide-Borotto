@@ -2,7 +2,32 @@
     width: 40%;
 }
 
+.carousel-inner{
+    padding-left: 30px;
+}
+
 // .carousel-item{
 //     display: flex;
 //     justify-content: center;
 // }
+
+@media screen and (min-width: 768px){
+    .carousel img{
+        width: 20%;
+    }
+    .carousel-inner{
+        padding-left: 60px;
+    }
+}
+@media screen and (min-width: 1200px){
+    .carousel img{
+        width: 15%;
+    }
+    .carousel-inner{
+        padding-left: 0px;
+    }
+    .carousel-item{
+        padding-left: 0;
+    }
+    
+}

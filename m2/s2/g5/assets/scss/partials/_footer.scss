@@ -1,0 +1,28 @@
+footer{
+    i,p{
+        color: $whiteop;
+    }
+    p{
+        font-size: $font-little;
+        font-weight: 200;
+        margin: 10px;
+    }
+    button{
+        color: $whiteop;
+        border: $borderop;
+        background-color: transparent;
+        width: 130px;
+        height: 30px;
+        font-size: $font-little;
+    }
+}
+
+#copyright{
+    font-size: .5rem;
+}
+
+@media screen and (max-width: 768px){
+    footer p{
+        text-align: center;
+    }
+}
