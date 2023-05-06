@@ -1,3 +1,76 @@
+#leftNavbar {
+  padding: 0;
+  margin: 0;
+}
+#leftNavbar .navbar-brand {
+  padding: 0;
+  margin: 0;
+}
+
+#navbarNav a, #navbarLeft {
+  font-size: 0.8rem;
+}
+
+#navbarLeft img {
+  width: 15%;
+}
+
+.active {
+  font-weight: 700;
+}
+
+#userMenu {
+  position: relative;
+}
+#userMenu #userIcon {
+  background-image: url("../assets/img/avatar.png");
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+}
+
+#dropUser {
+  position: absolute;
+  top: 55px;
+  color: white;
+  background-color: black;
+  border: 1px solid white;
+  padding: 10px;
+  z-index: 1;
+  display: none;
+}
+
+#myDropButton {
+  width: 100px;
+  height: 25px;
+  background-color: black;
+  border: 1px solid white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+#myDropMenu {
+  width: 200px;
+  background-color: black;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  position: absolute;
+  color: white;
+  z-index: 1;
+  top: 100px;
+  left: 248px;
+}
+
+.view {
+  background-color: black;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+body {
+  background-color: rgb(26, 26, 26);
+}
+
 #avatar {
   width: 15%;
 }
@@ -5,4 +78,8 @@
 button {
   width: 30px;
   height: 25px;
+}
+
+a {
+  font-size: 0.8rem;
 }/*# sourceMappingURL=main.css.map */

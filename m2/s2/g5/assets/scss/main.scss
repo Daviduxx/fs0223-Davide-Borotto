@@ -1,3 +1,13 @@
+// Import delle partials
+
+@import 'partials/_variables.scss';
+@import 'partials/mixins';
+@import 'partials/header';
+
+body{
+    background-color: $background;
+}
+
 #avatar{
     width: 15%;
 }
@@ -5,4 +15,8 @@
 button{
     width: 30px;
     height: 25px;
+}
+
+a{
+    font-size: $font-little;
 }

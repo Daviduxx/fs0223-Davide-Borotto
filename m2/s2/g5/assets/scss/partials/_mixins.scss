@@ -1,0 +1,16 @@
+// Porzioni di codice riustilizzabile
+
+@mixin standardContainer{
+    padding: 0;
+    margin: 0;
+}
+
+@mixin active{
+    font-weight: 700;
+}
+
+@mixin flexCenter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

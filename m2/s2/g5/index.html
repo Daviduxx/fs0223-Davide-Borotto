@@ -8,20 +8,20 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/main.css">
   </head>
-  <body class="bg-dark">
+  <body>
     
-    <div class="container bg-dark">
+    <div class="container">
         <!-- STRUTTURA HEADER -->
         <header>
 
             <nav>
                 <!-- NAV A SX -->
                 <div class="row align-items-center justify-content-between">
-                    <div class="col-8">
+                    <div class="col-8 p-0">
                         <nav class="navbar navbar-expand-lg">
-                            <div class="container-fluid">
+                            <div class="container-fluid" id="leftNavbar">
                                 <a class="navbar-brand" href="#">
-                                    <img src="assets/img/netflix_logo.png" alt="Logo" width="100" height="50" class="d-inline-block align-text-top">
+                                    <img src="assets/img/netflix_logo.png" alt="Logo" width="80" height="40" class="d-inline-block align-text-top">
                                   </a>
             
                               <div class="collapse navbar-collapse" id="navbarNav">
@@ -36,10 +36,10 @@
                                     <a class="nav-link text-white" href="#">Movies</a>
                                   </li>
                                   <li class="nav-item">
-                                    <a class="nav-link text-white">Recently Added</a>
+                                    <a class="nav-link text-white" href="#">Recently Added</a>
                                   </li>
                                   <li class="nav-item">
-                                    <a class="nav-link text-white">My List</a>
+                                    <a class="nav-link text-white" >My List</a>
                                   </li>
                                 </ul>
                               </div>
@@ -48,13 +48,13 @@
                     </div>
 
                     <!-- NAV A DX -->
-                    <div class="col">
+                    <div class="col p-0 d-flex justify-content-end align-items-center">
                         <nav class="navbar navbar-expand-lg">
-                            <div class="container-fluid">
+                            <div class="container-fluid p-0" id="navbarLeft">
                               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
                               </button>
-                              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                              <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                                 <ul class="navbar-nav">
                                   <li class="nav-item">
                                     <a class="nav-link active text-white" aria-current="page" href="#"><i class="bi bi-search"></i></a>
@@ -65,53 +65,51 @@
                                   <li class="nav-item">
                                     <a class="nav-link text-white" href="#"><i class="bi bi-bell-fill"></i></a>
                                   </li>
-                                  <!-- <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                     <img src="assets/img/avatar.png" alt="" id="avatar">
-                                    </a>
-                                    <ul class="dropdown-menu dropdown-center">
-                                      <li><a class="dropdown-item" href="#">Action</a></li>
-                                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                    </ul>
-                                  </li> -->
                                 </ul>
+                               
                               </div>
                             </div>
+                           
                           </nav>
+
+                          <div id="userMenu" class="ms-1">
+                            <div id="userIcon"></div>
+                          </div>
+                          <div id="dropUser">
+                            <div>
+                              <p>Manage Profiles</p>
+                              <p>Account</p>
+                              <p>Help</p>
+                            </div>
+                          </div>
                     </div>
                 </div>
             </nav>
 
+            <!-- Sezione tc Shows -->
             <div id="filter">
                 <div class="row">
-                    <div class="col">
-                        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                            <div class="container-fluid">
-                              <a class="navbar-brand" href="#">TV Shows</a>
-                              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                              </button>
-                              <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
-                                <ul class="navbar-nav">
-                                  <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                      Genres
-                                    </a>
-                                    <ul class="dropdown-menu dropdown-menu-dark">
-                                      <li><a class="dropdown-item" href="#">Action</a></li>
-                                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                    </ul>
-                                  </li>
-                                </ul>
-                              </div>
-                            </div>
-                          </nav>
-                    </div>
-                    <div class="col d-flex justify-content-end align-items-end">
-                        <button class="border border-1 border-white bg-dark"></button>
-                        <button class="border border-1 border-white bg-dark"></button>
+                    <div class="col d-flex align-items-center p-0">
+                        <h1 class="text-white fs-3">TV Shows</h1>
+                        <div id="myDrop" class="position-relative">
+                          <button id="myDropButton" class="text-white ms-3">
+                            Genres
+                            <i class="bi bi-caret-down-fill text-white"></i>
+                          </button>   
+                        </div>
+                        <div id="myDropMenu" class="position-absolute d-none">
+                          <p>Adolescenziale</p>
+                          <p>Adolescenziale</p>
+                          <p>Adolescenziale</p>
+                          <p>Adolescenziale</p>
+                          <p>Adolescenziale</p>
+                          <p>Adolescenziale</p>
+                          <p>Adolescenziale</p>
+                        </div>
+                  </div>
+                    <div class="col d-flex justify-content-end p-0">
+                        <button class="view"></button>
+                        <button class="view"></button>
                     </div>
                 </div>
             </div>
@@ -122,9 +120,9 @@
             <div class="row mt-3">
                 <div class="col">
                     <h5 class="text-white">Trending Now</h5>
-                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div id="carouselExampleControls1" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
-                          <div class="carousel-item active">
+                          <div class="carousel-item active" data-bs-interval="500000">
                             <img src="assets/img/media/media0.webp" class="d-inline" width="200" height="110" alt="...">
                             <img src="assets/img/media/media1.jpg"  class="d-inline" width="200" height="110" alt="...">
                             <img src="assets/img/media/media2.webp" class="d-inline" width="200" height="110" alt="...">
@@ -132,7 +130,7 @@
                             <img src="assets/img/media/media4.jpg"  class="d-inline" width="200" height="110" alt="...">
                             <img src="assets/img/media/media5.webp" class="d-inline" width="200" height="110" alt="...">
                           </div>
-                          <div class="carousel-item">
+                          <div class="carousel-item" data-bs-interval="500000"> 
                             <img src="assets/img/media/media0.webp" class="d-inline" width="200" height="110" alt="...">
                             <img src="assets/img/media/media1.jpg"  class="d-inline" width="200" height="110" alt="...">
                             <img src="assets/img/media/media2.webp" class="d-inline" width="200" height="110" alt="...">
@@ -140,7 +138,7 @@
                             <img src="assets/img/media/media4.jpg"  class="d-inline" width="200" height="110" alt="...">
                             <img src="assets/img/media/media5.webp" class="d-inline" width="200" height="110" alt="...">
                           </div>
-                          <div class="carousel-item">
+                          <div class="carousel-ite" data-bs-interval="5000000">
                             <img src="assets/img/media/media0.webp" class="d-inline" width="200" height="110" alt="...">
                             <img src="assets/img/media/media1.jpg"  class="d-inline" width="200" height="110" alt="...">
                             <img src="assets/img/media/media2.webp" class="d-inline" width="200" height="110" alt="...">
@@ -149,99 +147,21 @@
                             <img src="assets/img/media/media5.webp" class="d-inline" width="200" height="110" alt="...">
                           </div>
                         </div>
-                        <button class="carousel-control-prev mt-5" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                        <button class="carousel-control-prev mt-5" type="button" data-bs-target="#carouselExampleControls1" data-bs-slide="prev">
                           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                           <span class="visually-hidden">Previous</span>
                         </button>
-                        <button class="carousel-control-next mt-5" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                        <button class="carousel-control-next mt-5" type="button" data-bs-target="#carouselExampleControls1" data-bs-slide="next">
                           <span class="carousel-control-next-icon" aria-hidden="true"></span>
                           <span class="visually-hidden">Next</span>
                         </button>
                       </div>
                 </div>
             </div>
-            <div class="row mt-3">
-                <div class="col">
-                    <h5 class="text-white">Trending Now</h5>
-                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                          <div class="carousel-item active">
-                            <img src="assets/img/media/media0.webp" class="d-inline" width="200" height="110" alt="...">
-                            <img src="assets/img/media/media1.jpg"  class="d-inline" width="200" height="110" alt="...">
-                            <img src="assets/img/media/media2.webp" class="d-inline" width="200" height="110" alt="...">
-                            <img src="assets/img/media/media3.webp" class="d-inline" width="200" height="110" alt="...">
-                            <img src="assets/img/media/media4.jpg"  class="d-inline" width="200" height="110" alt="...">
-                            <img src="assets/img/media/media5.webp" class="d-inline" width="200" height="110" alt="...">
-                          </div>
-                          <div class="carousel-item">
-                            <img src="assets/img/media/media0.webp" class="d-inline" width="200" height="110" alt="...">
-                            <img src="assets/img/media/media1.jpg"  class="d-inline" width="200" height="110" alt="...">
-                            <img src="assets/img/media/media2.webp" class="d-inline" width="200" height="110" alt="...">
-                            <img src="assets/img/media/media3.webp" class="d-inline" width="200" height="110" alt="...">
-                            <img src="assets/img/media/media4.jpg"  class="d-inline" width="200" height="110" alt="...">
-                            <img src="assets/img/media/media5.webp" class="d-inline" width="200" height="110" alt="...">
-                          </div>
-                          <div class="carousel-item">
-                            <img src="assets/img/media/media0.webp" class="d-inline" width="200" height="110" alt="...">
-                            <img src="assets/img/media/media1.jpg"  class="d-inline" width="200" height="110" alt="...">
-                            <img src="assets/img/media/media2.webp" class="d-inline" width="200" height="110" alt="...">
-                            <img src="assets/img/media/media3.webp" class="d-inline" width="200" height="110" alt="...">
-                            <img src="assets/img/media/media4.jpg"  class="d-inline" width="200" height="110" alt="...">
-                            <img src="assets/img/media/media5.webp" class="d-inline" width="200" height="110" alt="...">
-                          </div>
-                        </div>
-                        <button class="carousel-control-prev mt-5" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next mt-5" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Next</span>
-                        </button>
-                      </div>
-                </div>
+            
+                
             </div>
-            <div class="row mt-3">
-                <div class="col">
-                    <h5 class="text-white">Trending Now</h5>
-                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                          <div class="carousel-item active">
-                            <img src="assets/img/media/media0.webp" class="d-inline" width="200" height="110" alt="...">
-                            <img src="assets/img/media/media1.jpg"  class="d-inline" width="200" height="110" alt="...">
-                            <img src="assets/img/media/media2.webp" class="d-inline" width="200" height="110" alt="...">
-                            <img src="assets/img/media/media3.webp" class="d-inline" width="200" height="110" alt="...">
-                            <img src="assets/img/media/media4.jpg"  class="d-inline" width="200" height="110" alt="...">
-                            <img src="assets/img/media/media5.webp" class="d-inline" width="200" height="110" alt="...">
-                          </div>
-                          <div class="carousel-item">
-                            <img src="assets/img/media/media0.webp" class="d-inline" width="200" height="110" alt="...">
-                            <img src="assets/img/media/media1.jpg"  class="d-inline" width="200" height="110" alt="...">
-                            <img src="assets/img/media/media2.webp" class="d-inline" width="200" height="110" alt="...">
-                            <img src="assets/img/media/media3.webp" class="d-inline" width="200" height="110" alt="...">
-                            <img src="assets/img/media/media4.jpg"  class="d-inline" width="200" height="110" alt="...">
-                            <img src="assets/img/media/media5.webp" class="d-inline" width="200" height="110" alt="...">
-                          </div>
-                          <div class="carousel-item">
-                            <img src="assets/img/media/media0.webp" class="d-inline" width="200" height="110" alt="...">
-                            <img src="assets/img/media/media1.jpg"  class="d-inline" width="200" height="110" alt="...">
-                            <img src="assets/img/media/media2.webp" class="d-inline" width="200" height="110" alt="...">
-                            <img src="assets/img/media/media3.webp" class="d-inline" width="200" height="110" alt="...">
-                            <img src="assets/img/media/media4.jpg"  class="d-inline" width="200" height="110" alt="...">
-                            <img src="assets/img/media/media5.webp" class="d-inline" width="200" height="110" alt="...">
-                          </div>
-                        </div>
-                        <button class="carousel-control-prev mt-5" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next mt-5" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Next</span>
-                        </button>
-                      </div>
-                </div>
-            </div>
+            
         </main>
 
         <!-- FOOTER -->

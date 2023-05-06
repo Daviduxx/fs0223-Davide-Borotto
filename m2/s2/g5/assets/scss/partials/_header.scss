@@ -1,0 +1,66 @@
+#leftNavbar{
+    @include standardContainer;
+    .navbar-brand{
+        @include standardContainer;
+    }
+}
+
+#navbarNav a, #navbarLeft{
+    font-size: $font-little;
+}
+
+#navbarLeft img{
+    width: 15%;
+}
+
+.active{
+    @include active;
+}
+
+#userMenu{
+    position: relative;
+    #userIcon{
+    background-image: url('../assets/img/avatar.png');
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+}
+}
+
+#dropUser{
+    position: absolute;
+    top: 55px;
+    color: white;
+    background-color: black;
+    border: $border;
+    padding: 10px;
+    z-index: 1;
+    display: none;
+}
+
+#myDropButton{
+    width: 100px;
+    height: 25px;
+    background-color: black;
+    border: $border;
+    @include flexCenter;
+    font-size: $font-little;
+    
+}
+
+#myDropMenu{
+    width: 200px;
+    background-color: black;
+    border: $borderop;
+    position: absolute;
+    color: white;
+    z-index: 1;
+    top: 100px;
+    left: 248px;
+}
+
+.view{
+    background-color: black;
+    border: $borderop;
+}
+
