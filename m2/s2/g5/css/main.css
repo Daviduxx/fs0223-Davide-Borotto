@@ -63,18 +63,25 @@
 }
 
 #myDropMenu {
-  width: 200px;
   background-color: black;
   border: 1px solid rgba(255, 255, 255, 0.6);
   position: absolute;
   color: white;
   z-index: 1;
-  top: 100px;
-  left: 248px;
+  left: 16px;
+  height: 200px;
+  width: 350px;
+}
+#myDropMenu a {
+  color: white;
+  text-decoration: none;
+}
+#myDropMenu a:hover {
+  text-decoration: underline;
 }
 
 .view {
-  background-color: black;
+  background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.6);
 }
 

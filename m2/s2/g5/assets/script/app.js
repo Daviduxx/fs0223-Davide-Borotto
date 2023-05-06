@@ -17,3 +17,13 @@ userMenu.addEventListener('click', function(){
     dropUser.classList.toggle('d-none')
     dropUser.classList.toggle('d-block')
 })
+
+// Show/Hide del TERZO menu a tendina
+
+let dropMenu = document.getElementById('myDropMenu')
+let dropButton = document.getElementById('myDropButton')
+
+dropButton.addEventListener('click', function(){
+    dropMenu.classList.toggle('d-none')
+    dropMenu.classList.toggle('d-block')
+})
