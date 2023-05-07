@@ -24,6 +24,14 @@
     .myButton{
     color: $whiteop;
     border: $borderop;
+    &:nth-child(1){
+        background-color: rgb(218, 218, 218);
+        color: black;
+    }
+    &:hover{
+        color: white;
+        border: $border;
+    }
     }
     label{
         font-size: .7rem;

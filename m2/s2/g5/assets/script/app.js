@@ -33,12 +33,3 @@ dropButton.addEventListener('click', function(){
     dropMenu.classList.toggle('d-block');
     genresIcon.classList.toggle('goup')
 })
-
-// I menu a tendina scompaiono se si clicca sul body
-
-// let body = document.querySelector('body');
-
-// body.addEventListener('click', function(){
-//     moreMenu.classList.remove('d-block') 
-// })
-

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 #leftNavbar {
   padding: 0;
   margin: 0;
@@ -83,6 +84,7 @@
 }
 
 #myDropMenu {
+  animation: showmenu 1s ease;
   background-color: black;
   border: 1px solid rgba(255, 255, 255, 0.5411764706);
   position: absolute;
@@ -104,6 +106,9 @@
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.5411764706);
 }
+.view:first-of-type {
+  border: 1px solid white;
+}
 .view i, .view svg {
   color: rgba(255, 255, 255, 0.5411764706);
 }
@@ -116,6 +121,15 @@
   transform: rotate(180deg) !important;
 }
 
+@keyframes showmenu {
+  0% {
+    height: 0;
+    overflow: hidden;
+  }
+  100% {
+    height: 100% ß;
+  }
+}
 .carousel img {
   width: 40%;
 }
@@ -240,6 +254,14 @@ footer button:hover {
 #profile .myButton {
   color: rgba(255, 255, 255, 0.5411764706);
   border: 1px solid rgba(255, 255, 255, 0.5411764706);
+}
+#profile .myButton:nth-child(1) {
+  background-color: rgb(218, 218, 218);
+  color: black;
+}
+#profile .myButton:hover {
+  color: white;
+  border: 1px solid white;
 }
 #profile label {
   font-size: 0.7rem;
