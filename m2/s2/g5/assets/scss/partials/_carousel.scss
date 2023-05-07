@@ -4,12 +4,16 @@
 
 .carousel-inner{
     padding-left: 30px;
+    animation: entrance;
+    img{
+        transition: .5s ease;
+        &:hover{
+        transform:scale(1.5);
+        cursor: pointer;
+    }
+    }
+    
 }
-
-// .carousel-item{
-//     display: flex;
-//     justify-content: center;
-// }
 
 @media screen and (min-width: 768px){
     .carousel img{
@@ -37,4 +41,26 @@
         transform: translate(80px, 35px);
     }
     
+}
+
+@keyframes entrance{
+    0%{
+        transform: translateY(50px); 
+        opacity: 0;
+    }
+    100%{
+        transform: translate(0); 
+        opacity: 1;
+    }
+}
+
+#carouselExampleDesktop{ 
+    animation: entrance 1s ease;
+}
+
+#carouselExampleDesktop1{
+    animation: entrance 2s ease;
+}
+#carouselExampleDesktop2{
+    animation: entrance 3s ease;
 }

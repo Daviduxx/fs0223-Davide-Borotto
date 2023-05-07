@@ -1,6 +1,10 @@
 footer{
     i,p{
         color: $whiteop;
+        &:hover{
+            color: white;
+            cursor: pointer;
+        }
     }
     p{
         font-size: $font-little;
@@ -14,6 +18,10 @@ footer{
         width: 130px;
         height: 30px;
         font-size: $font-little;
+        &:hover{
+            color: white;
+            border: $border;
+        }
     }
 }
 

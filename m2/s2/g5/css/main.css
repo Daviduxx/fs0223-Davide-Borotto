@@ -122,6 +122,14 @@
 
 .carousel-inner {
   padding-left: 30px;
+  animation: entrance;
+}
+.carousel-inner img {
+  transition: 0.5s ease;
+}
+.carousel-inner img:hover {
+  transform: scale(1.5);
+  cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {
@@ -150,8 +158,34 @@
     transform: translate(80px, 35px);
   }
 }
+@keyframes entrance {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+#carouselExampleDesktop {
+  animation: entrance 1s ease;
+}
+
+#carouselExampleDesktop1 {
+  animation: entrance 2s ease;
+}
+
+#carouselExampleDesktop2 {
+  animation: entrance 3s ease;
+}
+
 footer i, footer p {
   color: rgba(255, 255, 255, 0.5411764706);
+}
+footer i:hover, footer p:hover {
+  color: white;
+  cursor: pointer;
 }
 footer p {
   font-size: 0.8rem;
@@ -165,6 +199,10 @@ footer button {
   width: 130px;
   height: 30px;
   font-size: 0.8rem;
+}
+footer button:hover {
+  color: white;
+  border: 1px solid white;
 }
 
 #copyright {
