@@ -1,0 +1,41 @@
+#profile{
+    h1{
+        @include borderBottom;
+    }
+    img{
+        width: 100%;
+    }
+    h5{
+        background-color: grey;
+        width: 80%;
+    }
+    .settings{
+        @include settings;
+    }
+    button{
+        width: 100px;
+        height: 30px;
+        background-color: transparent;
+        border: $border;
+    }
+    #maturity{
+        background-color: rgb(84, 84, 84);
+    }
+    .myButton{
+    color: $whiteop;
+    border: $borderop;
+    }
+    label{
+        font-size: .7rem;
+    }
+    button{
+        &:last-of-type{
+            width: 160px;
+        }
+    }
+}
+
+.myborder-bottom{
+    @include borderBottom;
+}
+
