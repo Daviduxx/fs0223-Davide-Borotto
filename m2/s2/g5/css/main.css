@@ -84,6 +84,9 @@
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.6);
 }
+.view i, .view svg {
+  color: rgba(255, 255, 255, 0.6);
+}
 
 .carousel img {
   width: 40%;
@@ -103,13 +106,20 @@
 }
 @media screen and (min-width: 1200px) {
   .carousel img {
-    width: 15%;
+    width: 16%;
   }
   .carousel-inner {
     padding-left: 0px;
+    overflow: visible;
   }
   .carousel-item {
     padding-left: 0;
+  }
+  .carousel-control-prev {
+    transform: translate(-110px, 35px);
+  }
+  .carousel-control-next {
+    transform: translate(80px, 35px);
   }
 }
 footer i, footer p {

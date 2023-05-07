@@ -83,5 +83,8 @@
 .view{
     background-color: transparent;
     border: $borderop;
+    i, svg{
+        color: $whiteop;
+    }
 }
 
