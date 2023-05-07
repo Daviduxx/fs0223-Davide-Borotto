@@ -9,19 +9,28 @@
         
     }
     #moreMenu{
-        // top: 105px;
-        // left: 120px;
         z-index: 1;
         background-color: black;
+        border: $borderop;
         a{
         color: white;
         text-decoration: none;
+        &:hover{
+            color: $whiteop;
         }
+        }
+        
     }
 }
 
 #navbarNav a, #navbarLeft{
     font-size: $font-little;
+}
+
+#navbarNav li a:hover, #navbarLeft li a:hover{
+    
+        color: $whiteop !important;
+
 }
 
 #navbarLeft img{
@@ -34,6 +43,9 @@
 
 #userMenu{
     position: relative;
+    &:hover{
+        cursor: pointer;
+    }
     #userIcon{
     background-image: url('../assets/img/avatar.png');
     background-size: cover;
@@ -47,13 +59,22 @@
     top: 55px;
     color: white;
     background-color: black;
-    border: $border;
+    border: $borderop;
     padding: 10px;
     z-index: 9;
+    a{
+        color: white;
+        text-decoration: none;
+        display: block;
+        margin-bottom: 8px;
+        &:hover{
+            color: $whiteop;
+        }
+    }
 }
 
 #myDropButton{
-    width: 100px;
+    width: 90px;
     height: 25px;
     background-color: black;
     border: $border;
@@ -88,3 +109,10 @@
     }
 }
 
+#arrowIcon, #sfogliaIcon, #genresIcon{
+    transition: .5s ease;
+}
+
+.goup{
+    transform: rotate(180deg) !important;
+}

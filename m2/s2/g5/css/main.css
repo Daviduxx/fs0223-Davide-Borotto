@@ -13,14 +13,22 @@
 #leftNavbar #moreMenu {
   z-index: 1;
   background-color: black;
+  border: 1px solid rgba(255, 255, 255, 0.5411764706);
 }
 #leftNavbar #moreMenu a {
   color: white;
   text-decoration: none;
 }
+#leftNavbar #moreMenu a:hover {
+  color: rgba(255, 255, 255, 0.5411764706);
+}
 
 #navbarNav a, #navbarLeft {
   font-size: 0.8rem;
+}
+
+#navbarNav li a:hover, #navbarLeft li a:hover {
+  color: rgba(255, 255, 255, 0.5411764706) !important;
 }
 
 #navbarLeft img {
@@ -34,6 +42,9 @@
 #userMenu {
   position: relative;
 }
+#userMenu:hover {
+  cursor: pointer;
+}
 #userMenu #userIcon {
   background-image: url("../assets/img/avatar.png");
   background-size: cover;
@@ -46,13 +57,22 @@
   top: 55px;
   color: white;
   background-color: black;
-  border: 1px solid white;
+  border: 1px solid rgba(255, 255, 255, 0.5411764706);
   padding: 10px;
   z-index: 9;
 }
+#dropUser a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 8px;
+}
+#dropUser a:hover {
+  color: rgba(255, 255, 255, 0.5411764706);
+}
 
 #myDropButton {
-  width: 100px;
+  width: 90px;
   height: 25px;
   background-color: black;
   border: 1px solid white;
@@ -86,6 +106,14 @@
 }
 .view i, .view svg {
   color: rgba(255, 255, 255, 0.5411764706);
+}
+
+#arrowIcon, #sfogliaIcon, #genresIcon {
+  transition: 0.5s ease;
+}
+
+.goup {
+  transform: rotate(180deg) !important;
 }
 
 .carousel img {
