@@ -44,15 +44,10 @@ class Pet{
         this.species = species;
         this.breed = breed;
     }
-    static verifyOwner(){
-        
-       for(let i = 0; i < animalsArray.length; i++){
-        if(animalsArray[animalsArray.length - 1].ownerName === animalsArray[i].ownerName){
-            return true;
-        }
+    static verifyOwner = function(owner1, owner2){
+            return owner1.ownerName === owner2.ownerName;
        }
     }
-}
 
 
 submit.addEventListener('click', function(){
