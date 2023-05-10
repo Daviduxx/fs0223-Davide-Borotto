@@ -35,6 +35,7 @@ console.log(x.verifyAge(y));
 console.log('SECONDO ESERCIZIO');
 
 let submit = document.getElementById('submit');
+let list = document.getElementById('list')
 let animalsArray = [];
 
 class Pet{
@@ -44,8 +45,12 @@ class Pet{
         this.species = species;
         this.breed = breed;
     }
-    static verifyOwner = function(owner1, owner2){
-            return owner1.ownerName === owner2.ownerName;
+    verifyOwner = function(owner2){
+           for(let i = 0; i < owner2.length - 1; i++){
+            if(this.ownerName === owner2[i].ownerName){
+                return true;
+            }    
+           }
        }
     }
 
@@ -63,6 +68,15 @@ submit.addEventListener('click', function(){
     console.log(animalsArray);
 
     if(animalsArray.length > 1){
-        console.log(Pet.verifyOwner());
+        console.log(p.verifyOwner(animalsArray));
     }
+
+    list.innerHTML = '';
+
+    animalsArray.forEach(function(p){
+         let newPet = document.createElement('li');
+         newPet.innerText = p.petName + ' , ' + p.ownerName + ' , ' + p.species + ' , ' + p.breed + ' , ' + p.verifyOwner(animalsArray);
+         list.appendChild(newPet);
+    })
+   
 })
