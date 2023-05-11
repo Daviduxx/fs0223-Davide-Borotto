@@ -1,21 +1,29 @@
 addedBookArray = []
+let i = 0;
 
 const hide = function(){
-    this.parentElement.parentElement.classList.add('d-none');
+    this.parentElement.parentElement.remove();
 }
 
 const removeBook = function(){
-    this.parentElement.remove();
+    this.closest('col-12')
+    // const indice = addedBookArray.findIndex((x) => x === this.parentElement.firstChild.nextElementSibling.innerHTML)
+    // addedBookArray.splice(indice, 0);
+    // console.log(addedBookArray);
 }
 
 const add = function(){
-    let newBookAdded = document.createElement('li');
-    newBookAdded.innerHTML = this.parentElement.firstChild.nextElementSibling.innerHTML;
-    console.log(this.parentElement.firstChild)
-    list.appendChild(newBookAdded);
-    addedBookArray.push(this.parentElement.firstChild.nextElementSibling.innerHTML)
-    let addedBook = localStorage.setItem('book', JSON.stringify(addedBookArray))
 
+    let newTitle = this.parentElement.firstChild.nextElementSibling.innerHTML;
+    addedBookArray.push(newTitle);
+    let addedBook = localStorage.setItem('book', JSON.stringify(addedBookArray));
+    
+    let list = document.getElementById('list');
+    let newBookAdded = document.createElement('li');
+    newBookAdded.innerHTML = JSON.parse(localStorage.getItem('book'))[i];
+    i++;    
+    list.appendChild(newBookAdded);
+    
     let removeButton = document.createElement('button');
     removeButton.innerHTML = 'REMOVE';
     newBookAdded.appendChild(removeButton);
@@ -33,8 +41,9 @@ fetch('https://striveschool-api.herokuapp.com/books')
     }
 })
 .then((cards) => {
-    console.log(cards);
+    
     let mainRow = document.getElementById('mainRow')
+
     cards.forEach((card) => {
         let col = document.createElement('div');
         col.classList.add('col-12', 'col-md-4', 'col-lg-3');
@@ -49,20 +58,15 @@ fetch('https://striveschool-api.herokuapp.com/books')
                 </div>
         </div>`
         mainRow.appendChild(col);
-        
     })
 
-    let list = document.getElementById('list');
     let scartaCard = document.querySelectorAll('.scarta');
-    console.log(scartaCard);
     scartaCard.forEach((item) => item.addEventListener('click', hide));
 
     let addButton = document.querySelectorAll('.add');
-    console.log(addButton);
     addButton.forEach((item) => item.addEventListener('click', add))
 })
+
 .catch((err) => {
     console.log(err);
 });
-
-// scartaCard.forEach((item) => item.addEventListener('click', () => this.classList.add('d-none')))
