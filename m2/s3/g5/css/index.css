@@ -1,0 +1,19 @@
+#navbar {
+  background-color: rgb(113, 0, 0);
+}
+#navbar #logo {
+  width: 60px;
+  height: 60px;
+}
+#navbar img {
+  max-width: 60%;
+}
+
+.card {
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4039215686);
+  height: 600px;
+}
+.card .card-button {
+  background-color: rgb(113, 0, 0);
+  color: white;
+}/*# sourceMappingURL=index.css.map */

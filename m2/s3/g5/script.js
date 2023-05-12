@@ -26,16 +26,16 @@ const getProducts = function(){
 
         data.forEach((product) => {
             let productTemplate = `
-            <div class="col-12 col-md-4 col-lg-3">
+            <div class="col-12 col-md-4 col-lg-3 mb-3">
             <div class="card">
-              <img src="${product.imageUrl}" class="card-img-top" alt="${product.description}">
+              <img src="${product.imageUrl}" class="card-img-top mt-2" alt="${product.description}">
               <div class="card-body">
                 <h5 class="card-title">${product.name}</h5>
                 <p class="card-text">${product.brand}</p>
                 <p class="card-text">${product.description}</p>
-                <p class="card-text">${product.price}</p>
-                <a href="backoffice.html?productID=${product._id}" class="btn btn-primary">MODIFICA</a>
-                <a href="more.html?productID=${product._id}" class="btn btn-primary">SCOPRI DI PIU</a>
+                <p class="card-text">€${product.price}</p>
+                <a href="backoffice.html?productID=${product._id}" class="btn card-button">MODIFICA</a>
+                <a href="more.html?productID=${product._id}" class="btn card-button">SCOPRI DI PIU</a>
               </div>
             </div>
           </div>
