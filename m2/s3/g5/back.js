@@ -49,48 +49,6 @@ if(productId){
         console.log(err);
     })
 
-    // Eseguo richiesta PUT per modificare il prodotto
-    // backButton.addEventListener('click', function(){
-
-    //     let productName = document.getElementById('nome');
-    //     let productDescription = document.getElementById('description');
-    //     let productBrand = document.getElementById('brand');
-    //     let productImage = document.getElementById('immagine');
-    //     let productPrice = document.getElementById('price');
-
-    //     let changedItem = {
-    //         name: productName.value,
-    //         description: productDescription.value,
-    //         brand: productBrand.value,
-    //         imageUrl: productImage.value,
-    //         price: productPrice.value 
-    //     }
-
-    //     fetch(API_ENDPOINT + productId, {
-    //         method: 'PUT',
-    //         body: JSON.stringify(changedItem),
-    //         headers: {
-    //             Authorization: API_KEY,
-    //             'Content-type': 'application/json'
-    //         },
-    //     })
-    //     .then((res) => {
-    //         console.log(res);
-    //         if(res.ok){
-    //             res.json();
-    //         }
-    //         else{
-    //             throw new Error('OPS... Qualcosa è andato storto!')
-    //         }
-    //     })
-    //     .then((product) => {
-    //         console.log(product);
-    //     })
-    //     .catch((err) => {
-    //         console.log(err);
-    //     })
-    // })
-
     deleteButton.addEventListener('click', function(){
         fetch(API_ENDPOINT + productId, {
             method: 'DELETE',
