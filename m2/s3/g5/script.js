@@ -35,6 +35,7 @@ const getProducts = function(){
                 <p class="card-text">${product.description}</p>
                 <p class="card-text">${product.price}</p>
                 <a href="backoffice.html?productID=${product._id}" class="btn btn-primary">MODIFICA</a>
+                <a href="more.html?productID=${product._id}" class="btn btn-primary">SCOPRI DI PIU</a>
               </div>
             </div>
           </div>
