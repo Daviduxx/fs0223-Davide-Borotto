@@ -29,17 +29,20 @@ fetch(API_ENDPOINT + productId, HEADERS)
         let moreRow = document.getElementById('moreRow');
 
         let showProduct = `
-        <div class="col-12">
-                <div class="card mb-3">
-                    <img src="${product.imageUrl}" class="card-img-top" alt="${product.imageUrl}">
-                    <div class="card-body">
-                        <h5 class="card-title">${product.name}</h5>
-                        <h5 class="card-title">${product.brand}</h5>
-                        <p class="card-text">${product.description}</p>
-                        <p class="card-text"><small class="text-body-secondary">${product.price}</small></p>
-                    </div>
-                </div>
-            </div>
+        <div class="col card my-5 p-5">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="${product.imageUrl}" class="img-fluid rounded-start" alt="${product.imageUrl}">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">${product.name}</h5>
+            <p class="card-text">${product.description}</p>
+            <p class="card-text"><small class="text-body-secondary">€ ${product.price}</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
             `
         moreRow.innerHTML = showProduct;
     })

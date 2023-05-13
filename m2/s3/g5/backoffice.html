@@ -33,8 +33,11 @@
               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
 
-            <p class="fs-3">Modifica i campi desiderati oppure clicca su <i>Resetta i campi</i> per reinserire tutti i dati da zero.
+            <p class="fs-3 d-none" id="modificaText">Modifica i campi desiderati oppure clicca su <i>Resetta i campi</i> per reinserire tutti i dati da zero.
             Clicca su <i>ELIMINA</i> per eliminare completamente un prodotto</p>
+
+            <p class="fs-3" id="creaText">Compilia tutti i campi per inserire un nuovo prodotto. Clicca su<i> Resetta i campi</i> per svuotare i campi</p>
+
             <form id="back-form" class="w-lg-50">
               <div class="mb-3">
                 <label for="nome" class="form-label">Nome del prodotto</label>
@@ -71,8 +74,8 @@
                     <h1 class="modal-title fs-5" id="exampleModalLabel">Operazione confermata!</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
-                  <div class="modal-body">
-                    Il prodotto è stato modificato con successo.
+                  <div class="modal-body" id="modalChangeText">
+                    Il prodotto è stato creato con successo.
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>

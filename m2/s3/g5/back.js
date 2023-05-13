@@ -17,9 +17,14 @@ console.log(productId);
 
 // Se c'è un productID faccio una GET request, per avere i dati di quello specifico prodotto
 if(productId){
-    
+    let modificaText = document.getElementById('modificaText');
+    let creaText = document.getElementById('creaText');
+    modificaText.classList.remove('d-none');
+    creaText.classList.add('d-none');
     let backButton = document.getElementById('backButton');
     backButton.innerHTML = 'MODIFICA IL PRODOTTO';
+    let modalChangeText = document.getElementById('modalChangeText');
+    modalChangeText.innerHTML = 'Il prodotto è stato modificato con successo.'
 
     //Rendo visibile il bottone elimina
     let showDeleteModal = document.getElementById('showDeleteModal')
