@@ -10,6 +10,7 @@
   </head>
   <body>
 
+    <!-- NAVBAR -->
     <nav class="navbar" id="navbar">
       <div class="container-fluid">
         <div class="rounded-circle bg-light-subtle d-flex align-items-center justify-content-center" id="logo">
@@ -28,16 +29,19 @@
           <div class="col-lg-3"></div>
           <div class="col">
 
+            <!-- ALERT PER PRODOTTO ELIMINATO -->
             <div class="alert alert-success alert-dismissible fade show d-none mb-3" role="alert" id="alert">
               <strong>Operazione Confermata!</strong>Il prodotto è stato eliminato correttamente <a href="index.html"> Torna alla Home Page</a>
               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
 
+            <!-- TESTI VARIABILI A SECONDA DI MODALITA CREAZIONE O MODIFICA -->
             <p class="fs-3 d-none" id="modificaText">Modifica i campi desiderati oppure clicca su <i>Resetta i campi</i> per reinserire tutti i dati da zero.
             Clicca su <i>ELIMINA</i> per eliminare completamente un prodotto</p>
 
             <p class="fs-3" id="creaText">Compilia tutti i campi per inserire un nuovo prodotto. Clicca su<i> Resetta i campi</i> per svuotare i campi</p>
-
+            
+            <!-- FORM DI INSERIMENTO O MODIFICA PRODOTTI -->
             <form id="back-form" class="w-lg-50">
               <div class="mb-3">
                 <label for="nome" class="form-label">Nome del prodotto</label>
@@ -103,6 +107,7 @@
               </div>
             </div>
 
+            <!-- MODALE PER IL RESET -->
             <div class="modal fade" id="resetModal" tabindex="-1" aria-labelledby="exampleModalLabelDelete" aria-hidden="true">
               <div class="modal-dialog">
                 <div class="modal-content">
@@ -129,7 +134,7 @@
 
 
 
-    <script src="back.js"></script>  
+    <script src="assets/script/back.js"></script>  
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
   </body>
 </html>

@@ -30,21 +30,22 @@ fetch(API_ENDPOINT + productId, HEADERS)
 
         let showProduct = `
         <div class="col card my-5 p-5">
-      <div class="row g-0">
+        <div class="row g-0">
         <div class="col-md-4">
-          <img src="${product.imageUrl}" class="img-fluid rounded-start" alt="${product.imageUrl}">
+          <img src="${product.imageUrl}" class="img-fluid rounded-start" alt="${product.name}">
         </div>
         <div class="col-md-8">
           <div class="card-body">
-            <h5 class="card-title">${product.name}</h5>
-            <p class="card-text">${product.description}</p>
-            <p class="card-text"><small class="text-body-secondary">€ ${product.price}</small></p>
+            <h5 class="card-title fs-1">${product.name}</h5>
+            <p class="card-text fs-3">${product.description}</p>
+            <p class="card-text card-brand fs-3">${product.brand}</p>
+            <p class="card-text fs-4">€ ${product.price}</p>
+            <a href="index.html" class="btn card-button">TORNA INDIETRO</a>
           </div>
         </div>
       </div>
-    </div>
-            `
-        moreRow.innerHTML = showProduct;
+    </div>`
+    moreRow.innerHTML = showProduct;
     })
     .catch((err) => {
         console.log(err);

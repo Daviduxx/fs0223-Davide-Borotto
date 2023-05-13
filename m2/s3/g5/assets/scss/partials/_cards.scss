@@ -4,4 +4,13 @@
         background-color: $red;
         color: white;
     }
+    #card-description{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .card-brand{
+        color: $red;
+        font-weight: 700;
+    }
 }

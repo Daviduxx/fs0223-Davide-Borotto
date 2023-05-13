@@ -31,18 +31,16 @@ const getProducts = function(){
               <img src="${product.imageUrl}" class="card-img-top mt-2" alt="${product.description}">
               <div class="card-body">
                 <h5 class="card-title">${product.name}</h5>
-                <p class="card-text">${product.brand}</p>
-                <p class="card-text">${product.description}</p>
-                <p class="card-text">€${product.price}</p>
+                <p class="card-text card-brand">${product.brand}</p>
+                <p class="card-text" id="card-description">${product.description}</p>
+                <p class="card-text fs-4">€ ${product.price}</p>
                 <a href="backoffice.html?productID=${product._id}" class="btn card-button">MODIFICA</a>
                 <a href="more.html?productID=${product._id}" class="btn card-button">SCOPRI DI PIU</a>
               </div>
             </div>
           </div>
             `
-        
         let mainRow = document.getElementById('product-row');
-
         mainRow.innerHTML += productTemplate;
         })
     })

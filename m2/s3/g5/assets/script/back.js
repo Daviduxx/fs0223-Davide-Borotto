@@ -14,21 +14,20 @@ let addressBarContent = new URLSearchParams(window.location.search);
 let productId = addressBarContent.get('productID')
 console.log(productId);
 
-
 // Se c'è un productID faccio una GET request, per avere i dati di quello specifico prodotto
 if(productId){
+
+    // Modals e bottoni
     let modificaText = document.getElementById('modificaText');
     let creaText = document.getElementById('creaText');
-    modificaText.classList.remove('d-none');
-    creaText.classList.add('d-none');
     let backButton = document.getElementById('backButton');
-    backButton.innerHTML = 'MODIFICA IL PRODOTTO';
     let modalChangeText = document.getElementById('modalChangeText');
-    modalChangeText.innerHTML = 'Il prodotto è stato modificato con successo.'
-
-    //Rendo visibile il bottone elimina
     let showDeleteModal = document.getElementById('showDeleteModal')
     let deleteButton = document.getElementById('deleteButton');
+    modificaText.classList.remove('d-none');
+    creaText.classList.add('d-none');
+    backButton.innerHTML = 'MODIFICA IL PRODOTTO';
+    modalChangeText.innerHTML = 'Il prodotto è stato modificato con successo.'
     showDeleteModal.classList.remove('d-none');
 
     fetch(API_ENDPOINT + productId, HEADERS)
@@ -43,7 +42,6 @@ if(productId){
     })
     .then((product) => {
         console.log(product);
-
         document.getElementById('nome').value = product.name;
         document.getElementById('description').value = product.description;
         document.getElementById('brand').value = product.brand;
@@ -55,6 +53,7 @@ if(productId){
         console.log(err);
     })
 
+    // DELETE Request
     deleteButton.addEventListener('click', function(){
         fetch(API_ENDPOINT + productId, {
             method: 'DELETE',
@@ -66,7 +65,6 @@ if(productId){
             console.log(res);
             if(res.ok){
                 console.log('Prodotto eliminato con successo');
-
                 document.getElementById('nome').value =''
                 document.getElementById('description').value = ''
                 document.getElementById('brand').value = ''
@@ -125,10 +123,6 @@ form.addEventListener('submit', function(e){
         console.log(res);
         if(res.ok){
             console.log(productId ? 'prodotto modificato correttamente' : 'prodotto creato correttamente');
-            // Aggiungo al bottone gli attributi necessari per triggherare il modale
-            // backButton.setAttribute('data-bs-toggle', "modalModifica");
-            // backButton.setAttribute('data-bs-target', "#modificaprod");
-            console.log(backButton);
         }
         else{
             throw new Error('OPS... Qualcosa è andato storto!')

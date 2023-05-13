@@ -15,4 +15,13 @@
 .card .card-button {
   background-color: rgb(113, 0, 0);
   color: white;
+}
+.card #card-description {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card .card-brand {
+  color: rgb(113, 0, 0);
+  font-weight: 700;
 }/*# sourceMappingURL=index.css.map */
