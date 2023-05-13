@@ -25,9 +25,17 @@
 
       <div class="container">
         <div class="row mt-5">
+          <div class="col-lg-3"></div>
           <div class="col">
 
-            <form id="back-form">
+            <div class="alert alert-success alert-dismissible fade show d-none mb-3" role="alert" id="alert">
+              <strong>Operazione Confermata!</strong>Il prodotto è stato eliminato correttamente <a href="index.html"> Torna alla Home Page</a>
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+
+            <p class="fs-3">Modifica i campi desiderati oppure clicca su <i>Resetta i campi</i> per reinserire tutti i dati da zero.
+            Clicca su <i>ELIMINA</i> per eliminare completamente un prodotto</p>
+            <form id="back-form" class="w-lg-50">
               <div class="mb-3">
                 <label for="nome" class="form-label">Nome del prodotto</label>
                 <input type="text" class="form-control" id="nome" aria-describedby="emailHelp" required placeholder="Insersci il nome del tuo prodotto">
@@ -49,31 +57,70 @@
                 <input type="number" class="form-control" id="price" required placeholder="Inserisci il prezzo del prodotto">
               </div>
 
-              <button type="submit" class="btn btn-primary" id="backButton" data-bs-toggle="modal" data-bs-target="#exampleModal">REGISTRA IL PRODOTTO</button>
-              <button type="button" class="btn btn-danger d-none" id="deleteButton" data-bs-toggle="modal" data-bs-target="#exampleModal">ELIMINA IL PRODOTTO</button>
-              <button type="reset" class="btn btn-success" id="deleteButton" data-bs-toggle="modal" data-bs-target="#exampleModal">RESETTA I CAMPI</button>
+              <button type="submit" class="mb-2 btn btn-primary" id="backButton" data-bs-toggle="modal" data-bs-target="#modificaprod">REGISTRA IL PRODOTTO</button>
+              <button type="button" class="mb-2 btn btn-danger d-none" data-bs-toggle="modal" data-bs-target="#exampleModal" id="showDeleteModal">ELIMINA IL PRODOTTO</button>
+              <button type="button" class="mb-2 btn btn-success" data-bs-toggle="modal" data-bs-target="#resetModal">RESETTA I CAMPI</button>
               
             </form>
 
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <!-- MOdale per la modifica -->
+            <div class="modal fade" id="modificaprod" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Operazione confermata!</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
-                    ...
+                    Il prodotto è stato modificato con successo.
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
                   </div>
                 </div>
               </div>
             </div>
 
+            <!-- modale per l'eliminazione -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabelDelete" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabelDelete">ATTENZIONE!</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    In questo modo il prodotto verrà cancellato definitivamente. Sei sicuro di voler procedere?
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="deleteButton" data-bs-dismiss="modal">Procedi</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annulla</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="modal fade" id="resetModal" tabindex="-1" aria-labelledby="exampleModalLabelDelete" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabelDelete">ATTENZIONE!</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    In questo modo verranno svuotati definitivamente tutti i campi. Sei sicuro di voler procedere?
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="resetButton" data-bs-dismiss="modal">Procedi</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annulla</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
           </div>
+          <div class="col-lg-3"></div>
         </div>
       </div>
 

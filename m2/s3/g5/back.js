@@ -22,8 +22,9 @@ if(productId){
     backButton.innerHTML = 'MODIFICA IL PRODOTTO';
 
     //Rendo visibile il bottone elimina
+    let showDeleteModal = document.getElementById('showDeleteModal')
     let deleteButton = document.getElementById('deleteButton');
-    deleteButton.classList.remove('d-none');
+    showDeleteModal.classList.remove('d-none');
 
     fetch(API_ENDPOINT + productId, HEADERS)
     .then((res) => {
@@ -60,6 +61,15 @@ if(productId){
             console.log(res);
             if(res.ok){
                 console.log('Prodotto eliminato con successo');
+
+                document.getElementById('nome').value =''
+                document.getElementById('description').value = ''
+                document.getElementById('brand').value = ''
+                document.getElementById('immagine').value = ''
+                document.getElementById('price').value = ''
+
+                let alertDelete = document.getElementById('alert');
+                alertDelete.classList.remove('d-none')
             }
             else{
                 throw new Error('OPS... QUalcosa è andato storto')
@@ -96,7 +106,7 @@ form.addEventListener('submit', function(e){
 
     console.log(newItem);
 
-    // Eseguo la richiesta POST
+    // Eseguo la richiesta POST o PUT
     
     fetch(productId ? API_ENDPOINT + productId : API_ENDPOINT, {
         method: productId ? 'PUT' : 'POST',
@@ -110,6 +120,10 @@ form.addEventListener('submit', function(e){
         console.log(res);
         if(res.ok){
             console.log(productId ? 'prodotto modificato correttamente' : 'prodotto creato correttamente');
+            // Aggiungo al bottone gli attributi necessari per triggherare il modale
+            // backButton.setAttribute('data-bs-toggle', "modalModifica");
+            // backButton.setAttribute('data-bs-target', "#modificaprod");
+            console.log(backButton);
         }
         else{
             throw new Error('OPS... Qualcosa è andato storto!')
@@ -118,4 +132,13 @@ form.addEventListener('submit', function(e){
     .catch((err) => {
         console.log(err);
     })
+})
+
+let resetButton = document.getElementById('resetButton');
+resetButton.addEventListener('click', function(){
+    document.getElementById('nome').value =''
+    document.getElementById('description').value = ''
+    document.getElementById('brand').value = ''
+    document.getElementById('immagine').value = ''
+    document.getElementById('price').value = ''
 })
