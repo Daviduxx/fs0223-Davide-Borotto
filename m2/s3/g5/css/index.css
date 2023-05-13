@@ -24,4 +24,9 @@
 .card .card-brand {
   color: rgb(113, 0, 0);
   font-weight: 700;
+}
+
+#order .card-button {
+  background-color: rgb(113, 0, 0);
+  color: white;
 }/*# sourceMappingURL=index.css.map */

@@ -43,6 +43,63 @@ const getProducts = function(){
         let mainRow = document.getElementById('product-row');
         mainRow.innerHTML += productTemplate;
         })
+
+        // Funzione per ordinare per prezzo crescente
+        let crescente = document.getElementById('crescente')
+        crescente.addEventListener('click', function(){
+            let mainRow = document.getElementById('product-row');
+            mainRow.innerHTML = '';
+        data.sort(function(a, b){return b.price - a.price});
+        console.log(data);
+
+        data.forEach((product) => {
+            let productTemplate = `
+            <div class="col-12 col-md-4 col-lg-3 mb-3">
+            <div class="card">
+              <img src="${product.imageUrl}" class="card-img-top mt-2" alt="${product.description}">
+              <div class="card-body">
+                <h5 class="card-title">${product.name}</h5>
+                <p class="card-text card-brand">${product.brand}</p>
+                <p class="card-text" id="card-description">${product.description}</p>
+                <p class="card-text fs-4">€ ${product.price}</p>
+                <a href="backoffice.html?productID=${product._id}" class="btn card-button">MODIFICA</a>
+                <a href="more.html?productID=${product._id}" class="btn card-button">SCOPRI DI PIU</a>
+              </div>
+            </div>
+          </div>
+            `
+        mainRow.innerHTML += productTemplate;
+        })
+        })
+
+        // Funzione per ordinare per prezzo decrescente
+        let decrescente = document.getElementById('decrescente')
+        decrescente.addEventListener('click', function(){
+        let mainRow = document.getElementById('product-row');
+        mainRow.innerHTML = '';
+        data.sort(function(a, b){return a.price - b.price});
+        console.log(data);
+
+        data.forEach((product) => {
+            let productTemplate = `
+            <div class="col-12 col-md-4 col-lg-3 mb-3">
+            <div class="card">
+              <img src="${product.imageUrl}" class="card-img-top mt-2" alt="${product.description}">
+              <div class="card-body">
+                <h5 class="card-title">${product.name}</h5>
+                <p class="card-text card-brand">${product.brand}</p>
+                <p class="card-text" id="card-description">${product.description}</p>
+                <p class="card-text fs-4">€ ${product.price}</p>
+                <a href="backoffice.html?productID=${product._id}" class="btn card-button">MODIFICA</a>
+                <a href="more.html?productID=${product._id}" class="btn card-button">SCOPRI DI PIU</a>
+              </div>
+            </div>
+          </div>
+            `
+        mainRow.innerHTML += productTemplate;
+        })
+        })
+        
     })
     .catch((err) => {
         console.log(err);
