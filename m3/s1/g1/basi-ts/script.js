@@ -1,4 +1,5 @@
+"use strict";
 console.log('Hello World');
-var nome = 'Mariooo';
-var anni = 30;
-var bool = true;
+let nome = 'Mariooo';
+let anni = 30;
+let bool = true;
