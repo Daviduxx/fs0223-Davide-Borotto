@@ -1,12 +1,12 @@
 // usando classi non astratte
 class User{
 
-    codredd:number;
-    redditoAnnuoLordo:number;
-    tasseInps:number;
-    tasseIrpef:number;
+    private readonly codredd:number;
+    private readonly redditoAnnuoLordo:number;
+    private readonly tasseInps:number;
+    private readonly tasseIrpef:number;
 
-    constructor(codredd, reddito, tasseinps, tasseirpef){
+    constructor(codredd:number, reddito:number, tasseinps:number, tasseirpef:number){
         this.codredd = codredd,
         this.redditoAnnuoLordo = reddito,
         this.tasseInps = tasseinps,
