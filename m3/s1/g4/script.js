@@ -1,3 +1,4 @@
+console.log('ciao');
 var arrayNegozio = [];
 var getVestiti = function () {
     fetch('Abbigliamento.json')

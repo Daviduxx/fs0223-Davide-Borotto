@@ -1,3 +1,6 @@
+console.log('ciao');
+
+
 type myArray = {
     id:number,
     codprod:number,
@@ -98,5 +101,4 @@ class Negozio{
     }
 }
 
-
-    getVestiti()
+getVestiti()
