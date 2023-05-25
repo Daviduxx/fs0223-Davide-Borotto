@@ -1,5 +1,20 @@
-let arrayNegozio:any = []
+type myArray = {
+    id:number,
+    codprod:number,
+    collezione:string,
+    capo:string,
+    modello:number,
+    quantita:number,
+    colore:string,
+    prezzoivaesclusa:number,
+    prezzoivainclusa:number,
+    disponibile:string,
+    saldo:number
+}
 
+let arrayNegozio: myArray[]= []
+
+const getVestiti = function(){
 fetch('Abbigliamento.json')
 .then((res) => {
     console.log(res)
@@ -10,9 +25,9 @@ fetch('Abbigliamento.json')
         throw new Error('OPs... Qualcosa è andato storto!')
     }
     })
-.then(data => {
+.then((data) => {
     console.log(data);
-    data.forEach((capo) => {
+    data.forEach((capo:any) => {
         let newItem = new Negozio(
             capo.id, 
             capo.codprod, 
@@ -30,8 +45,11 @@ fetch('Abbigliamento.json')
         arrayNegozio.push(newItem)
     })
 })
+.catch((err) => {
+    console.log(err);
+})
 console.log(arrayNegozio);
-
+}
 class Negozio{
 
     id:number;
@@ -72,3 +90,7 @@ class Negozio{
         this.saldo = saldo  
     }
 }
+
+window.onload = function(){
+    getVestiti()
+ }
