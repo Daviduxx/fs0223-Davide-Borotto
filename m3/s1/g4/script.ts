@@ -89,8 +89,14 @@ class Negozio{
         this.disponibile = disponibile,
         this.saldo = saldo  
     }
+
+    getSaldoCapo():number{
+        return this.saldo;
+    }
+    getAcquistoCapo():number{
+        return this.prezzoivaesclusa - (this.prezzoivaesclusa * (this.saldo / 100))
+    }
 }
 
-window.onload = function(){
+
     getVestiti()
- }

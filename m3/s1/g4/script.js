@@ -37,8 +37,12 @@ var Negozio = /** @class */ (function () {
             this.disponibile = disponibile,
             this.saldo = saldo;
     }
+    Negozio.prototype.getSaldoCapo = function () {
+        return this.saldo;
+    };
+    Negozio.prototype.getAcquistoCapo = function () {
+        return this.prezzoivaesclusa - (this.prezzoivaesclusa * (this.saldo / 100));
+    };
     return Negozio;
 }());
-window.onload = function () {
-    getVestiti();
-};
+getVestiti();
