@@ -11,7 +11,13 @@ fetch('Abbigliamento.json')
 })
     .then(function (data) {
     console.log(data);
+    data.forEach(function (capo) {
+        var newItem = new Negozio(capo.id, capo.codprod, capo.collezione, capo.capo, capo.modello, capo.quantita, capo.colore, capo.prezzoivaesclusa, capo.prezzoivainclusa, capo.disponibile, capo.saldo);
+        console.log(newItem);
+        arrayNegozio.push(newItem);
+    });
 });
+console.log(arrayNegozio);
 var Negozio = /** @class */ (function () {
     function Negozio(id, codprod, collezione, capo, modello, quantita, colore, prezzoivaesclusa, prezzoivainclusa, disponibile, saldo) {
         this.id = id,

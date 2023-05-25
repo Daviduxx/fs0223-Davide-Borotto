@@ -1,4 +1,4 @@
-const arrayNegozio:[] = [];
+let arrayNegozio:any = []
 
 fetch('Abbigliamento.json')
 .then((res) => {
@@ -12,8 +12,25 @@ fetch('Abbigliamento.json')
     })
 .then(data => {
     console.log(data);
-    
+    data.forEach((capo) => {
+        let newItem = new Negozio(
+            capo.id, 
+            capo.codprod, 
+            capo.collezione, 
+            capo.capo, 
+            capo.modello, 
+            capo.quantita, 
+            capo.colore, 
+            capo.prezzoivaesclusa, 
+            capo.prezzoivainclusa,
+            capo.disponibile,
+            capo.saldo
+            )
+        console.log(newItem);
+        arrayNegozio.push(newItem)
+    })
 })
+console.log(arrayNegozio);
 
 class Negozio{
 
