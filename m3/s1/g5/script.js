@@ -1,5 +1,4 @@
 "use strict";
-// creazione della classe
 class Smartphone {
     constructor(carica, numeroChiamate, id = 0, durata = 0, timing = new Date()) {
         this.costoMinuto = 0.20;
@@ -16,14 +15,19 @@ class Smartphone {
         this.carica += euro;
     }
     numero404() {
-        return `Il tuo credito residuo è di € ${this.carica}`;
+        return `Il tuo credito residuo è di € ${this.carica.toFixed(2)}`;
     }
     getNumeroChiamate() {
         return this.numeroChiamate;
     }
     chiamata(min, year) {
-        this.numeroChiamate++;
-        this.carica -= (min * this.costoMinuto);
+        if (this.carica >= (min * this.costoMinuto)) {
+            this.numeroChiamate++;
+            this.carica -= (min * this.costoMinuto);
+        }
+        else {
+            console.log('Non hai abbastanza credito per effetture una chiamata. Fai una ricarica!');
+        }
         //EXTRA
         let nuovaChiamata = { id: this.registro.length, durata: min, timing: year };
         this.registro.push(nuovaChiamata);

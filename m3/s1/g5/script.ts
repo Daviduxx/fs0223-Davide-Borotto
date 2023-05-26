@@ -13,7 +13,6 @@ interface iSmartphone{
     filtraChiamatePerDataOra(dataIndicata:Date):{}[];
 }
 
-// creazione della classe
 
 class Smartphone implements iSmartphone {
 
@@ -39,7 +38,7 @@ class Smartphone implements iSmartphone {
     }
 
     numero404():string { 
-        return `Il tuo credito residuo è di € ${this.carica}`;
+        return `Il tuo credito residuo è di € ${this.carica.toFixed(2)}`;
     }
 
     getNumeroChiamate():number {
@@ -47,8 +46,13 @@ class Smartphone implements iSmartphone {
     }
 
     chiamata(min: number, year:Date): void {
-        this.numeroChiamate++;
-        this.carica -= (min * this.costoMinuto)
+        if(this.carica >= (min * this.costoMinuto)){
+            this.numeroChiamate++;
+            this.carica -= (min * this.costoMinuto)
+        }
+        else{
+            console.log('Non hai abbastanza credito per effetture una chiamata. Fai una ricarica!')
+        }
 
         //EXTRA
         let nuovaChiamata:{ id:number, durata:number, timing:Date } = {id: this.registro.length, durata: min, timing: year}
