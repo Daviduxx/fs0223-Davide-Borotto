@@ -1,11 +1,3 @@
-// interfacce
-
-// interface iRegistro{
-//     id:number;
-//     durata:number;
-//     timing:Date;
-// }
-
 interface iSmartphone{
     carica:number;
     numeroChiamate:number;
@@ -15,7 +7,7 @@ interface iSmartphone{
     ricarica(euro:number):void;
     numero404():string;
     getNumeroChiamate():number;
-    chiamata(min:number,durata:number,year:Date):void;
+    chiamata(min:number,year:Date):void;
     azzeraChiamate():void;
     mostraRegistroChiamate():void;
     filtraChiamatePerDataOra():void;
@@ -54,12 +46,12 @@ class Smartphone implements iSmartphone {
         return this.numeroChiamate;
     }
 
-    chiamata(min: number, durata:number, year:Date): void {
+    chiamata(min: number, year:Date): void {
         this.numeroChiamate++;
         this.carica -= (min * this.costoMinuto)
 
         //EXTRA
-        let nuovaChiamata:{ id:number, durata:number, timing:Date } = {id: this.registro.length, durata: durata, timing: year}
+        let nuovaChiamata:{ id:number, durata:number, timing:Date } = {id: this.registro.length, durata: min, timing: year}
         this.registro.push(nuovaChiamata)
     }
 
@@ -82,7 +74,7 @@ class Smartphone implements iSmartphone {
 
 console.log('------------------- ISTANZA N.1 ----------------------------');
 
-let smartphone1 = new Smartphone(20, 8)
+let smartphone1 = new Smartphone(20, 5)
 console.log('SMARTPHONE 1:', smartphone1);
 console.log('CARICA INIZIALE',smartphone1.carica);
 
@@ -93,14 +85,14 @@ console.log(smartphone1.numero404());
 
 console.log('CHIAMATE EFFETTUATE:', smartphone1.getNumeroChiamate());
 
-smartphone1.chiamata(5, 4, new Date('2023'))
+smartphone1.chiamata(5, new Date(2023, 4, 5, 11, 30, 0))
 
 console.log('NUMERO CHIAMATE AGGIORNATO:', smartphone1.numeroChiamate, 'CARICA AGGIORNATA:', smartphone1.carica);
 
 smartphone1.azzeraChiamate()
 console.log('CHIAMATE EFFETTUATE AGGIORNATO:', smartphone1.numeroChiamate);
 
-smartphone1.chiamata(10, 3, new Date('2023'))
+smartphone1.chiamata(10, new Date(2023, 4, 3, 23, 50, 4))
 
 console.log('NUMERO CHIAMATE AGGIORNATO:', smartphone1.numeroChiamate, 'CARICA AGGIORNATA:', smartphone1.carica);
 
