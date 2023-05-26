@@ -1,12 +1,17 @@
 "use strict";
-// interfaccia iniziale
+// interfacce
 // creazione della classe
 class Smartphone {
-    constructor(carica, numeroChiamate) {
+    constructor(carica, numeroChiamate, id, durata, timing) {
         this.costoMinuto = 0.20;
         this.carica = carica;
         this.numeroChiamate = numeroChiamate;
         this.costoMinuto;
+        this.registro = [{
+                id: id,
+                durata: durata,
+                timing: timing
+            }];
     }
     ricarica(euro) {
         this.carica += euro;
@@ -24,10 +29,14 @@ class Smartphone {
     azzeraChiamate() {
         this.numeroChiamate = 0;
     }
+    mostraRegistroChiamate() {
+    }
+    filtraChiamatePerDataOra() {
+    }
 }
 // Istanziamento delle classi
 console.log('------------------- ISTANZA N.1 ----------------------------');
-let smartphone1 = new Smartphone(20, 8);
+let smartphone1 = new Smartphone(20, 8, 0, 2, new Date());
 console.log('SMARTPHONE 1:', smartphone1);
 console.log('CARICA INIZIALE', smartphone1.carica);
 smartphone1.ricarica(8);
@@ -41,7 +50,7 @@ console.log('CHIAMATE EFFETTUATE AGGIORNATO:', smartphone1.numeroChiamate);
 smartphone1.chiamata(10);
 console.log('NUMERO CHIAMATE AGGIORNATO:', smartphone1.numeroChiamate, 'CARICA AGGIORNATA:', smartphone1.carica);
 console.log('------------------- ISTANZA N.2 ----------------------------');
-let smartphone2 = new Smartphone(10, 4);
+let smartphone2 = new Smartphone(10, 4, 0, 2, new Date());
 console.log('SMARTPHONE 2:', smartphone2);
 console.log('CARICA INIZIALE', smartphone2.carica);
 smartphone2.ricarica(5);
@@ -55,7 +64,7 @@ console.log('CHIAMATE EFFETTUATE AGGIORNATO:', smartphone2.numeroChiamate);
 smartphone2.chiamata(10);
 console.log('NUMERO CHIAMATE AGGIORNATO:', smartphone2.numeroChiamate, 'CARICA AGGIORNATA:', smartphone2.carica);
 console.log('------------------- ISTANZA N.3 ----------------------------');
-let smartphone3 = new Smartphone(13, 23);
+let smartphone3 = new Smartphone(13, 23, 0, 2, new Date());
 console.log('SMARTPHONE 3:', smartphone3);
 console.log('CARICA INIZIALE', smartphone3.carica);
 smartphone3.ricarica(7);
