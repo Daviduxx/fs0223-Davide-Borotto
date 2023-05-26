@@ -2,7 +2,7 @@
 // interfacce
 // creazione della classe
 class Smartphone {
-    constructor(carica, numeroChiamate, id, durata, timing) {
+    constructor(carica, numeroChiamate, id = 0, durata, timing) {
         this.costoMinuto = 0.20;
         this.carica = carica;
         this.numeroChiamate = numeroChiamate;
@@ -30,13 +30,14 @@ class Smartphone {
         this.numeroChiamate = 0;
     }
     mostraRegistroChiamate() {
+        return this.registro;
     }
     filtraChiamatePerDataOra() {
     }
 }
 // Istanziamento delle classi
 console.log('------------------- ISTANZA N.1 ----------------------------');
-let smartphone1 = new Smartphone(20, 8, 0, 2, new Date());
+let smartphone1 = new Smartphone(20, 8);
 console.log('SMARTPHONE 1:', smartphone1);
 console.log('CARICA INIZIALE', smartphone1.carica);
 smartphone1.ricarica(8);
@@ -49,6 +50,7 @@ smartphone1.azzeraChiamate();
 console.log('CHIAMATE EFFETTUATE AGGIORNATO:', smartphone1.numeroChiamate);
 smartphone1.chiamata(10);
 console.log('NUMERO CHIAMATE AGGIORNATO:', smartphone1.numeroChiamate, 'CARICA AGGIORNATA:', smartphone1.carica);
+console.log(smartphone1.mostraRegistroChiamate());
 console.log('------------------- ISTANZA N.2 ----------------------------');
 let smartphone2 = new Smartphone(10, 4, 0, 2, new Date());
 console.log('SMARTPHONE 2:', smartphone2);

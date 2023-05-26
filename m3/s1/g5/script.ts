@@ -10,7 +10,7 @@ interface iSmartphone{
     carica:number;
     numeroChiamate:number;
     costoMinuto:number;
-    registro:{ id:number, durata:number, timing:Date }[]
+    registro:{ id?:number, durata?:number, timing?:Date }[]
 
     ricarica(euro:number):void;
     numero404():string;
@@ -28,9 +28,9 @@ class Smartphone implements iSmartphone {
     carica:number;
     numeroChiamate:number;
     costoMinuto:number = 0.20;
-    registro:{ id:number, durata:number, timing:Date} []
+    registro:{ id?:number, durata?:number, timing?:Date }[]
 
-    constructor(carica:number, numeroChiamate:number, id:number, durata:number, timing:Date){
+    constructor(carica:number, numeroChiamate:number, id:number = 0, durata?:number, timing?:Date ){
 
         this.carica = carica;
         this.numeroChiamate = numeroChiamate;
@@ -63,8 +63,8 @@ class Smartphone implements iSmartphone {
         this.numeroChiamate = 0;
     }
 
-    mostraRegistroChiamate(): void {
-        
+    mostraRegistroChiamate(): {}[] {
+        return this.registro
     }
 
     filtraChiamatePerDataOra(): void {
@@ -78,7 +78,7 @@ class Smartphone implements iSmartphone {
 
 console.log('------------------- ISTANZA N.1 ----------------------------');
 
-let smartphone1 = new Smartphone(20, 8, 0, 2, new Date())
+let smartphone1 = new Smartphone(20, 8)
 console.log('SMARTPHONE 1:', smartphone1);
 console.log('CARICA INIZIALE',smartphone1.carica);
 
@@ -100,7 +100,7 @@ smartphone1.chiamata(10)
 
 console.log('NUMERO CHIAMATE AGGIORNATO:', smartphone1.numeroChiamate, 'CARICA AGGIORNATA:', smartphone1.carica);
 
-
+console.log(smartphone1.mostraRegistroChiamate());
 
 console.log('------------------- ISTANZA N.2 ----------------------------');
 
