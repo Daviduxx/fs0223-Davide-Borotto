@@ -1,12 +1,29 @@
-<div class="container">
-  <div class="row">
-    <div class="col my-5">
-      <h1 class="text-center">HOLA</h1>
-      <h2 class="text-center yellow">Sottotitolo</h2>
+<div class="container-fluid bg-dark">
+  <div class="row d-flex align-items-center">
+    <div class="col-3 bg-dark">
+      <h1 class="text-white">HOLA</h1>
+      <h2 class="yellow">Sottotitolo</h2>
     </div>
+    <div class="col-9 d-flex justify-content-end">
+      <app-menu></app-menu>
+    </div>
+
   </div>
-</div>
-<app-comp1></app-comp1>
-<app-comp2></app-comp2>
-<app-comp3></app-comp3>
+  </div>
+
+  <div class="container py-5 my-5 bg-light">
+      <div class="row">
+    <div class="col-4">
+      <app-comp1></app-comp1>
+    </div>
+    <div class="col-4">
+      <app-comp2></app-comp2>
+    </div>
+    <div class="col-4">
+      <app-comp3></app-comp3>
+    </div>
+
+  </div>
+  </div>
+
 
