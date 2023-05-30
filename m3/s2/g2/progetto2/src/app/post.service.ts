@@ -7,7 +7,7 @@ import { Post } from './post';
 
 export class PostService {
 
-  API:string = "../assets/db.json";
+  API:string = "assets/db.json";
 
 
   constructor() { }
