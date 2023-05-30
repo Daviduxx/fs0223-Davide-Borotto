@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { HomeComponent } from 'src/app/home/home.component';
+import { Post } from 'src/app/post';
 import { PostService } from 'src/app/post.service';
 
 @Component({
@@ -9,13 +9,15 @@ import { PostService } from 'src/app/post.service';
 })
 export class ActiveComponent {
 
-  Posts:any[] = []
-  activePosts:any[]
+  Posts:Post[] = []
 
-  constructor(postSVC: PostService){
-    postSVC.getAllPost()
-    .then(posts => this.Posts = posts);
+  constructor(private postSVC: PostService){
 
-    this.activePosts = this.Posts.filter(post => {post.active = true})
+    this.postSVC.getAllPost()
+    .then(posts => {
+      let filteredPosts = posts.filter(p => p.active)
+      this.Posts = filteredPosts;
+    });
+
   }
 }

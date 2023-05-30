@@ -2,7 +2,7 @@ import { UrlSegment } from "@angular/router";
 
 export class Post {
 
-  userID:number;
+  userId:number;
   id:number;
   title:string;
   body:string;
@@ -10,7 +10,7 @@ export class Post {
 
   constructor(userID:number,id:number,title:string,body:string,active:boolean){
 
-    this.userID = userID;
+    this.userId = userID;
     this.id = id;
     this.title = title;
     this.body = body;
