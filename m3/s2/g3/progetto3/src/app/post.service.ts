@@ -70,4 +70,6 @@ export class PostService {
   getNewPosts():Post[]{
     return this.newPostsArray;
   }
+
+
 }

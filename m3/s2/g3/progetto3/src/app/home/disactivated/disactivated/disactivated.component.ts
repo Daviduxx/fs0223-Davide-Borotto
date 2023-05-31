@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Post } from 'src/app/post';
 import { PostService } from 'src/app/post.service';
 
@@ -7,7 +7,7 @@ import { PostService } from 'src/app/post.service';
   templateUrl: './disactivated.component.html',
   styleUrls: ['./disactivated.component.scss']
 })
-export class DisactivatedComponent {
+export class DisactivatedComponent{
 
   // Posts:Post[] = [];
   newPosts:Post[] = []
