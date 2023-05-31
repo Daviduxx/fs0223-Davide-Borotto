@@ -9,15 +9,22 @@ import { PostService } from 'src/app/post.service';
 })
 export class DisactivatedComponent {
 
-  Posts:Post[] = []
+  Posts:Post[] = [];
+  newPosts:Post[] = []
 
   constructor(private postSVC: PostService){
 
-    this.postSVC.getAllPost()
-    .then(posts => {
-      let filteredPosts = posts.filter(p => !p.active)
-      this.Posts = filteredPosts;
-    });
+    // this.postSVC.getAllPost()
+    // .then(posts => {
+    //   let filteredPosts = posts.filter(p => !p.active)
+    //   this.Posts = filteredPosts;
+    // });
+
+    postSVC.getNewPosts().forEach(el => this.newPosts.push(el))
+    let newFilteredPosts = this.newPosts.filter(p => !p.active);
+    this.newPosts = newFilteredPosts
+
+
 
   }
 }

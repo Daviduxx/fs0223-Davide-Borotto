@@ -10,11 +10,14 @@ import { PostService } from '../post.service';
 export class HomeComponent {
 
   posts:any[] = [];
+  newPosts:Post[] = []
 
   constructor(postSVC: PostService){
 
-    postSVC.getAllPost()
-    .then(posts => this.posts = posts)
+    // postSVC.getAllPost()
+    // .then(posts => this.posts = posts);
+
+    postSVC.getNewPosts().forEach(el => this.newPosts.push(el))
 
   }
 
