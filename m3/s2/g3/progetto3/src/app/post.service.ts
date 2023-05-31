@@ -71,5 +71,18 @@ export class PostService {
     return this.newPostsArray;
   }
 
+  getPostByStatus(status:boolean):Post[]{
+    return this.newPostsArray.filter(p => p.active == status)
+  }
+
+  toggleStatus(post:Post):void{
+    post.active = !post.active;
+
+    let index = this.newPostsArray.findIndex(p => p.userId == post.userId)
+    this.newPostsArray.splice(index,1,post)
+    console.log(post);
+
+  }
+
 
 }

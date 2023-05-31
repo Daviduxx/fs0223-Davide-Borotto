@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Post } from '../post';
 import { PostService } from '../post.service';
 
@@ -7,18 +7,32 @@ import { PostService } from '../post.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit{
 
-  posts:any[] = [];
   newPosts:Post[] = []
 
-  constructor(postSVC: PostService){
+  constructor(private postSVC: PostService){}
 
-    // postSVC.getAllPost()
-    // .then(posts => this.posts = posts);
-
-    postSVC.getNewPosts().forEach(el => this.newPosts.push(el))
-
+  ngOnInit(): void {
+   this.newPosts = this.postSVC.getNewPosts();
   }
 
-}
+  changeColor(type:string):string{
+
+    let color:string = '';
+
+    switch(type){
+
+      case 'news':
+      color = 'yellow';
+      break;
+      case 'politic':
+        color = 'blue';
+      break;
+      case 'education':
+        color = 'green';
+      break;
+    }
+    return color;
+  }
+  }
