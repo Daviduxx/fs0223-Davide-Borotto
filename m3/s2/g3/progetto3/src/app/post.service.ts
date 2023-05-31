@@ -7,9 +7,9 @@ import { Post } from './post';
 
 export class PostService {
 
-  API:string = "assets/db.json";
+  // API:string = "assets/db.json";
 
-  newPostsArray:Post[] = [
+  private newPostsArray:Post[] = [
     {
       userId: 1,
       id: 1,

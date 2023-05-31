@@ -9,7 +9,7 @@ import { PostService } from 'src/app/post.service';
 })
 export class DisactivatedComponent {
 
-  Posts:Post[] = [];
+  // Posts:Post[] = [];
   newPosts:Post[] = []
 
   constructor(private postSVC: PostService){
