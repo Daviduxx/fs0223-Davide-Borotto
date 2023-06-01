@@ -1,9 +1,15 @@
 <p>Loading...</p>
 <p>Al momento hai completato i seguenti tasks:</p>
 
-<ul>
-  <li *ngFor="let todo of allTodos" >{{ todo.title}}<button>COMPLETATO</button></li>
-</ul>
+
+  <div *ngFor="let todo of allTodos">
+    <ng-container *ngIf="todo.completed">
+      <p>{{ todo.title }}</p>
+    </ng-container>
+    <ng-container *ngIf="!todo.completed"></ng-container>
+  </div>
+
+
 
 <input [(ngModel)]="todo.title" type="text" placeholder="Cosa devi fare?">
 <button (click)="create()">CREA</button>
