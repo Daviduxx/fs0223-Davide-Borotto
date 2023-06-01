@@ -1,8 +1,8 @@
 <p>Loading...</p>
 <p>I tuoi todos:</p>
-
+<p *ngIf="allTodos.length == 0">Non hai tasks al momento</p>
 <ul>
-  <li *ngFor="let todo of allTodos">{{todo.title}}</li><button>COMPLETATO</button>
+  <li *ngFor="let todo of allTodos">{{todo.title}}<button>COMPLETATO</button></li>
 </ul>
 
 <input [(ngModel)]="todo.title" type="text" placeholder="Cosa devi fare?">
