@@ -1,3 +1,9 @@
-<p>todos works!</p>
+<p>Loading...</p>
+<p>I tuoi todos:</p>
 
-{{allTodos | json}}
+<ul>
+  <li *ngFor="let todo of allTodos">{{todo.title}}</li>
+</ul>
+
+<input [(ngModel)]="todo.title" type="text" placeholder="Cosa devi fare?">
+<button (click)="create()">CREA</button>

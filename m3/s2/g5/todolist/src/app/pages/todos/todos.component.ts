@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ITodo } from 'src/app/Models/i-todo';
+import { Todo } from 'src/app/Models/todo';
 import { TodolistService } from 'src/app/todolist.service';
 
 @Component({
@@ -10,11 +11,18 @@ import { TodolistService } from 'src/app/todolist.service';
 export class TodosComponent implements OnInit{
 
   allTodos:ITodo[] = [];
+
+  todo:Todo = new Todo('')
   constructor(private todoSVC:TodolistService){}
 
   ngOnInit(){
 
     this.todoSVC.getTodos().then(todo => this.allTodos = todo);
+
+  }
+
+  create(){
+    this.todoSVC.addTodo(this.todo).then(res => console.log(res));
 
   }
 
