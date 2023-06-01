@@ -1,6 +1,6 @@
-<p>Loading...</p>
-<p>I tuoi todos:</p>
-<p *ngIf="allTodos.length == 0">Non hai tasks al momento</p>
+<p *ngIf="allTodos.length == 0 && loading">Loading...</p>
+<p *ngIf="allTodos.length != 0 && !loading">I tuoi todos:</p>
+<p *ngIf="allTodos.length == 0 && !loading">Non hai tasks al momento</p>
 <ul>
   <li *ngFor="let todo of allTodos">{{todo.title}}<button>COMPLETATO</button></li>
 </ul>

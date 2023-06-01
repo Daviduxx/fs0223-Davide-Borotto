@@ -11,6 +11,7 @@ import { TodolistService } from 'src/app/todolist.service';
 export class TodosComponent implements OnInit{
 
   allTodos:ITodo[] = [];
+  loading:boolean = true;
 
   todo:Todo = new Todo('')
   constructor(private todoSVC:TodolistService){}
@@ -28,8 +29,9 @@ export class TodosComponent implements OnInit{
   }
 
   getTodos(){
-    this.todoSVC.getTodos().then(todo => this.allTodos = todo);
-
+    this.todoSVC.getTodos().then(todo => {
+      this.allTodos = todo;
+      this.loading = false;
   }
-
+)}
 }
