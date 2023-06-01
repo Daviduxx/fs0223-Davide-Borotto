@@ -16,13 +16,19 @@ export class TodosComponent implements OnInit{
   constructor(private todoSVC:TodolistService){}
 
   ngOnInit(){
-
-    this.todoSVC.getTodos().then(todo => this.allTodos = todo);
+    this.getTodos()
 
   }
 
   create(){
-    this.todoSVC.addTodo(this.todo).then(res => console.log(res));
+    this.todoSVC.addTodo(this.todo).then(res => {
+      console.log(res);
+      this.getTodos()
+    });
+  }
+
+  getTodos(){
+    this.todoSVC.getTodos().then(todo => this.allTodos = todo);
 
   }
 
