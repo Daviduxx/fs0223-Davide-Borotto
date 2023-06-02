@@ -20,7 +20,7 @@ export class TodosComponent implements OnInit{
     this.getTodos()
   }
 
-  create(){
+  create():void{
     this.loading = true;
     this.todoSVC.addTodo(this.todo).then(res => {
       console.log(res);
@@ -28,14 +28,14 @@ export class TodosComponent implements OnInit{
     });
   }
 
-  getTodos(){
+  getTodos():void{
     this.todoSVC.getTodos().then(todo => {
       this.allTodos = todo;
       this.loading = false;
   }
 )}
 
-  update(todo:any){
+  update(todo:any):void{
     todo.completed = true;
     this.todoSVC.updateTodo(todo).then(res => console.log(res))
     console.log(todo);

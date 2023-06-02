@@ -8,12 +8,14 @@ import { CompletedComponent } from './pages/completed/completed.component';
 import { MenuComponent } from './pages/menu/menu.component';
 import { FormsModule } from '@angular/forms';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     TodosComponent,
     CompletedComponent,
-    MenuComponent
+    MenuComponent,
+
   ],
   imports: [
     BrowserModule,

@@ -16,19 +16,19 @@ export class CompletedComponent implements OnInit {
   todo:Todo = new Todo('')
   constructor(private todoSVC:TodolistService){}
 
-  ngOnInit(){
+  ngOnInit():void{
     this.getTodos()
 
   }
 
-  create(){
+  create():void{
     this.todoSVC.addTodo(this.todo).then(res => {
       console.log(res);
       this.getTodos()
     });
   }
 
-  getTodos(){
+  getTodos():void{
     this.todoSVC.getTodos().then(todo => {
       this.allTodos = todo;
       this.loading = false;
@@ -36,7 +36,7 @@ export class CompletedComponent implements OnInit {
 
 }
 
-deleteTodo(todo:any){
+deleteTodo(todo:ITodo):void{
   this.loading = true;
   console.log('eliminazione in corso');
   this.todoSVC.deletePizza(todo).then(res => {

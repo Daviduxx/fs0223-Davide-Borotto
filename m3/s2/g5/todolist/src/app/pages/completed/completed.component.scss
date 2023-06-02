@@ -3,7 +3,6 @@
 
 #completedContainer{
   font-family: 'Poppins', sans-serif;
-
   h3{
     font-size: 1rem;
     color: white;
@@ -11,12 +10,10 @@
     font-weight: 400;
     text-transform: uppercase;
   }
-
 .completedTask{
     display: flex;
     justify-content: space-between;
     margin-top: 40px;
-    border: 2px solid white;
     color: white;
     padding: 10px;
     align-items: center;
@@ -26,7 +23,6 @@
       white-space: nowrap;
       text-overflow: ellipsis;
     }
-
     button{
       background-color: transparent;
       border: none;
@@ -43,6 +39,8 @@
   }
 }
 
+
+// SPINNER
 @keyframes spin {
   from {
     transform: rotate(0);
