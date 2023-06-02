@@ -1,13 +1,37 @@
-<p>Loading...</p>
-<p>Al momento hai completato i seguenti tasks:</p>
+<div id="completedContainer">
 
-
-  <div *ngFor="let todo of allTodos">
-    <ng-container *ngIf="todo.completed">
-      <p>{{ todo.title }}</p><button (click)="deleteTodo(todo)">EliminA</button>
-    </ng-container>
-    <ng-container *ngIf="!todo.completed"></ng-container>
+  <div class="spinner-box" *ngIf="allTodos.length == 0 && loading">
+    <div class="circle-border">
+      <div class="circle-core"></div>
+    </div>
   </div>
+
+  <h3 *ngIf="allTodos.length != 0 && !loading">Al momento hai completato i seguenti tasks:</h3>
+  <h3 *ngIf="allTodos.length == 0 && !loading">Al momento non hai completato nessuna task</h3>
+
+    <div >
+
+      <div *ngFor="let todo of allTodos" class="completedTask">
+        <div>
+          <ng-container *ngIf="todo.completed">
+            <p>{{ todo.title }}</p>
+          </ng-container>
+        </div>
+        <div>
+          <ng-container *ngIf="todo.completed">
+            <button (click)="deleteTodo(todo)"><i class="bi bi-trash3-fill"></i></button>
+          </ng-container>
+        </div>
+        <ng-container *ngIf="!todo.completed"></ng-container>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+
 
 
 

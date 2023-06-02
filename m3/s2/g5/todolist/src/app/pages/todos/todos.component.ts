@@ -21,6 +21,7 @@ export class TodosComponent implements OnInit{
   }
 
   create(){
+    this.loading = true;
     this.todoSVC.addTodo(this.todo).then(res => {
       console.log(res);
       this.getTodos()
