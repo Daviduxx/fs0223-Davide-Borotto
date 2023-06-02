@@ -1,6 +1,13 @@
 <div id="completedContainer">
 
   <div class="spinner-box" *ngIf="allTodos.length == 0 && loading">
+    <p>Sto caricando i TODO completati!</p>
+    <div class="circle-border">
+      <div class="circle-core"></div>
+    </div>
+  </div>
+  <div class="spinner-box" *ngIf="allTodos.length != 0 && loading">
+    <p>Sto eliminando il TODO selezionato!</p>
     <div class="circle-border">
       <div class="circle-core"></div>
     </div>
@@ -12,7 +19,7 @@
     <div >
 
       <div *ngFor="let todo of allTodos" class="completedTask">
-        <div>
+        <div class="completedTaskP">
           <ng-container *ngIf="todo.completed">
             <p>{{ todo.title }}</p>
           </ng-container>

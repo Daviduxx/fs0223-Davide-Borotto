@@ -37,6 +37,7 @@ export class CompletedComponent implements OnInit {
 }
 
 deleteTodo(todo:any){
+  this.loading = true;
   console.log('eliminazione in corso');
   this.todoSVC.deletePizza(todo).then(res => {
     console.log(res)
