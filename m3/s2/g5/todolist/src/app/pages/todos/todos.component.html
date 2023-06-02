@@ -28,7 +28,7 @@
     <div class="todoTitle">{{todo.title}}</div>
     <div>
       <button (click)="update(todo)" class="btn btn-slide">
-        <i class="bi bi-check-square-fill"></i>
+        <i class="bi bi-check-square-fill" [ngClass]="{'green': todo.completed}"></i>
       </button>
     </div>
   </div>
