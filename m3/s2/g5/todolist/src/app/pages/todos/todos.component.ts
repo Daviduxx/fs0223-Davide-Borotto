@@ -34,14 +34,6 @@ export class TodosComponent implements OnInit{
   }
 )}
 
-
-
-  completed(todo:any){
-    console.log((todo));
-    todo.completed = true;
-    console.log((todo));
-  }
-
   update(todo:any){
     todo.completed = true;
     this.todoSVC.updateTodo(todo).then(res => console.log(res))

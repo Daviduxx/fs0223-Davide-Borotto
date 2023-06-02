@@ -30,4 +30,11 @@ export class TodolistService {
       body: JSON.stringify(todo)
     }).then(response => response.json());
   }
+
+  deletePizza(todo:ITodo){
+    return fetch(this.APIURL +'/' + todo.id,{
+      method:'DELETE',
+    }).then(response => response.json());
+  }
+
 }

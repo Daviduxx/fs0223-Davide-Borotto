@@ -11,6 +11,7 @@ import { TodolistService } from 'src/app/todolist.service';
 export class CompletedComponent implements OnInit {
 
   allTodos:ITodo[] = [];
+  loading:boolean = true;
 
   todo:Todo = new Todo('')
   constructor(private todoSVC:TodolistService){}
@@ -28,7 +29,19 @@ export class CompletedComponent implements OnInit {
   }
 
   getTodos(){
-    this.todoSVC.getTodos().then(todo => this.allTodos = todo);
+    this.todoSVC.getTodos().then(todo => {
+      this.allTodos = todo;
+      this.loading = false;
+  })
 
+}
+
+deleteTodo(todo:any){
+  console.log('eliminazione in corso');
+  this.todoSVC.deletePizza(todo).then(res => {
+    console.log(res)
+    console.log('eliminazione completata');
+    this.ngOnInit()
+  });
 }
 }

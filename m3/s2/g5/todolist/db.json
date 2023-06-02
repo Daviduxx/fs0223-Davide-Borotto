@@ -1,16 +1,6 @@
 {
   "todo": [
     {
-      "id": 1,
-      "title": "lorem ipsum",
-      "completed": true
-    },
-    {
-      "title": "fvafd",
-      "completed": true,
-      "id": 2
-    },
-    {
       "title": "fvafd",
       "completed": true,
       "id": 3
@@ -24,26 +14,6 @@
       "completed": true,
       "title": "dfbdfb",
       "id": 5
-    },
-    {
-      "completed": true,
-      "title": "dfbdfb",
-      "id": 6
-    },
-    {
-      "completed": true,
-      "title": "aaaaaaaaaa",
-      "id": 7
-    },
-    {
-      "completed": true,
-      "title": "ssssssss",
-      "id": 8
-    },
-    {
-      "completed": true,
-      "title": "dddddd",
-      "id": 9
     },
     {
       "completed": false,
@@ -79,16 +49,6 @@
       "completed": false,
       "title": "zzzzz",
       "id": 16
-    },
-    {
-      "completed": true,
-      "title": "completato",
-      "id": 17
-    },
-    {
-      "completed": true,
-      "title": "completato1",
-      "id": 18
     }
   ]
 }

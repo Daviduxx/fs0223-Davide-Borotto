@@ -4,12 +4,10 @@
 
   <div *ngFor="let todo of allTodos">
     <ng-container *ngIf="todo.completed">
-      <p>{{ todo.title }}</p>
+      <p>{{ todo.title }}</p><button (click)="deleteTodo(todo)">EliminA</button>
     </ng-container>
     <ng-container *ngIf="!todo.completed"></ng-container>
   </div>
 
 
 
-<input [(ngModel)]="todo.title" type="text" placeholder="Cosa devi fare?">
-<button (click)="create()">CREA</button>
