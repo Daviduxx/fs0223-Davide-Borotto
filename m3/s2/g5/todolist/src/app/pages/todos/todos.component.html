@@ -1,7 +1,19 @@
 
 <div id="todosContainer">
 
-  <p *ngIf="allTodos.length == 0 && loading">Loading...</p>
+  <!-- <p *ngIf="allTodos.length == 0 && loading">Loading...</p> -->
+
+
+  <div *ngIf="allTodos.length == 0 && loading">
+
+    <div class="spinner-box">
+      <div class="circle-border">
+        <div class="circle-core"></div>
+      </div>
+    </div>
+
+  </div>
+
   <h2 *ngIf="allTodos.length != 0 && !loading">I tuoi todos:</h2>
 <p *ngIf="allTodos.length == 0 && !loading">Non hai tasks al momento</p>
 
