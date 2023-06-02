@@ -81,12 +81,12 @@
       "id": 16
     },
     {
-      "completed": false,
+      "completed": true,
       "title": "completato",
       "id": 17
     },
     {
-      "completed": false,
+      "completed": true,
       "title": "completato1",
       "id": 18
     }

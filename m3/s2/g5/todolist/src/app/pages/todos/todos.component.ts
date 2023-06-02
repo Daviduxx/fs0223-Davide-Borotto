@@ -18,7 +18,6 @@ export class TodosComponent implements OnInit{
 
   ngOnInit(){
     this.getTodos()
-
   }
 
   create(){
@@ -35,14 +34,19 @@ export class TodosComponent implements OnInit{
   }
 )}
 
+
+
   completed(todo:any){
     console.log((todo));
     todo.completed = true;
     console.log((todo));
   }
 
-  update(){
-    this.todo.completed == true;
-    this.todoSVC.updateTodo(this.todo).then(res => console.log(res))
+  update(todo:any){
+    todo.completed = true;
+    this.todoSVC.updateTodo(todo).then(res => console.log(res))
+    console.log(todo);
+
+
   }
 }

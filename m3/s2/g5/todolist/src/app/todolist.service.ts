@@ -22,7 +22,6 @@ export class TodolistService {
     }).then(res => res.json())
   }
 
-  // aggiungere chiamata put per rendere todo completed == true
 
   updateTodo(todo:ITodo){
     return fetch(this.APIURL + '/' + todo.id,{
