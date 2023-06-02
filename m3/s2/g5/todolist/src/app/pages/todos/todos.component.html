@@ -1,9 +1,24 @@
-<p *ngIf="allTodos.length == 0 && loading">Loading...</p>
-<p *ngIf="allTodos.length != 0 && !loading">I tuoi todos:</p>
-<p *ngIf="allTodos.length == 0 && !loading">Non hai tasks al momento</p>
-<ul>
-  <li *ngFor="let todo of allTodos">{{todo.title}}<button (click)="update(todo)">COMPLETATO</button></li>
-</ul>
 
-<input [(ngModel)]="todo.title" type="text" placeholder="Cosa devi fare?">
-<button (click)="create()">CREA</button>
+<div id="todosContainer">
+
+  <p *ngIf="allTodos.length == 0 && loading">Loading...</p>
+  <h2 *ngIf="allTodos.length != 0 && !loading">I tuoi todos:</h2>
+<p *ngIf="allTodos.length == 0 && !loading">Non hai tasks al momento</p>
+
+<div id="todoList">
+
+  <div *ngFor="let todo of allTodos" class="flexList">
+    <div class="todoTitle">{{todo.title}}</div>
+    <div><button (click)="update(todo)">COMPLETATO</button></div>
+  </div>
+</div>
+<!-- <ul id="todoList">
+  <li *ngFor="let todo of allTodos">{{todo.title}}<button (click)="update(todo)">COMPLETATO</button></li>
+</ul> -->
+<div id="inputContainer">
+  <input [(ngModel)]="todo.title" type="text" placeholder="Cosa devi fare?"><br>
+  <button (click)="create()">CREA</button>
+</div>
+
+
+</div>

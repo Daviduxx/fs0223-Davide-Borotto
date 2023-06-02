@@ -3,17 +3,7 @@
     {
       "title": "fvafd",
       "completed": true,
-      "id": 3
-    },
-    {
-      "title": "fvafd",
-      "completed": true,
       "id": 4
-    },
-    {
-      "completed": true,
-      "title": "dfbdfb",
-      "id": 5
     },
     {
       "completed": false,
@@ -36,17 +26,17 @@
       "id": 13
     },
     {
-      "completed": false,
+      "completed": true,
       "title": "lllllllll",
       "id": 14
     },
     {
-      "completed": false,
+      "completed": true,
       "title": "òòòòòòòòò",
       "id": 15
     },
     {
-      "completed": false,
+      "completed": true,
       "title": "zzzzz",
       "id": 16
     }

@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+#flexContainer{
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+
+  align-items: center;
+  #mainContainer{
+    min-height: 600px;
+    border: 2px solid grey;
+    padding: 40px;
+    border-radius: 10px;
+  }
+}
