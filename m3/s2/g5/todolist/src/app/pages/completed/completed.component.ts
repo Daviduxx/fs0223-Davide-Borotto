@@ -38,10 +38,7 @@ export class CompletedComponent implements OnInit {
 
 deleteTodo(todo:ITodo):void{
   this.loading = true;
-  console.log('eliminazione in corso');
   this.todoSVC.deletePizza(todo).then(res => {
-    console.log(res)
-    console.log('eliminazione completata');
     this.ngOnInit()
   });
 }

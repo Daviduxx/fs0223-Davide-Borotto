@@ -1,19 +1,19 @@
 {
   "todo": [
     {
-      "completed": false,
+      "completed": true,
       "title": "lorem ippsuuuuuuuuuuummmmmmm",
       "id": 2
     },
     {
-      "completed": false,
-      "title": "lorem ippsuuuuuuuuuuummmmmmm",
-      "id": 3
+      "completed": true,
+      "title": "lorem lorem lorem lorem lorem lorem",
+      "id": 5
     },
     {
       "completed": false,
-      "title": "oiuygoiuygoiuygvoiuvy",
-      "id": 4
+      "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ",
+      "id": 6
     }
   ]
 }
