@@ -1,14 +1,29 @@
 <p>template-driven works!</p>
 
 <div class="container">
-  <div class="row">
-    <div class="col">
+  <div class="row justify-content-center">
+    <div class="col-6">
 
       <h1 class="text-center">Template Driven Form</h1>
 
       <form>
         <label for="nome" class="form-label">Nome:</label>
         <input type="text" class="form-control" required id="nome">
+
+        <label for="alterEgo" class="form-label">alterEgo:</label>
+        <input type="text" class="form-control" required id="alterEgo">
+
+        <label for="power" class="form-label">power:</label>
+        <input type="text" class="form-control" required id="power">
+
+        <label for="enemy" class="form-label">enemy:</label>
+        <input type="text" class="form-control" id="enemy" maxlength="10">
+
+        <label for="planet" class="form-label">planet:</label>
+        <input type="text" class="form-control" required id="planet" minlength="5">
+
+        <label for="weakness" class="form-label">weakness:</label>
+        <input type="text" class="form-control" required id="weakness">
       </form>
     </div>
   </div>
