@@ -23,7 +23,7 @@ export class TodolistService {
   }
 
 
-  updateTodo(todo:ITodo){
+  updateTodo(todo:ITodo):Promise<ITodo>{
     return fetch(this.APIURL + '/' + todo.id,{
       method:'PUT',
       headers: {'Content-Type': 'application/json'},
@@ -31,7 +31,7 @@ export class TodolistService {
     }).then(response => response.json());
   }
 
-  deletePizza(todo:ITodo){
+  deletePizza(todo:ITodo):Promise<ITodo>{
     return fetch(this.APIURL +'/' + todo.id,{
       method:'DELETE',
     }).then(response => response.json());
