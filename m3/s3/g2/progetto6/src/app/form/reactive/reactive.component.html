@@ -6,32 +6,30 @@
 
       <h1 class="text-center">Reactive Form</h1>
 
-      <form [formGroup]="form">
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
         <label for="nome" class="form-label">Nome:</label>
-        <input type="text" class="form-control" id="nome" name="nome">
+        <input type="text" class="form-control" id="nome" name="nome" formControlName="nome">
 
         <label for="alterEgo" class="form-label">alterEgo:</label>
-        <input type="text" class="form-control" id="alterEgo" name="alterEgo">
+        <input type="text" class="form-control" id="alterEgo" name="alterEgo" formControlName="alterEgo">
 
         <label for="power" class="form-label">power:</label>
 
 
-        <select name="power" id="power" class="form-control">
-          <option value="type">capire typescript</option>
-          <option value="angular">capire angular</option>
-          <option value="react">capire react</option>
+        <select name="power" id="power" class="form-control" formControlName="power">
+          <option *ngFor="let power of powers, let i = index" [value]="i">{{power}}</option>
         </select>
 
         <label for="enemy" class="form-label">enemy:</label>
-        <input type="text" class="form-control" id="enemy" maxlength="10" name="enemy">
+        <input type="text" class="form-control" id="enemy" maxlength="10" name="enemy" formControlName="enemy">
 
         <label for="planet" class="form-label">planet:</label>
-        <input type="text" class="form-control" id="planet" name="planet" minlength="5">
+        <input type="text" class="form-control" id="planet" name="planet" minlength="5" formControlName="planet">
 
         <label for="weakness" class="form-label">weakness:</label>
-        <input type="text" class="form-control" id="weakness" name="weakness">
+        <input type="text" class="form-control" id="weakness" name="weakness" formControlName="weakness">
 
-        <button class="btn btn-primary">SUBMIT</button>
+        <button class="btn btn-primary" [disabled]="!form.valid">SUBMIT</button>
       </form>
     </div>
   </div>
