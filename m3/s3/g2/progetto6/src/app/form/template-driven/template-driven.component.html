@@ -6,24 +6,33 @@
 
       <h1 class="text-center">Template Driven Form</h1>
 
-      <form>
+      <form #form="ngForm" (ngSubmit)="onSubmit(form)">
         <label for="nome" class="form-label">Nome:</label>
-        <input type="text" class="form-control" required id="nome">
+        <input type="text" class="form-control" id="nome" name="nome" ngModel required="">
 
         <label for="alterEgo" class="form-label">alterEgo:</label>
-        <input type="text" class="form-control" required id="alterEgo">
+        <input type="text" class="form-control" required id="alterEgo" name="alterEgo" ngModel>
 
         <label for="power" class="form-label">power:</label>
-        <input type="text" class="form-control" required id="power">
+        <!-- Input tipo testo -->
+        <!-- <input type="text" class="form-control" required id="power" name="power" ngModel> -->
+
+        <select name="power" id="power" class="form-control" ngModel required="">
+          <option value="type">capire typescript</option>
+          <option value="angular">capire angular</option>
+          <option value="react">capire react</option>
+        </select>
 
         <label for="enemy" class="form-label">enemy:</label>
-        <input type="text" class="form-control" id="enemy" maxlength="10">
+        <input type="text" class="form-control" id="enemy" maxlength="10" name="enemy" ngModel>
 
         <label for="planet" class="form-label">planet:</label>
-        <input type="text" class="form-control" required id="planet" minlength="5">
+        <input type="text" class="form-control" required id="planet" name="planet" minlength="5" ngModel>
 
         <label for="weakness" class="form-label">weakness:</label>
-        <input type="text" class="form-control" required id="weakness">
+        <input type="text" class="form-control" required id="weakness" name="weakness" ngModel>
+
+        <button class="btn btn-primary" [disabled]="!form.valid">SUBMIT</button>
       </form>
     </div>
   </div>
