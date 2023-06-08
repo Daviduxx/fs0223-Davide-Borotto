@@ -17,7 +17,7 @@ export class SignupComponent {
   }
 
   register(){
-    this.AuthSVC.signup(this.userData).subscribe(reg => console.log(reg.user, reg.accessToken))
+    this.AuthSVC.signup(this.userData).subscribe(reg => console.log(reg.user))
 
   }
 }

@@ -1,3 +1,14 @@
 {
-  "users": []
+  "users": [
+    {
+      "email": "xilyw@mailinator.com",
+      "password": "$2a$10$j/Swogw8i.Ywv1IKgIq04.OpueEcypKmtVJRAKPWYQtsarYoZAZLi",
+      "id": 1
+    },
+    {
+      "email": "puqo@mailinator.com",
+      "password": "$2a$10$QkmPVrzqjxBlKouMux4xIeyK5yjiSs4b1Z9gLyatPiAIN.zBAAGsu",
+      "id": 2
+    }
+  ]
 }
