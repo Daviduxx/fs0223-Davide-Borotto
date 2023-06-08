@@ -1,1 +1,17 @@
-<p>signup works!</p>
+
+<form>
+  <div class="mb-3">
+
+    <label class="form-label">Email address</label>
+    <input type="email" class="form-control" placeholder="Email" [(ngModel)]="userData.email">
+
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Password</label>
+    <input type="password" class="form-control" placeholder="password" [(ngModel)]="userData.password">
+  </div>
+
+
+  <button  class="btn btn-primary" (click)="register()">Registrati</button>
+</form>
