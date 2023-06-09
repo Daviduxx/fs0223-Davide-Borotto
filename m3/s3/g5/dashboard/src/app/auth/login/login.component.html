@@ -10,17 +10,17 @@
     <div class="col"></div>
       <div class="col-6">
 
-        <form>
+        <form [formGroup]="loginForm">
 
           <div>
           <label for="nome">Nome:</label>
-          <input class="form-control mb-3"  type="text" name="nome" placeholder="Insersci il tuo nome" >
+          <input class="form-control mb-3"  type="text" name="nome" placeholder="Insersci il tuo nome"  formControlName="nome">
           <label for="cognome">Cogome:</label>
-          <input class="form-control mb-3" type="text" name="cognome" placeholder="Insersci il tuo cognome">
+          <input class="form-control mb-3" type="text" name="cognome" placeholder="Insersci il tuo cognome" formControlName="cognome">
           <label for="email">Idirizzo e-mail:</label>
-          <input class="form-control mb-3" type="email" name="email" placeholder="Insersci la tua email">
+          <input class="form-control mb-3" type="email" name="email" placeholder="Insersci la tua email" formControlName="email">
           <label for="password">Password:</label>
-          <input class="form-control mb-3" type="password" name="password" placeholder="Insersci la password">
+          <input class="form-control mb-3" type="password" name="password" placeholder="Insersci la password" formControlName="password">
 
           </div>
 

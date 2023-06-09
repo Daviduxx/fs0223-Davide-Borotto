@@ -23,6 +23,7 @@ export class AuthService {
   user$ = this.authSubject.asObservable();
   isLoggedIn$ = this.user$.pipe(map(u => Boolean(u)))
   authLogoutTimer:any;
+  router: any;
   constructor( private http:HttpClient) { }
 
   signup(datiUser:FormGroup){
@@ -40,6 +41,15 @@ export class AuthService {
     }),
 
     )
+  }
+
+  logout(){
+    this.authSubject.next(null);
+    localStorage.removeItem('user');
+    this.router.navigate(['/login']);
+    if(this.authLogoutTimer){
+      clearTimeout(this.authLogoutTimer);
+    }
   }
 
   getPost(){

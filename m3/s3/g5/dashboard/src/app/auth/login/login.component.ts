@@ -27,10 +27,10 @@ export class LoginComponent implements OnInit{
   }
 
   login(){
-    this.AuthSVC.login(this.loginForm)
-    .subscribe(u => {
+    this.AuthSVC.login(this.loginForm.value).subscribe(u => {
       console.log(u);
-
+      this.loginForm.reset();
+      this.router.navigate(['auth/dashboard'])
     })
   }
 
