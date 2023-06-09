@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { JwtHelperService } from '@auth0/angular-jwt';
-import { BehaviorSubject, map } from 'rxjs';
+import { BehaviorSubject, map, tap } from 'rxjs';
 import { environment } from 'src/environments/environment.development';
 import { IUser } from './interfaces/i-user';
 import { HttpClient } from '@angular/common/http';
@@ -18,29 +18,29 @@ export class AuthService {
   APIURL = environment.APIURL;
   POSTAPI = environment.POSTAPI;
 
-  private authSubject = new BehaviorSubject<null | IUser>(null);
+  private authSubject = new BehaviorSubject<null | IAuthData>(null);
 
   user$ = this.authSubject.asObservable();
   isLoggedIn$ = this.user$.pipe(map(u => Boolean(u)))
-
+  authLogoutTimer:any;
   constructor( private http:HttpClient) { }
 
   signup(datiUser:FormGroup){
     return this.http.post<IUser>(this.APIURL + '/signup', datiUser)
   }
 
-  // login(data:LoginData){
-  //   return this.http.post<AccessData>(this.apiUrl + '/login', data)
-  //   .pipe(tap(data =>{
-  //     this.authSubject.next(data);
-  //     localStorage.setItem('user', JSON.stringify(data))
+  login(data:FormGroup){
+    return this.http.post<IAuthData>(this.APIURL + '/login', data)
+    .pipe(tap(data =>{
+      this.authSubject.next(data);
+      localStorage.setItem('user', JSON.stringify(data))
 
-  //     const expDate = this.jwtHelper
-  //     .getTokenExpirationDate(data.accessToken) as Date;
-  //   }),
-  //     //catchError()
-  //   )
-  // }
+      const expDate = this.jwtHelper
+      .getTokenExpirationDate(data.accessToken) as Date;
+    }),
+
+    )
+  }
 
   getPost(){
     return this.http.get<IPost[]>(this.POSTAPI)

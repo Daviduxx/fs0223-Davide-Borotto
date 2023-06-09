@@ -20,6 +20,13 @@
       "nome": "Est in atque nulla e",
       "cognome": "Aut quis dolor tempo",
       "id": 3
+    },
+    {
+      "email": "ciao@ciao",
+      "password": "$2a$10$vHL48LDnPe2o3co86VAQyu6UW4uOXRzqWdKei0jgRBYTl/JVkpcNK",
+      "nome": "ciao",
+      "cognome": "ciao",
+      "id": 4
     }
   ],
   "post": [
