@@ -15,6 +15,7 @@
   </header>
 
   <div class="row">
+    <div class="col"></div>
     <div class="col-6">
       <h2>SCRIVI UN POST!</h2>
 
@@ -27,20 +28,21 @@
       </form>
 
     </div>
+    <div class="col"></div>
   </div>
 
-  <div class="row">
-    <div class="col-12 col-md-6 col-lg-3">
-      <div *ngFor="let post of postArr; let i = index" class="card" style="width: 18rem;">
+  <div class="row my-5">
+    <h2>I tuoi post:</h2>
+      <div *ngFor="let post of postArr; let i = index" class="card col-12 col-md-6 col-lg-3 m-3">
         <div class="card-body">
           <h5 class="card-title">{{post.title}}</h5>
           <h6 class="card-subtitle mb-2 text-body-secondary">{{post.subtitle}}</h6>
           <p class="card-text">{{post.content}}</p>
-          <button class="btn btn-primary" (click)="changeForm(i)">Modifica</button>
+          <button class="btn btn-primary me-3" (click)="changeForm(i)">Modifica</button>
           <button class="btn btn-danger" (click)="delete(post.id, i)">Elimina</button>
         </div>
       </div>
-    </div>
+
   </div>
 </div>
 

@@ -35,6 +35,7 @@ export class DashboardComponent {
         console.log(p);
 
         this.ngOnInit()
+        //CAMBIARE E METTERE ARRAY.PUSH
       })
     }
 

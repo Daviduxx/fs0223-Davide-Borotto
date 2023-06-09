@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { JwtHelperService } from '@auth0/angular-jwt';
-import { BehaviorSubject, map, tap } from 'rxjs';
+import { BehaviorSubject, catchError, map, tap } from 'rxjs';
 import { environment } from 'src/environments/environment.development';
 import { IUser } from './interfaces/i-user';
 import { HttpClient } from '@angular/common/http';
@@ -39,9 +39,11 @@ export class AuthService {
       const expDate = this.jwtHelper
       .getTokenExpirationDate(data.accessToken) as Date;
     }),
-
+    //catchError()
     )
   }
+
+
 
   logout(){
     this.authSubject.next(null);
@@ -51,6 +53,11 @@ export class AuthService {
       clearTimeout(this.authLogoutTimer);
     }
   }
+
+
+
+
+  // CRUD DA SPOSTARE
 
   getPost(){
     return this.http.get<IPost[]>(this.POSTAPI)
