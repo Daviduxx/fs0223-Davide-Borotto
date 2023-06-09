@@ -2,6 +2,7 @@ import { ISignup } from './../interfaces/i-signup';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -12,7 +13,7 @@ export class SignupComponent implements OnInit{
 
   form!:FormGroup;
 
-  constructor( private fb:FormBuilder, private AuthSVC:AuthService){}
+  constructor( private fb:FormBuilder, private AuthSVC:AuthService, private router: Router){}
 
     userData:ISignup = {
       nome: '',
@@ -38,6 +39,7 @@ export class SignupComponent implements OnInit{
     this.AuthSVC.signup(this.form.value).subscribe(reg => {
       console.log(reg);
       this.form.reset();
+      this.router.navigate(['auth/dashboard'])
     }
     )
   }

@@ -6,6 +6,40 @@
       "nome": "Et in veniam dolore",
       "cognome": "Explicabo Nobis per",
       "id": 1
+    },
+    {
+      "email": "hija@mailinator.com",
+      "password": "$2a$10$mN342MaGsVrtwvxDOduxaeyYQFyqTZtmyMuw3GxH2QJfc9Z3QCeH6",
+      "nome": "Laborum temporibus e",
+      "cognome": "Lorem beatae omnis e",
+      "id": 2
+    },
+    {
+      "email": "mylu@mailinator.com",
+      "password": "$2a$10$WUQE5zIeximpmim86mC92OfZ3PernRPwRYw2ZO0kOKDAhD5qhJFby",
+      "nome": "Est in atque nulla e",
+      "cognome": "Aut quis dolor tempo",
+      "id": 3
+    }
+  ],
+  "post": [
+    {
+      "title": "Laudantium sit omni",
+      "subtitle": "Numquam voluptatem ",
+      "content": "Ut dolor molestiae fffffffffffff",
+      "id": 1
+    },
+    {
+      "title": "Natus itaque autem i",
+      "subtitle": "Et consequatur Inve",
+      "content": "Voluptate temporibus",
+      "id": 2
+    },
+    {
+      "title": "Ad laboris soluta es",
+      "subtitle": "Dolores et minus ex ",
+      "content": "Deserunt eum quam mo",
+      "id": 3
     }
   ]
 }

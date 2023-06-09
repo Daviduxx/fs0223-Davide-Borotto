@@ -1,0 +1,47 @@
+
+
+
+<div class="container">
+
+  <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+      <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+      <span class="fs-4">Benvenuto</span>
+    </a>
+
+    <ul class="nav nav-pills">
+      <li class="nav-item"><button class="btn btn-danger">Logout</button></li>
+    </ul>
+  </header>
+
+  <div class="row">
+    <div class="col-6">
+      <h2>SCRIVI UN POST!</h2>
+
+      <form [formGroup]="postForm">
+        <input class="form-control" type="text" placeholder="Insersci il titolo" formControlName="title"><br>
+        <input class="form-control" type="text"  placeholder="Insersci il sottotitolo" formControlName="subtitle"><br>
+        <input class="form-control" type="text"  placeholder="Insersci il contenuto" formControlName="content"><br>
+        <button class="btn btn-primary" *ngIf="!changeMod" (click)="write()">INVIA</button>
+        <button class="btn btn-primary" *ngIf="changeMod" (click)="change()">MODIFICA</button>
+      </form>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12 col-md-6 col-lg-3">
+      <div *ngFor="let post of postArr; let i = index" class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">{{post.title}}</h5>
+          <h6 class="card-subtitle mb-2 text-body-secondary">{{post.subtitle}}</h6>
+          <p class="card-text">{{post.content}}</p>
+          <button class="btn btn-primary" (click)="changeForm(i)">Modifica</button>
+          <button class="btn btn-danger" (click)="delete(post.id, i)">Elimina</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
