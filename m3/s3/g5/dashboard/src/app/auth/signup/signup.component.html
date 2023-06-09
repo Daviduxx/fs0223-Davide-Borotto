@@ -1,0 +1,18 @@
+
+<h1>Registrati!</h1>
+
+<form [formGroup]="form">
+
+  <div>
+
+    <input type="text" name="nome" placeholder="Insersci il tuo nome" formControlName="nome"><br>
+  <input type="text" name="cognome" placeholder="Insersci il tuo cognome" formControlName="cognome"><br>
+  <input type="email" name="email" placeholder="Insersci la tua email" formControlName="email"><br>
+  <input type="password" name="password" placeholder="Insersci la password" formControlName="password"><br>
+
+  </div>
+
+
+  <button (click)="register()">REGISTRATI!</button>
+
+</form>
