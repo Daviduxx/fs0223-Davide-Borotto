@@ -21,7 +21,7 @@ export class CrudService {
   }
 
   deletePost(id:number){
-    return this.http.delete(this.POSTAPI + '/' + id)
+    return this.http.delete<IPost>(this.POSTAPI + '/' + id)
   }
 
   changePost(id:number, changedPost:IPost){

@@ -70,6 +70,10 @@ export class AuthService {
       return;
     }
     this.authSubject.next(user);
+  }
+
+  getErrors(){
+
 
   }
 }

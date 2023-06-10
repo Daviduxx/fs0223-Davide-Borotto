@@ -29,24 +29,5 @@
       "id": 4
     }
   ],
-  "post": [
-    {
-      "title": "Blanditiis et omnis ",
-      "subtitle": "Dolor ut sed digniss",
-      "content": "Quo architecto aut s",
-      "id": 1
-    },
-    {
-      "title": "Eiusmod temporibus d",
-      "subtitle": "Repellendus Est dol",
-      "content": "Assumenda eius et qu",
-      "id": 2
-    },
-    {
-      "title": "Debitis et reiciendi",
-      "subtitle": "Assumenda qui aut co",
-      "content": "Irure tenetur quis s",
-      "id": 3
-    }
-  ]
+  "post": []
 }

@@ -20,6 +20,7 @@ export class DashboardComponent {
     idPost:number = 0;
 
     ngOnInit(){
+      this.AuthSVC.resUser()
       this.CrudSVC.getPost().subscribe(res => {
         this.postArr = res;
         console.log(this.postArr);
@@ -29,7 +30,7 @@ export class DashboardComponent {
         title: this.fb.control(null,[Validators.required]),
         subtitle: this.fb.control(null,[Validators.required]),
         content: this.fb.control(null,[Validators.required]),
-        id: this.fb.control(0),
+        // id: this.fb.control(0),
     })
     }
 
@@ -40,15 +41,22 @@ export class DashboardComponent {
     write(){
       this.CrudSVC.writePost(this.postForm.value).subscribe(p => {
         console.log(p);
-        this.postArr.push(this.postForm.value);
+        this.postArr.push(p);
+        console.log(this.postArr);
         this.postForm.reset();
 
       })
     }
 
     delete(id:number, i:number){
-      this.CrudSVC.deletePost(id).subscribe();
-      this.postArr.splice(i, 1)
+      this.CrudSVC.deletePost(id).subscribe(p => {
+        this.postArr.splice(i, 1)
+        console.log(this.postArr);
+      }
+
+      );
+
+
     }
 
     changeForm(i:number){
