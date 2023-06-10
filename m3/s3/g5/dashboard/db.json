@@ -27,19 +27,27 @@
       "nome": "ciao",
       "cognome": "ciao",
       "id": 4
+    },
+    {
+      "email": "test@test",
+      "password": "$2a$10$8k8sOi/q3Kc/Zn6KC9NkgOH8v4Hzy5CYL2tUbCsQyzzECHUgGpzgu",
+      "nome": "test",
+      "cognome": "test",
+      "id": 5
+    },
+    {
+      "email": "nisezys@mailinator.com",
+      "password": "$2a$10$qI.iFnCLLsQLuaXaCywks.R2VabNyLisTmw6mBTeonH3eA6W45eie",
+      "nome": "Dolor mollitia dicta",
+      "cognome": "Amet voluptates inc",
+      "id": 6
     }
   ],
   "post": [
     {
-      "title": "Nulla eum non aute v",
-      "subtitle": "Nihil dolore non mod",
-      "content": "modificato",
-      "id": 1
-    },
-    {
       "title": "Non totam autem eos ",
       "subtitle": "Optio accusantium n",
-      "content": "Omnis accusamus arch",
+      "content": "MODIFICATO",
       "id": 3
     },
     {
@@ -47,6 +55,12 @@
       "subtitle": "Commodo dicta earum ",
       "content": "Itaque necessitatibu",
       "id": 4
+    },
+    {
+      "title": "Tenetur dolore inven",
+      "subtitle": "Sed facilis sed comm",
+      "content": "Commodo proident qu",
+      "id": 5
     }
   ]
 }
