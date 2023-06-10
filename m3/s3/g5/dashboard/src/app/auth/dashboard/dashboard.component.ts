@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IPost } from '../interfaces/i-post';
 import { AuthService } from '../auth.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { CrudService } from '../crud.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -10,7 +11,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class DashboardComponent {
 
-    constructor( private fb:FormBuilder, private AuthSVC:AuthService){}
+
+    constructor( private fb:FormBuilder, private AuthSVC:AuthService, private CrudSVC:CrudService){}
 
     postArr:IPost[] = []
     postForm!:FormGroup;
@@ -18,7 +20,7 @@ export class DashboardComponent {
     idPost:number = 0;
 
     ngOnInit(){
-      this.AuthSVC.getPost().subscribe(res => {
+      this.CrudSVC.getPost().subscribe(res => {
         this.postArr = res;
         console.log(this.postArr);
 
@@ -36,16 +38,16 @@ export class DashboardComponent {
     }
 
     write(){
-      this.AuthSVC.writePost(this.postForm.value).subscribe(p => {
+      this.CrudSVC.writePost(this.postForm.value).subscribe(p => {
         console.log(p);
         this.postArr.push(this.postForm.value);
         this.postForm.reset();
-        //CAMBIARE E METTERE ARRAY.PUSH
+
       })
     }
 
     delete(id:number, i:number){
-      this.AuthSVC.deletePost(id).subscribe();
+      this.CrudSVC.deletePost(id).subscribe();
       this.postArr.splice(i, 1)
     }
 
@@ -63,7 +65,7 @@ export class DashboardComponent {
     }
 
     change(){
-      this.AuthSVC.changePost(this.postForm.value.id, this.postForm.value).subscribe(p => console.log(p))
+      this.CrudSVC.changePost(this.postForm.value.id, this.postForm.value).subscribe(p => console.log(p))
       console.log(this.postForm.value.id);
 
       this.changeMod = false;

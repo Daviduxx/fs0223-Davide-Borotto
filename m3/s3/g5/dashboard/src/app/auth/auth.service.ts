@@ -72,25 +72,4 @@ export class AuthService {
     this.authSubject.next(user);
 
   }
-
-
-
-
-  // CRUD DA SPOSTARE
-
-  getPost(){
-    return this.http.get<IPost[]>(this.POSTAPI)
-  }
-
-  writePost(newPost:IPost){
-    return this.http.post<IPost>(this.POSTAPI, newPost)
-  }
-
-  deletePost(id:number){
-    return this.http.delete(this.POSTAPI + '/' + id)
-  }
-
-  changePost(id:number, changedPost:IPost){
-    return this.http.put(this.POSTAPI + '/' + id, changedPost)
-  }
 }
