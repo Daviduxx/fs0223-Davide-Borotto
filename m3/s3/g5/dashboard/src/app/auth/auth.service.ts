@@ -8,6 +8,7 @@ import { ISignup } from './interfaces/i-signup';
 import { IAuthData } from './interfaces/i-auth-data';
 import { Form, FormGroup } from '@angular/forms';
 import { IPost } from './interfaces/i-post';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -24,7 +25,7 @@ export class AuthService {
   isLoggedIn$ = this.user$.pipe(map(u => Boolean(u)))
   authLogoutTimer:any;
   router: any;
-  constructor( private http:HttpClient) { }
+  constructor( private http:HttpClient, private Router:Router) { }
 
   signup(datiUser:FormGroup){
     return this.http.post<IUser>(this.APIURL + '/signup', datiUser)
@@ -43,15 +44,33 @@ export class AuthService {
     )
   }
 
-
-
   logout(){
     this.authSubject.next(null);
     localStorage.removeItem('user');
-    this.router.navigate(['/login']);
+    this.Router.navigate(['/auth']);
     if(this.authLogoutTimer){
       clearTimeout(this.authLogoutTimer);
     }
+  }
+
+  autoLogout(expDate:Date){
+    const expMs = expDate.getTime() - new Date().getTime();
+    this.authLogoutTimer = setTimeout(()=>{
+      this.logout();
+    }, expMs)
+  }
+
+  resUser(){
+    const userJson = localStorage.getItem('user');
+    if(!userJson){
+      return
+    }
+    const user:IAuthData = JSON.parse(userJson)
+    if(this.jwtHelper.isTokenExpired(user.accessToken)){
+      return;
+    }
+    this.authSubject.next(user);
+
   }
 
 
@@ -71,7 +90,7 @@ export class AuthService {
     return this.http.delete(this.POSTAPI + '/' + id)
   }
 
-  changePost(changedPost:IPost, id:number){
+  changePost(id:number, changedPost:IPost){
     return this.http.put(this.POSTAPI + '/' + id, changedPost)
   }
 }

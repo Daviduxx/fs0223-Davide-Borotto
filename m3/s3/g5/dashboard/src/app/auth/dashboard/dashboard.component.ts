@@ -27,14 +27,19 @@ export class DashboardComponent {
         title: this.fb.control(null,[Validators.required]),
         subtitle: this.fb.control(null,[Validators.required]),
         content: this.fb.control(null,[Validators.required]),
+        id: this.fb.control(0),
     })
+    }
+
+    logout(){
+      this.AuthSVC.logout();
     }
 
     write(){
       this.AuthSVC.writePost(this.postForm.value).subscribe(p => {
         console.log(p);
-
-        this.ngOnInit()
+        this.postArr.push(this.postForm.value);
+        this.postForm.reset();
         //CAMBIARE E METTERE ARRAY.PUSH
       })
     }
@@ -49,16 +54,21 @@ export class DashboardComponent {
         title: this.fb.control(this.postArr[i].title,[Validators.required]),
         subtitle: this.fb.control(this.postArr[i].subtitle,[Validators.required]),
         content: this.fb.control(this.postArr[i].content,[Validators.required]),
+        id: this.fb.control(this.postArr[i].id),
     })
     this.changeMod = true;
-    this.idPost = i + 1;
+    this.idPost = i;
+    console.log(this.postForm.value.id);
+
     }
 
     change(){
-      this.AuthSVC.changePost(this.postForm.value, this.idPost).subscribe(p => console.log(p))
+      this.AuthSVC.changePost(this.postForm.value.id, this.postForm.value).subscribe(p => console.log(p))
+      console.log(this.postForm.value.id);
+
       this.changeMod = false;
       this.postArr.splice(this.idPost, 1, this.postForm.value);
       this.postForm.reset();
-      this.idPost = 0;
+      // this.idPost = 0;
     }
 }
