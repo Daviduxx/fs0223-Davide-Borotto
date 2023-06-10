@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { JwtHelperService } from '@auth0/angular-jwt';
-import { BehaviorSubject, catchError, map, tap } from 'rxjs';
+import { BehaviorSubject, catchError, map, tap, throwError } from 'rxjs';
 import { environment } from 'src/environments/environment.development';
 import { IUser } from './interfaces/i-user';
 import { HttpClient } from '@angular/common/http';
@@ -16,10 +16,11 @@ import { Router } from '@angular/router';
 export class AuthService {
 
   jwtHelper:JwtHelperService = new JwtHelperService()
-  APIURL = environment.APIURL;
-  POSTAPI = environment.POSTAPI;
+  APIURL:string = environment.APIURL;
+  POSTAPI:string = environment.POSTAPI;
+  cUser:string = ''
 
-  private authSubject = new BehaviorSubject<null | IAuthData>(null);
+   authSubject = new BehaviorSubject<null | IAuthData>(null);
 
   user$ = this.authSubject.asObservable();
   isLoggedIn$ = this.user$.pipe(map(u => Boolean(u)))
@@ -29,6 +30,7 @@ export class AuthService {
 
   signup(datiUser:FormGroup){
     return this.http.post<IUser>(this.APIURL + '/signup', datiUser)
+    .pipe(catchError(this.getErrors))
   }
 
   login(data:FormGroup){
@@ -39,8 +41,9 @@ export class AuthService {
 
       const expDate = this.jwtHelper
       .getTokenExpirationDate(data.accessToken) as Date;
+      this.autoLogout(expDate)
     }),
-    //catchError()
+    catchError(this.getErrors)
     )
   }
 
@@ -70,10 +73,15 @@ export class AuthService {
       return;
     }
     this.authSubject.next(user);
+    console.log('utente loggato');
+    this.cUser = user.user.nome
+
   }
 
-  getErrors(){
-
+  getErrors(er:any){
+    console.log(er);
+    alert(er.error)
+    return throwError(er.error)
 
   }
 }

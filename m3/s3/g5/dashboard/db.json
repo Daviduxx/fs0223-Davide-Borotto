@@ -29,5 +29,24 @@
       "id": 4
     }
   ],
-  "post": []
+  "post": [
+    {
+      "title": "Nulla eum non aute v",
+      "subtitle": "Nihil dolore non mod",
+      "content": "modificato",
+      "id": 1
+    },
+    {
+      "title": "Non totam autem eos ",
+      "subtitle": "Optio accusantium n",
+      "content": "Omnis accusamus arch",
+      "id": 3
+    },
+    {
+      "title": "Et adipisicing itaqu",
+      "subtitle": "Commodo dicta earum ",
+      "content": "Itaque necessitatibu",
+      "id": 4
+    }
+  ]
 }

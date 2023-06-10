@@ -6,7 +6,7 @@
   <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
     <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
       <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-      <span class="fs-4">Benvenuto</span>
+      <span class="fs-4">Benvenuto {{currUser}}</span>
     </a>
 
     <ul class="nav nav-pills">
@@ -39,7 +39,7 @@
           <h6 class="card-subtitle mb-2 text-body-secondary">{{post.subtitle}}</h6>
           <p class="card-text">{{post.content}}</p>
           <button class="btn btn-primary me-3" (click)="changeForm(i)">Modifica</button>
-          <button class="btn btn-danger" (click)="delete(post.id, i)">Elimina{{post.id}}</button>
+          <button class="btn btn-danger" (click)="delete(post.id, i)">Elimina</button>
         </div>
       </div>
 
