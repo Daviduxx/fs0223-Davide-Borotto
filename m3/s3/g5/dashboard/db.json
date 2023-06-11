@@ -41,19 +41,40 @@
       "nome": "Dolor mollitia dicta",
       "cognome": "Amet voluptates inc",
       "id": 6
+    },
+    {
+      "email": "gizyba@mailinator.com",
+      "password": "$2a$10$ep8SV52jRErk28I6oDi1Z.E7Edl7l4O/JUFHsbnv0ED.jqlfnstjK",
+      "nome": "Deserunt ut esse por",
+      "cognome": "Veniam esse amet ",
+      "id": 7
+    },
+    {
+      "email": "sysaxajy@mailinator.com",
+      "password": "$2a$10$G1I/6zWPZbT6eqq2U8I9g.rPuG6Ej60VAW0XpqDT0j0vEyf.hnxym",
+      "nome": "Suscipit et assumend",
+      "cognome": "Elit qui consequatu",
+      "id": 8
+    },
+    {
+      "email": "hewosuvubu@mailinator.com",
+      "password": "$2a$10$W5xrycofLl.ARTfn/iuNuOcnU7IWs8odWHwIu.sMspxl5NQT8JkN2",
+      "nome": "Reprehenderit est m",
+      "cognome": "Blanditiis aut imped",
+      "id": 9
     }
   ],
   "post": [
     {
       "title": "Non totam autem eos ",
       "subtitle": "Optio accusantium n",
-      "content": "MODIFICATO",
+      "content": "MODIFICATO 2",
       "id": 3
     },
     {
       "title": "Et adipisicing itaqu",
       "subtitle": "Commodo dicta earum ",
-      "content": "Itaque necessitatibu",
+      "content": "modificato",
       "id": 4
     },
     {
@@ -61,6 +82,12 @@
       "subtitle": "Sed facilis sed comm",
       "content": "Commodo proident qu",
       "id": 5
+    },
+    {
+      "title": "Ut dolor doloremque ",
+      "subtitle": "Et suscipit molestia",
+      "content": "Soluta doloribus omn",
+      "id": 6
     }
   ]
 }
