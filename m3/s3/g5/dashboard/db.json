@@ -62,6 +62,13 @@
       "nome": "Reprehenderit est m",
       "cognome": "Blanditiis aut imped",
       "id": 9
+    },
+    {
+      "email": "fahipi@mailinator.com",
+      "password": "$2a$10$cHJVuzfQ68fyStW5lMdP3OLNyzJ4zN1uabZ.EGbapNhu7neRS/8c.",
+      "nome": "Harum sit voluptas c",
+      "cognome": "Dolores expedita aut",
+      "id": 10
     }
   ],
   "post": [
@@ -84,9 +91,9 @@
       "id": 5
     },
     {
-      "title": "Ut dolor doloremque ",
-      "subtitle": "Et suscipit molestia",
-      "content": "Soluta doloribus omn",
+      "title": "SIAMO ONLINE!",
+      "subtitle": "Qui commodo providen",
+      "content": "Cupidatat voluptatem",
       "id": 6
     }
   ]
