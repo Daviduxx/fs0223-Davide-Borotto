@@ -1,0 +1,37 @@
+$primary-color: #262626;
+$secondary-color: #fac564;
+$third-color: #5c3d03;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  color: $primary-color;
+  background-image: url(https://themewagon.github.io/pizza/images/food.png);
+}
+
+p {
+  color: $third-color;
+}
+
+.animazione {
+  height: 80px;
+  width: 80px;
+  border: 1px solid $third-color;
+  color: $third-color;
+  transition: transform 300ms, scale 300ms;
+}
+
+.animazione:hover {
+  transform: rotate(135deg);
+  scale: 1.2;
+  color: white;
+  background-color: #f8b500;
+  border: none;
+}
+
+.annullo:hover {
+  transform: rotate(-135deg);
+}

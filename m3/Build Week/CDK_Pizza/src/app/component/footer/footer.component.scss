@@ -1,0 +1,71 @@
+$primary-color: #262626;
+$secondary-color: #BA041A;
+$text-light: rgb(233, 233, 233);
+$text-secondary: rgba(255, 255, 255, 0.7);
+
+
+footer{
+  background-color: $primary-color;
+  color: $text-secondary;
+
+  a{
+    text-decoration: none;
+    color: unset;
+    transition: all 0.2s;
+    cursor: pointer;
+
+    &:hover{
+      color: white;
+    }
+  }
+
+  div.container-fluid{
+    padding-top: 8em;
+    padding-bottom: 8em;
+
+    div.row{
+      margin: 0 10%;
+      font-size: 16px;
+
+      h6{
+        color: $text-light;
+        margin-bottom: 30px;
+      }
+
+      p.text-white{
+        margin: 0;
+        margin-bottom: .4em;
+        font-weight: 500;
+      }
+
+      .blog-article{
+        margin-bottom: 1.5em;
+
+        img{
+          margin-right: 25px;
+        }
+
+        .post-description{
+          font-size: 12px;
+          svg.ml{
+            margin-left: 10px;
+          }
+        }
+      }
+
+      div.me-pers{
+        margin-right: 1.5em;
+      }
+
+      a.social{
+        color: $text-light;
+        cursor: pointer;
+      }
+
+      a.social:not(:first-of-type){
+        margin-left: 20px;
+      }
+    }
+  }
+
+}

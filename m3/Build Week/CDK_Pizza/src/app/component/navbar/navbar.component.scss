@@ -1,0 +1,94 @@
+$primary-color: #262626;
+$secondary-color: #fac564;
+
+// RESET SETTINGS
+*{
+  margin: 0;
+  padding: 0;
+}
+
+a, a:visited, a:active{
+  text-decoration: none;
+  cursor: pointer;
+}
+
+// MY SCSS
+nav{
+  background-color: $primary-color;
+  color: $secondary-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  // padding: .5em 10em;
+
+  img.logo{
+    width: 5%;
+    margin-left: 35px;
+  }
+
+  ul{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    margin-left: auto;
+    margin-right: 2em;
+
+    a{
+      color: $secondary-color;
+    }
+  }
+}
+
+.Gerald{
+  color: $secondary-color;
+  border: 1px solid $secondary-color;
+
+  &:hover, &:focus, &:active{
+    color: $secondary-color;
+    background-color: transparent;
+    border: 1px solid $secondary-color;
+  }
+}
+
+.lorenzo{
+  width: 400px;
+  // height: 200px;
+    // padding: 20px;
+  background-color: $primary-color;
+  border: 1px solid $secondary-color;
+
+  div.input-group{
+    margin-bottom: .5rem;
+    input{
+      padding-left: 5px;
+    }
+  }
+
+  .validazione{
+    color: rgb(236, 136, 136);
+  }
+
+  .blabla{
+    background-color: $primary-color;
+    color: $secondary-color;
+    border-radius: 10px;
+    padding: 10px 25px;
+    margin-right: .5rem;
+    border: 1px solid $secondary-color
+  }
+
+  .blibli{
+    text-decoration: none;
+    color: $secondary-color;
+    margin-right: .5rem;
+    padding: 10px 25px;
+  }
+
+}
+
+
+.cart{
+  font-size: 2.2rem;
+}

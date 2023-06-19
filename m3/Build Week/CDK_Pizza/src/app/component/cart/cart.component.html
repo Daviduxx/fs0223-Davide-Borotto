@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1 class="text-center my-5">Il tuo carrello:</h1>
+    </div>
+  </div>
+  <div class="row d-flex justify-content-center">
+    <div id="item" class="card mb-3" *ngFor="let cart of cart let i = index">
+      <div class="row">
+        <div class="col-md-4 img-container p-0">
+          <img
+            src="{{ cart.image }}"
+            class="img-fluid rounded-start"
+            alt="..."
+          />
+        </div>
+        <div class="col-md-8 d-flex pe-0">
+          <div
+            class="card-body d-flex align-items-center justify-content-between"
+          >
+            <div class="col-md-8">
+              <h5 class="card-title">{{ cart.title }}</h5>
+              <h5 class="card-title">{{ cart.name }}</h5>
+              <p class="card-text">{{ cart.ingredients }}</p>
+            </div>
+            <div>
+              <p class="card-text fs-2 text-end">€ {{ cart.price }}</p>
+              <button class="btn btn-danger" (click)="deleteItem(cart, i)">RIMUOVI</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="text-end fs-2 pe-3 mt-3">Totale carrello: € {{total}}</p>
+  </div>
+
+
+</div>

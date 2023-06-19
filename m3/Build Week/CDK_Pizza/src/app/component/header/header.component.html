@@ -1,0 +1,27 @@
+<div class="header-contenitor">
+  <div class="wrap-contenitor">
+
+    <!-- <app-navbar></app-navbar> -->
+
+    <div class="main-header mx-auto" *ngIf="isHome">
+
+        <p class="secondary-color special-p">Welcome</p>
+        <p class="slogan text-uppercase my-3 fs-1">Prova la novità:</p>
+        <p class="slogan text-uppercase my-3">pizza MIMOSA a portafoglio</p>
+        <p>
+          Solo le migliori pizze qui da Pizzeria da Michele. L'unica pizzeria in Italia che fa la famosa pizza Mimosa a portafoglio. Utilizziamo solo farine senza CSS inline.
+        </p>
+        <p class="fst-italic fs-2 mt-4">"Cosa vuoi da me???"</p>
+        <div class="button-container">
+          <button>Ordina ora</button>
+          <button>Guarda il menu</button>
+        </div>
+    </div>
+
+    <div class="mx-auto" *ngIf="!isHome">
+      <router-outlet></router-outlet>
+    </div>
+
+
+  </div>
+</div>

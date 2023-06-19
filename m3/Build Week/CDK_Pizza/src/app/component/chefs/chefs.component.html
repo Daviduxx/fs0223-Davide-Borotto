@@ -1,0 +1,35 @@
+<div class="background">
+  <div class="container py-3">
+    <div class="row">
+      <div class="col-2"></div>
+
+      <div class="col-8 text-center text-light">
+        <h2 class="my-4">I nostri chefs</h2>
+        <p class="flip">
+          <span class="deg1"></span>
+          <span class="deg2"></span>
+          <span class="deg3"></span>
+        </p>
+        <p class="my-5"></p>
+      </div>
+
+      <div class="col-2"></div>
+    </div>
+
+    <div class="row mt-2">
+      <div class="col-12 col-md-6 col-lg-3 mb-3 p-3" *ngFor="let chef of chef | slice:0:4">
+        <div class="bg-transparent card text-center border-2 border-warning text-light p-3 chefs">
+          <img
+            class="card-img-top rounded-circle w-50 mx-auto mt-3"
+            src={{chef.image}}
+            alt="Title"
+          />
+          <div class="card-body">
+            <h4 class="card-title gold">{{chef.name}}</h4>
+            <h4 class="card-title gold">{{chef.surname}}</h4>
+            <p class="card-text mb-3">{{chef.email}}</p>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>

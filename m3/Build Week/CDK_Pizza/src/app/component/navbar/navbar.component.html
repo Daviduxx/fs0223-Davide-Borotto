@@ -1,0 +1,107 @@
+<nav class="navbar navbar-dark navbar-expand-md">
+  <img
+    src="assets/logo-nuovo.png"
+    class="logo"
+    alt="Logo Milan"
+    [routerLink]="['/home']"
+  />
+  <button
+    class="navbar-toggler me-5"
+    type="button"
+    (click)="isMenuCollapsed = !isMenuCollapsed"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" [ngbCollapse]="isMenuCollapsed">
+    <ul class="navbar-nav text-center">
+      <li class="nav-item">
+        <a (click)="isMenuCollapsed = true">Menu</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="isMenuCollapsed = true">Services</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="isMenuCollapsed = true">Blog</a>
+      </li>
+      <li class="nav-item">
+        <a [routerLink]="['/cart']" (click)="isMenuCollapsed = true"><i class="bi bi-cart4 cart"></i></a>
+      </li>
+      <li class="nav-item" *ngIf="!isAdmin">
+        <div ngbDropdown class="d-inline-block">
+          <button
+            type="button"
+            class="btn btn-outline-primary px-2 py-1 Gerald"
+            id="dropdownBasic1"
+            ngbDropdownToggle
+          >
+            Login/Register
+          </button>
+          <div
+            ngbDropdownMenu
+            aria-labelledby="dropdownBasic1"
+            class="position-absolute dropdown-menu-end overflow-auto py-3 px-3 lorenzo"
+          >
+            <div class="container-fluid">
+              <div class="row mt-3">
+                <div class="col-3">
+                  <span>
+                    <img
+                      src="../../../assets/berlusca.gif"
+                      alt="Il Cavaliere"
+                      title="Il Cavaliere della FIGA"
+                      width="70px"
+                    />
+                  </span>
+                </div>
+                <div class="col">
+                  <form #loginForm="ngForm">
+                  <div class="position-relative">
+                    <div class="input-group">
+                      <input
+                        type="email"
+                        class="form-control"
+                        placeholder="Email"
+                        aria-label="Username"
+                        aria-describedby="basic-addon1"
+                        ngModel
+                        [(ngModel)]="data.email"
+                        name="email"
+                        required
+                        email
+                      />
+                    </div>
+                    <div class="input-group">
+                      <input
+                        type="password"
+                        class="form-control"
+                        placeholder="Password"
+                        aria-label="Password"
+                        aria-describedby="basic-addon1"
+                        #password="ngModel"
+                        [(ngModel)]="data.password"
+                        name="password"
+                        required
+                      />
+                      </div>
+                      <div class="validazione" *ngIf="password.invalid && (password.dirty || password.touched)">
+                        <div class="" *ngIf="password.errors?.['required']">Password obbligatoria</div>
+                      </div>
+                    <div class="d-flex justify-content-between mt-3">
+                      <button (click)="login()" class="blabla" [disabled]="loginForm.invalid">Login</button>
+                      <a [routerLink]="['/sign-in']" class="blibli">Sign in</a>
+                    </div>
+                  </div>
+                </form>
+              </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li *ngIf="isAdmin">
+        <a [routerLink]="['/dashboard']">Admin Panel</a>
+      </li>
+    </ul>
+  </div>
+</nav>

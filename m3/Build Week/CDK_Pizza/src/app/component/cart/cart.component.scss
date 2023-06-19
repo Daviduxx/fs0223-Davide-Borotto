@@ -1,0 +1,21 @@
+$primary-color: #262626;
+$secondary-color: #fac564;
+
+.img-container {
+  height: 200px;
+  overflow: hidden;
+}
+
+h1,
+p {
+  color: $secondary-color;
+}
+
+#item {
+  background-color: $primary-color;
+  color: $secondary-color;
+}
+.totalPrice{
+  font-size: 2rem;
+  font-weight: 600;
+}

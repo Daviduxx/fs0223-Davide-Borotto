@@ -1,0 +1,73 @@
+<div class="container-fluid" id="container">
+  <div class="row p-3">
+    <div class="col-12 col-md-4 p-0">
+      <img class="w-100" src="https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=685&q=80" alt="">
+    </div>
+    <div class="col-12 col-md-8">
+      <div class="row p-4">
+        <div class="col-12 col-md-2 p-1">
+          <button class="btn fd-menu text-decoration-none" (click)="counter(1)">Pizza</button>
+        </div>
+        <div class="col-12 col-md-2 p-1">
+          <button class="btn fd-menu text-decoration-none" (click)="counter(2)">Drink</button>
+        </div>
+        <div class="col-12 col-md-2 p-1">
+          <button class="btn fd-menu text-decoration-none" (click)="counter(3)">Burger</button>
+        </div>
+        <div class="col-12 col-md-2 p-1">
+          <button class="btn fd-menu text-decoration-none" (click)="counter(4)">Pasta</button>
+        </div>
+      </div>
+
+      <div class="row p-3 mt-5" *ngIf="showPizze">
+        <div class="col-12 col-md-4 text-center p-4" *ngFor="let pizza of pizze | slice:0:3">
+          <div class="img-container">
+            <img class="img-fluid" src={{pizza.image}} alt="">
+          </div>
+          <h3 class="text-white mt-3">{{pizza.title}}</h3>
+          <p class="text-secondary text-white ingredients">{{pizza.ingredients}}</p>
+          <p class="price">€ {{pizza.price}}</p>
+          <button class="btn btn-outline-light fd-btn">Add to cart</button>
+        </div>
+      </div>
+      <div class="row p-3 mt-5" *ngIf="showDrinks">
+        <div class="col-12 col-md-4 text-center p-4" *ngFor="let drink of drinks | slice:0:3">
+          <div class="img-container">
+            <img class="img-fluid" src={{drink.image}} alt="">
+          </div>
+          <h3 class="text-white mt-3">{{drink.name}}</h3>
+          <p class="price">€ {{drink.price}}</p>
+          <button class="btn btn-outline-light fd-btn">Add to cart</button>
+        </div>
+      </div>
+      <div class="row p-3 mt-5" *ngIf="showBurgers">
+        <div class="col-12 col-md-4 text-center p-4" *ngFor="let burger of burgers | slice:0:3">
+          <div class="img-container">
+            <img class="img-fluid" src={{burger.image}} alt="">
+          </div>
+          <h3 class="text-white mt-3">{{burger.name}}</h3>
+          <p class="text-secondary">{{burger.ingredients}}</p>
+          <p class="price">€ {{burger.price}}</p>
+          <button class="btn btn-outline-light fd-btn">Add to cart</button>
+        </div>
+      </div>
+      <div class="row p-3 mt-5" *ngIf="showPasta">
+        <div class="col-12 col-md-4 text-center p-4" *ngFor="let pasta of pasta | slice:0:3">
+          <div class="img-container">
+            <img class="img-fluid" src={{pasta.image}} alt="">
+          </div>
+          <h3 class="text-white mt-3">{{pasta.name}}</h3>
+          <p class="text-secondary">{{pasta.ingredients}}</p>
+          <p class="price">€ {{pasta.price}}</p>
+          <button class="btn btn-outline-light fd-btn">Add to cart</button>
+        </div>
+      </div>
+
+
+
+
+
+    </div>
+
+
+</div>

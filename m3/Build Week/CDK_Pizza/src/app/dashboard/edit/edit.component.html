@@ -1,0 +1,35 @@
+
+<div class="container p-5">
+
+  <div class="row">
+    <h2 class="text-center my-5">Modifica la pizza</h2>
+    <div class="col"></div>
+
+    <div class="col-12 col-lg-6">
+
+      <form #f="ngForm">
+
+        <label for="titolo">Titolo della pizza:</label>
+        <input class="form-control" placeholder="" type="text" required [(ngModel)]="pizza.title" name="title">
+
+        <label for="ingredienti">Ingredienti:</label>
+        <input class="form-control" placeholder="" type="text" required [(ngModel)]="pizza.ingredients" name="ingredients">
+
+        <label for="prezzo">Prezzo:</label>
+        <input class="form-control" placeholder="" type="number" required [(ngModel)]="pizza.price" name="price">
+
+        <label for="immagine">Immagine:</label>
+        <input class="form-control" placeholder="" type="text" required [(ngModel)]="pizza.image" name="image">
+
+        <label for="immagine">Disponibilità:</label>
+        <select name="disponibile" ngModel class="form-control" [(ngModel)]="pizza.disponibile">
+          <option [ngValue]="true" >Disponibile</option>
+          <option [ngValue]="false" >Non Disponibile</option>
+        </select>
+
+        <button class="btn btn-primary mt-3" (click)="modifica()">Conferma</button>
+      </form>
+    </div>
+    <div class="col"></div>
+  </div>
+</div>

@@ -1,0 +1,247 @@
+{
+  "users": [
+    {
+      "email": "paul@florii",
+      "password": "$2a$10$wnl8hzPfe4TlcPaJmPBNqutrqMIqq20uitA.70CTaXnDX9RJFBtGG",
+      "name": "Paul",
+      "surname": "Florii",
+      "admin": false,
+      "image": "../../../assets/chef.png",
+      "id": 3
+    },
+    {
+      "email": "ant@canna",
+      "password": "$2a$10$NAZHxdsuDZa5XUWE/9PqIuh8M.7VYbYEpD4koHq7V02EmerwvDgEq",
+      "name": "Antonino",
+      "surname": "Cannvacciuolo",
+      "admin": false,
+      "image": "../../../assets/chef.png",
+      "id": 6
+    },
+    {
+      "email": "bruno@barbieri.it",
+      "password": "$2a$10$YoHgtboVA1uiNFW78urocOp3k.AHecBllCtcl0.L0wZrWuQxbkmEq",
+      "name": "Bruno",
+      "surname": "Barbieri",
+      "admin": false,
+      "image": "../../../assets/chef.png",
+      "id": 7
+    },
+    {
+      "email": "davide@davide",
+      "password": "$2a$10$U0jMrqq0q1jtlBi5.cewteXO6Amk5FuYR0T7pLendSw30LxTBQbjq",
+      "name": "Davide",
+      "surname": "Davide",
+      "admin": true,
+      "image": "../../../assets/chef.png",
+      "id": 8
+    },
+    {
+      "email": "daniele@pasqualetti.it",
+      "password": "$2a$10$vkdpYGv8WiJDxtJUi5KqmOi3g4wIRsrfCZj1aqECpnrGdQ9zentI.",
+      "name": "Daniele",
+      "surname": "Pasqualetti",
+      "admin": true,
+      "image": "../../../assets/chef.png",
+      "id": 9
+    },
+    {
+      "email": "pippopalla@traballa.it",
+      "password": "$2a$10$LeteJEKciAgiBRC0g.G.TerMMnQ6dUYgzss0yU85e9.ARX5QlsAX.",
+      "name": "Pippo",
+      "surname": "Palla",
+      "admin": true,
+      "image": "../../../assets/chef.png",
+      "id": 10
+    },
+    {
+      "email": "epicode@epicode",
+      "password": "$2a$10$CyzGOFGCpZqspVdHs2v0T.rc7MxHq5CBs183O9ggWx738xPYDGVl6",
+      "name": "epicode",
+      "surname": "epicode",
+      "admin": true,
+      "image": "../../../assets/chef.png",
+      "id": 11
+    }
+  ],
+  "pizze": [
+    {
+      "id": 1,
+      "title": "Mimosa",
+      "ingredients": "Mozzarella, Pomodro, Mais, Prosciutto, Panna",
+      "image": "https://www.ricettedalmondo.it/images/foto-ricette/p/29294-pizza-mimosa.jpg",
+      "price": 5987,
+      "disponibile": true
+    },
+    {
+      "id": 2,
+      "title": "Boscaiola",
+      "ingredients": "Mozzarella, Pomodro, Prosciutto, Fontina",
+      "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
+      "price": 7,
+      "disponibile": true
+    },
+    {
+      "title": "Margherita",
+      "ingredients": "Pomodoro, Mozzarella, Basilico",
+      "price": 5,
+      "image": "https://images.unsplash.com/photo-1594007654729-407eedc4be65?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=428&q=80",
+      "id": 5,
+      "disponibile": true
+    },
+    {
+      "title": "Diavola",
+      "ingredients": "Pomodoro, Mozzarella, Salame Piccante",
+      "price": 8,
+      "image": "https://images.unsplash.com/photo-1628840042765-356cda07504e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1180&q=80",
+      "disponibile": false,
+      "id": 6
+    },
+    {
+      "title": "Prosciutto",
+      "ingredients": "Pomodoro, Mozzarella, Prosciutto Cotto ",
+      "price": 7,
+      "image": "https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+      "disponibile": true,
+      "id": 7
+    },
+    {
+      "title": "Napoli",
+      "ingredients": "Pomodoro, Mozzarella, Acciughe, Origano",
+      "price": 6,
+      "image": "https://images.unsplash.com/photo-1571066811602-716837d681de?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=536&q=80",
+      "disponibile": "disponibile",
+      "id": 8
+    },
+    {
+      "title": "epicode",
+      "ingredients": "angular js",
+      "price": 10,
+      "image": "https://images.unsplash.com/photo-1502197996753-841c0e19d607?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+      "disponibile": "non-disponibile",
+      "id": 9
+    }
+  ],
+  "drinks": [
+    {
+      "id": 1,
+      "name": "Coca-cola",
+      "image": "https://www.stickersmurali.com/it/img/asfs127-jpg/folder/products-listado-merchant/adesivi-coca-cola.jpg",
+      "price": 3,
+      "disponibile": true
+    },
+    {
+      "name": "Coca & Jack",
+      "image": "https://images.unsplash.com/photo-1502197996753-841c0e19d607?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+      "price": 8,
+      "disponibile": true,
+      "id": 3
+    },
+    {
+      "name": "Gin Tonic",
+      "image": "https://images.unsplash.com/photo-1578526944121-5cdd127fdc1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
+      "price": 8,
+      "disponibile": true,
+      "id": 4
+    },
+    {
+      "name": "Gin Lemon",
+      "image": "https://images.unsplash.com/photo-1617714017765-ddba98f9ef27?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=750&q=80",
+      "price": 6,
+      "disponibile": true,
+      "id": 5
+    },
+    {
+      "name": "Birra Bionda",
+      "image": "https://images.unsplash.com/photo-1566633806327-68e152aaf26d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
+      "price": 4,
+      "disponibile": true,
+      "id": 6
+    },
+    {
+      "name": "Vino Rosso",
+      "image": "https://images.unsplash.com/photo-1621644894301-cd6b2eaca610?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
+      "price": 5,
+      "disponibile": false,
+      "id": 7
+    }
+  ],
+  "burgers": [
+    {
+      "id": 1,
+      "name": "American Burger",
+      "ingredients": "Pomodoro, Formaggio, Lattuga, Mozzarella, Bacon",
+      "image": "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_450,h_450,d_it:cuisines:hamburger-0.jpg/v1/it/restaurants/235910.jpg",
+      "price": 10,
+      "disponibile": false
+    },
+    {
+      "name": "Classico",
+      "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=999&q=80",
+      "ingredients": "Hamburger, Cheddar, Lattuga, Pomodoro, Ketchup",
+      "price": 7,
+      "disponibile": true,
+      "id": 2
+    },
+    {
+      "name": "BBQ Burger",
+      "image": "https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=871&q=80",
+      "ingredients": "Hamburger, Cheddar, Lattuga, Pomodoro, Bacon, BBQ",
+      "price": 12,
+      "disponibile": true,
+      "id": 3
+    }
+  ],
+  "pasta": [
+    {
+      "id": 1,
+      "name": "Carbonara",
+      "ingredients": "Guanciale, Pecorino romano, Uova",
+      "image": "https://www.scattidigusto.it/wp-content/uploads/2017/03/carbonara-nuovo-ristorante-Eggs-Roma.jpg",
+      "price": 9,
+      "disponibile": false
+    },
+    {
+      "name": "Penne All'Arrabbiata",
+      "image": "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80",
+      "ingredients": "Pomodoro, Peperoncino, Aglio, Prezzemolo",
+      "price": 7,
+      "disponibile": true,
+      "id": 2
+    },
+    {
+      "name": "Cacio e Pepe",
+      "image": "https://images.unsplash.com/photo-1555949258-eb67b1ef0ceb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+      "ingredients": "Pepe, Pecorino Romano",
+      "price": 8,
+      "disponibile": true,
+      "id": 3
+    }
+  ],
+  "cart": [
+    {
+      "id": 1,
+      "title": "Mimosa",
+      "ingredients": "Mozzarella, Pomodro, Mais, Prosciutto, Panna",
+      "image": "https://www.ricettedalmondo.it/images/foto-ricette/p/29294-pizza-mimosa.jpg",
+      "price": 5987,
+      "disponibile": true
+    },
+    {
+      "title": "Margherita",
+      "ingredients": "Pomodoro, Mozzarella, Basilico",
+      "price": 5,
+      "image": "https://images.unsplash.com/photo-1594007654729-407eedc4be65?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=428&q=80",
+      "id": 5,
+      "disponibile": true
+    },
+    {
+      "title": "Prosciutto",
+      "ingredients": "Pomodoro, Mozzarella, Prosciutto Cotto ",
+      "price": 7,
+      "image": "https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+      "disponibile": true,
+      "id": 7
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+
+<div class="container p-5">
+
+  <div class="row my-5">
+
+    <div class="col">
+
+      <h2 class="text-center text-white">Sei dello staff? Registrati per poter pubblicare i tuoi piatti</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col"></div>
+    <div class="col-12 col-lg-6">
+
+      <form class="px-4 py-3">
+        <div class="mb-3">
+          <label for="nome" class="form-label">Nome</label>
+          <input type="text" class="form-control" id="nome" placeholder=" Il tuo Nome" [(ngModel)]="data.name" name="nome">
+        </div>
+        <div class="mb-3">
+          <label for="cognome" class="form-label">Cognome</label>
+          <input type="text" class="form-control" id="cognome" placeholder=" Il tuo Cognome" [(ngModel)]="data.surname" name="surname">
+        </div>
+        <div class="mb-3">
+          <label for="image" class="form-label">Immagine del profilo</label>
+          <input type="text" class="form-control" id="image" placeholder="La tua immagine del profilo" [(ngModel)]="data.image" name="image">
+        </div>
+        <div class="mb-3">
+          <label for="exampleDropdownFormEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com" [(ngModel)]="data.email" name="email">
+        </div>
+        <div class="mb-3">
+          <label for="exampleDropdownFormPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password" [(ngModel)]="data.password" name="password">
+        </div>
+        <button class="btn myBtn" (click)="register()">Sign in</button>
+      </form>
+
+    </div>
+    <div class="col"></div>
+  </div>
+</div>
+
+

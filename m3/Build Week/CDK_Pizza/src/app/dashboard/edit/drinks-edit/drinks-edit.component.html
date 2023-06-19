@@ -1,0 +1,29 @@
+
+<div class="container">
+
+  <div class="row">
+    <h2 class="text-center">Modifica il Drink</h2>
+    <div class="col-6">
+
+      <form #f="ngForm">
+
+        <label for="titolo">Nome drink:</label>
+        <input class="form-control" placeholder="" type="text" required [(ngModel)]="drink.name" name="title">
+
+        <label for="prezzo">Prezzo:</label>
+        <input class="form-control" placeholder="" type="number" required [(ngModel)]="drink.price" name="price">
+
+        <label for="immagine">Immagine:</label>
+        <input class="form-control" placeholder="" type="text" required [(ngModel)]="drink.image" name="image">
+
+        <label for="immagine">Disponibilità:</label>
+        <select name="disponibile" ngModel class="form-control" [(ngModel)]="drink.disponibile">
+          <option [ngValue]="true" >Disponibile</option>
+          <option [ngValue]="false" >Non Disponibile</option>
+        </select>
+
+        <button class="btn btn-primary" (click)="modifica()">Conferma</button>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,318 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col text-end m-3">
+      <button class="btn btn-danger" (click)="logout()">Logout</button>
+    </div>
+  </div>
+</div>
+
+<div class="container p-5" id="container">
+  <div class="row">
+    <div class="col text-center">
+      <h2 class="text-center my-5">Aggiungi la tua pizza</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col"></div>
+    <div class="col-6 my-3">
+      <form #f="ngForm">
+        <label for="titolo">Nome della pizza:</label>
+        <input
+          class="form-control"
+          placeholder="ES: Margherita"
+          type="text"
+          required
+          ngModel
+          name="title"
+        />
+
+        <label for="ingredienti">Ingredienti:</label>
+        <input
+          class="form-control"
+          placeholder="ES: Pomodoro, Mozzarella..."
+          type="text"
+          required
+          ngModel
+          name="ingredients"
+        />
+
+        <label for="prezzo">Prezzo:</label>
+        <input
+          class="form-control"
+          placeholder="Quanto costa la pizza?"
+          type="number"
+          required
+          ngModel
+          name="price"
+        />
+
+        <label for="immagine">Immagine:</label>
+        <input
+          class="form-control"
+          placeholder=""
+          type="text"
+          required
+          ngModel
+          name="image"
+        />
+
+        <label for="immagine">Disponibilità:</label>
+        <select name="disponibile" ngModel class="form-control">
+          <option value="disponibile" selected>Disponibile</option>
+          <option value="non-disponibile">Non Disponibile</option>
+        </select>
+
+        <button class="btn myBtn mt-3" (click)="creaPizza()">Conferma</button>
+      </form>
+    </div>
+    <div class="col"></div>
+  </div>
+
+  <div class="row p-3 mt-5">
+    <div class="col-12 col-md-4 text-center p-4" *ngFor="let pizza of pizze">
+      <div class="img-container d-flex justify-content-center">
+        <img class="img-fluid" src="{{ pizza.image }}" alt="" />
+      </div>
+      <h3 class="text-white mt-3">{{ pizza.title }}</h3>
+      <p class="text-white">{{ pizza.ingredients }}</p>
+      <p class="price fs-3">€ {{ pizza.price }}</p>
+
+      <button
+        class="btn myBtn fd-btn mx-3"
+        [routerLink]="['/dashboard', 'edit', pizza.id]"
+      >
+        Modifica
+      </button>
+      <button class="btn btn-danger fd-btn mx-3" (click)="delete(pizza.id)">
+        Elimina
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="container" id="container">
+  <div class="row">
+    <h2 class="text-center my-3">Aggiungi il tuo drink</h2>
+    <div class="col"></div>
+    <div class="col-6 my-3">
+      <form #e="ngForm">
+        <label for="titolo">Nome drink</label>
+        <input
+          class="form-control"
+          placeholder=""
+          type="text"
+          required
+          [(ngModel)]="newDrink.name"
+          name="title"
+        />
+
+        <label for="prezzo">Prezzo:</label>
+        <input
+          class="form-control"
+          placeholder=""
+          type="number"
+          required
+          [(ngModel)]="newDrink.price"
+          name="price"
+        />
+
+        <label for="immagine">Immagine:</label>
+        <input
+          class="form-control"
+          placeholder=""
+          type="text"
+          required
+          [(ngModel)]="newDrink.image"
+          name="image"
+        />
+
+        <label for="immagine">Disponibilità:</label>
+        <select name="disponibile" ngModel class="form-control">
+          <option value="disponibile" selected>Disponibile</option>
+          <option value="non-disponibile">Non Disponibile</option>
+        </select>
+
+        <button class="btn myBtn my-3" (click)="creaDrink()">Conferma</button>
+      </form>
+    </div>
+    <div class="col"></div>
+  </div>
+
+  <div class="row p-3 mt-5">
+    <div class="col-12 col-md-4 text-center p-4" *ngFor="let drink of drinks">
+      <div class="img-container">
+        <img class="img-fluid" src="{{ drink.image }}" alt="" />
+      </div>
+      <h3 class="text-white mt-3">{{ drink.name }}</h3>
+      <p class="price">€ {{ drink.price }}</p>
+      <button
+        class="btn myBtn fd-btn mx-3"
+        [routerLink]="['/dashboard', 'editDrink', drink.id]"
+      >
+        Modifica
+      </button>
+      <button class="btn btn-danger fd-btn" (click)="deleteDrink(drink.id)">
+        Elimina
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="container" id="container">
+  <div class="row my-5">
+    <h2 class="text-center my-3">Aggiungi un nuovo burger</h2>
+    <div class="col"></div>
+    <div class="col-6">
+      <form #e="ngForm">
+        <label for="titolo">Nome burger</label>
+        <input
+          class="form-control"
+          placeholder=""
+          type="text"
+          required
+          [(ngModel)]="newBurger.name"
+          name="title"
+        />
+
+        <label for="ingredienti">Ingredienti:</label>
+        <input
+          class="form-control"
+          placeholder=""
+          type="text"
+          required
+          [(ngModel)]="newBurger.ingredients"
+          name="ingredients"
+        />
+
+        <label for="prezzo">Prezzo:</label>
+        <input
+          class="form-control"
+          placeholder=""
+          type="number"
+          required
+          [(ngModel)]="newBurger.price"
+          name="price"
+        />
+
+        <label for="immagine">Immagine:</label>
+        <input
+          class="form-control"
+          placeholder=""
+          type="text"
+          required
+          [(ngModel)]="newBurger.image"
+          name="image"
+        />
+
+        <label for="immagine">Disponibilità:</label>
+        <select name="disponibile" ngModel class="form-control">
+          <option value="disponibile" selected>Disponibile</option>
+          <option value="non-disponibile">Non Disponibile</option>
+        </select>
+
+        <button class="btn myBtn my-3" (click)="creaBurger()">Conferma</button>
+      </form>
+    </div>
+    <div class="col"></div>
+  </div>
+
+  <div class="row p-3 mt-5">
+    <div class="col-12 col-md-4 text-center p-4" *ngFor="let burger of burgers">
+      <div class="img-container">
+        <img class="img-fluid" src="{{ burger.image }}" alt="" />
+      </div>
+      <h3 class="text-white mt-3">{{ burger.name }}</h3>
+      <p class="text-white">{{ burger.ingredients }}</p>
+      <p class="price fs-3">€ {{ burger.price }}</p>
+      <button
+        class="btn myBtn fd-btn mx-3"
+        [routerLink]="['/dashboard', 'editBurgers', burger.id]"
+      >
+        Modifica
+      </button>
+      <button class="btn btn-danger fd-btn" (click)="deleteBurger(burger.id)">
+        Elimina
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="container" id="container">
+  <div class="row my-5">
+    <h2 class="text-center">Aggiungi nuova pasta</h2>
+    <div class="col"></div>
+    <div class="col-6">
+      <form #e="ngForm">
+        <label for="titolo">Nome pasta</label>
+        <input
+          class="form-control"
+          placeholder=""
+          type="text"
+          required
+          [(ngModel)]="newPasta.name"
+          name="title"
+        />
+
+        <label for="ingredienti">Ingredienti:</label>
+        <input
+          class="form-control"
+          placeholder=""
+          type="text"
+          required
+          [(ngModel)]="newPasta.ingredients"
+          name="ingredients"
+        />
+
+        <label for="prezzo">Prezzo:</label>
+        <input
+          class="form-control"
+          placeholder=""
+          type="number"
+          required
+          [(ngModel)]="newPasta.price"
+          name="price"
+        />
+
+        <label for="immagine">Immagine:</label>
+        <input
+          class="form-control"
+          placeholder=""
+          type="text"
+          required
+          [(ngModel)]="newPasta.image"
+          name="image"
+        />
+
+        <label for="immagine">Disponibilità:</label>
+        <select name="disponibile" ngModel class="form-control">
+          <option value="disponibile" selected>Disponibile</option>
+          <option value="non-disponibile">Non Disponibile</option>
+        </select>
+
+        <button class="btn myBtn my-3" (click)="creaPasta()">Conferma</button>
+      </form>
+    </div>
+    <div class="col"></div>
+  </div>
+
+  <div class="row p-3 mt-5">
+    <div class="col-12 col-md-4 text-center p-4" *ngFor="let pasta of pasta">
+      <div class="img-container">
+        <img class="img-fluid" src="{{ pasta.image }}" alt="" />
+      </div>
+      <h3 class="text-white mt-3">{{ pasta.name }}</h3>
+      <p class="text-secondary">{{ pasta.ingredients }}</p>
+      <p class="price">€ {{ pasta.price }}</p>
+      <button
+        class="btn myBtn fd-btn mx-3"
+        [routerLink]="['/dashboard', 'editPasta', pasta.id]"
+      >
+        Modifica
+      </button>
+      <button class="btn btn-danger fd-btn" (click)="deletePasta(pasta.id)">
+        Elimina
+      </button>
+    </div>
+  </div>
+</div>

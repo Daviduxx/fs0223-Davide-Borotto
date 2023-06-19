@@ -1,0 +1,92 @@
+$primary-color: #262626;
+$secondary-color: #fac564;
+
+.price-pizza {
+  color: $secondary-color;
+}
+
+.bg-1 {
+  height: 100%;
+  background-size: cover ;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.text {
+  background-color: rgba($color: #000000, $alpha: 0.1);
+}
+
+.flip {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+p.flip span.deg1 {
+  position: absolute;
+  bottom: 2px;
+  left: -30px;
+  right: 0;
+  width: 6px;
+  height: 6px;
+  content: '';
+  background: #fac564;
+  -webkit-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  transform: rotate(135deg);
+  margin: 0 auto;
+}
+
+p.flip span.deg2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  content: '';
+  background: #fac564;
+  -webkit-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  transform: rotate(135deg);
+  margin: 0 auto;
+}
+
+p.flip span.deg3 {
+  position: absolute;
+  bottom: 2px;
+  left: 30px;
+  right: 0;
+  width: 6px;
+  height: 6px;
+  content: '';
+  background: #fac564;
+  -webkit-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  transform: rotate(135deg);
+  margin: 0 auto;
+}
+
+p.flip:before {
+  position: absolute;
+  bottom: 4px;
+  left: 100px;
+  right: 0;
+  content: '';
+  width: 40px;
+  height: 1px;
+  background: #8d5d05;
+  margin: 0 auto;
+}
+
+p.flip:after {
+  position: absolute;
+  bottom: 4px;
+  left: -100px;
+  right: 0;
+  content: '';
+  width: 40px;
+  height: 1px;
+  background: #8d5d05;
+  margin: 0 auto;
+}

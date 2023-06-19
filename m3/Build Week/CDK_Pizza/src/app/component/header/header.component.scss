@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+$primary-color: #262626;
+$secondary-color: #fac564;
+$text-light: rgb(233, 233, 233);
+
+// RESET SETTINGS
+*{
+  margin: 0;
+  padding: 0;
+}
+
+a, a:visited, a:active{
+  text-decoration: none;
+  cursor: pointer;
+}
+
+// MY SCSS
+.primary-color{
+  color: $primary-color;
+}
+
+.primary-background{
+  background-color: $primary-color;
+}
+
+.secondary-color{
+  color: $secondary-color;
+}
+
+.secondary-background{
+  background-color: $secondary-color;
+}
+
+.header-contenitor{
+  min-height: 100vh;
+  background-image: url('../../../assets/wooden-bg.jpg');
+  background-size: cover;
+  background-position: center;
+
+
+  .wrap-contenitor{
+    background-color: rgba($color: $primary-color, $alpha: .5);
+    min-height: 100vh;
+    color: $text-light;
+
+    .main-header{
+      margin: 0;
+      // margin-top: 10%;
+      max-width: 50%;
+      text-align: center;
+
+      .special-p{
+        margin: 10px 0;
+        font-family: 'Dancing Script', cursive;
+        font-size: 3.5em;
+      }
+
+      .slogan{
+        font-size: 2em;
+        font-weight: 600;
+      }
+
+      .button-container{
+
+        margin-top: 1em;
+
+        button{
+          background-color: $secondary-color;
+          color: #252520;
+          padding: 1em 2em;
+          text-transform: capitalize;
+          border: none;
+          transition: all .4s;
+
+          &:hover{
+            color: $secondary-color;
+            background-color: transparent;
+            border: 1px solid $secondary-color;
+          }
+        }
+        button:last-child{
+          border: 1px solid $text-light;
+          background-color: transparent;
+          color: $text-light;
+          margin-left: 1em;
+
+          &:hover{
+            background-color: $secondary-color;
+            color: #252520;
+            border: 1px solid $secondary-color;
+          }
+        }
+      }
+
+    }
+  }
+}
+

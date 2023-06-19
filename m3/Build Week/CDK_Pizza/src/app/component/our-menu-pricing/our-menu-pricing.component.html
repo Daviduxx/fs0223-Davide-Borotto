@@ -1,0 +1,197 @@
+
+
+<div class="row align justify-content-center">
+  <div class="col-6 flex-column d-flex align-items-center">
+    <h1 class="my-5 text-center">OUR MENU PRICING</h1>
+    <p class="flip">
+      <span class="deg1"></span><span class="deg2"></span
+      ><span class="deg3"></span>
+    </p>
+    <p class="my-5 text-white text-center fs-3"> Per comprare le nostre pizze consigliamo di fare il finanziamento Per Merito.</p>
+
+    <div class="container">
+      <h2 class="text-center">PIZZE:</h2>
+      <div class="row d-flex align-items-center">
+        <div class="col-12 col-lg-6 d-flex flex-column align-items-center">
+              <p class="m-3 text-center">Ordina per prezzo:</p>
+              <div class="col-12 col-lg-6 btn-group" role="group" aria-label="Basic outlined example">
+                <button type="button" class="btn myBtn orderBtn" (click)="discendente()">Crescente</button>
+                <button type="button" class="btn myBtn orderBtn" (click)="ascendente()">Decrescente</button>
+              </div>
+        </div>
+        <div class="col-12 col-lg-6 d-flex flex-column align-items-center">
+          <p class="m-3 text-center">Filtra per disponibilità</p>
+              <div class="btn-group" role="group" aria-label="Basic outlined example">
+                <button type="button" class="btn btn-outline myBtn orderBtn" (click)="ngOnInit()">Tutte</button>
+                <button type="button" class="btn btn-outline myBtn orderBtn" (click)="disponibili()">Disponibili</button>
+                <button type="button" class="btn btn-outline myBtn orderBtn" (click)="nonDisponibili()">Non Disponibili</button>
+              </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+  </div>
+</div>
+
+<div class="row">
+
+  <div class="col-12 col-lg-6 flex-wrap py-3" *ngFor="let pizza of pizze">
+    <div class="row">
+      <div class="col-2 me-4">
+          <div class="bg-list" style="background-image: url({{pizza.image}});"></div>
+
+      </div>
+      <div class="col">
+        <div class="d-flex text">
+          <h3 class="m-0 ms-1 me-4 fs-3">{{pizza.title}}</h3>
+          <p class="text-warning m-0 mt-1 ms-auto"> € {{pizza.price}}</p>
+        </div>
+        <div class="d-flex justify-content-between">
+          <p class="my-2">{{pizza.ingredients}}</p>
+          <button [ngClass]="pizza.disponibile ? 'btn myBtn' : 'btn myBtn disabled'" (click)="addToCart(pizza)" class="mt-1">Add to Cart</button>
+        </div>
+        <span [ngClass]="pizza.disponibile ? 'badge text-bg-success' : 'badge text-bg-danger' ">{{ pizza.disponibile ? 'Disponibile' : 'Non disponibile'}}</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="container my-5">
+  <div class="row d-flex align-items-center">
+    <h2 class="text-center">PASTA:</h2>
+    <div class="col-12 col-lg-6 d-flex flex-column align-items-center">
+          <p class="m-3 text-center">Ordina per prezzo:</p>
+          <div class="col-12 col-lg-6 btn-group" role="group" aria-label="Basic outlined example">
+            <button type="button" class="btn myBtn orderBtn" (click)="discendentePasta()">Crescente</button>
+            <button type="button" class="btn myBtn orderBtn" (click)="ascendentePasta()">Decrescente</button>
+          </div>
+    </div>
+    <div class="col-12 col-lg-6 d-flex flex-column align-items-center">
+      <p class="m-3 text-center">Filtra per disponibilità</p>
+          <div class="btn-group" role="group" aria-label="Basic outlined example">
+            <button type="button" class="btn btn-outline myBtn orderBtn" (click)="ngOnInit()">Tutte</button>
+            <button type="button" class="btn btn-outline myBtn orderBtn" (click)="disponibiliPasta()">Disponibili</button>
+            <button type="button" class="btn btn-outline myBtn orderBtn" (click)="nonDisponibiliPasta()">Non Disponibili</button>
+          </div>
+    </div>
+  </div>
+</div>
+
+<div class="row px-1">
+
+  <div class="col-12 col-lg-6 flex-wrap py-3" *ngFor="let pasta of pasta">
+    <div class="row">
+      <div class="col-2 me-4">
+          <div class="bg-list" style="background-image: url({{pasta.image}});"></div>
+
+      </div>
+      <div class="col">
+        <div class="d-flex text">
+          <h3 class="m-0 ms-1 me-4 fs-3">{{pasta.name}}</h3>
+          <p class="text-warning m-0 mt-1 ms-auto"> € {{pasta.price}}</p>
+        </div>
+        <div class="d-flex justify-content-between">
+          <p class="my-2">{{pasta.ingredients}}</p>
+          <button [ngClass]="pasta.disponibile ? 'btn myBtn' : 'btn myBtn disabled'"  class="mt-1" (click)="addToCartPasta(pasta)" >Add to Cart</button>
+        </div>
+        <span [ngClass]="pasta.disponibile ? 'badge text-bg-success' : 'badge text-bg-danger' ">{{ pasta.disponibile ? 'Disponibile' : 'Non disponibile'}}</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="container my-5">
+  <div class="row d-flex align-items-center">
+    <h2 class="text-center">BURGERS:</h2>
+    <div class="col-12 col-lg-6 d-flex flex-column align-items-center">
+          <p class="m-3 text-center">Ordina per prezzo:</p>
+          <div class="col-12 col-lg-6 btn-group" role="group" aria-label="Basic outlined example">
+            <button type="button" class="btn myBtn orderBtn" (click)="discendenteBurger()">Crescente</button>
+            <button type="button" class="btn myBtn orderBtn" (click)="ascendenteBurger()">Decrescente</button>
+          </div>
+    </div>
+    <div class="col-12 col-lg-6 d-flex flex-column align-items-center">
+      <p class="m-3 text-center">Filtra per disponibilità</p>
+          <div class="btn-group" role="group" aria-label="Basic outlined example">
+            <button type="button" class="btn btn-outline myBtn orderBtn" (click)="ngOnInit()">Tutte</button>
+            <button type="button" class="btn btn-outline myBtn orderBtn" (click)="disponibiliBurger()">Disponibili</button>
+            <button type="button" class="btn btn-outline myBtn orderBtn" (click)="nonDisponibiliBurger()">Non Disponibili</button>
+          </div>
+    </div>
+  </div>
+</div>
+
+<div class="row px-1">
+
+  <div class="col-12 col-lg-6 flex-wrap py-3" *ngFor="let burger of burgers">
+    <div class="row">
+      <div class="col-2 me-4">
+          <div class="bg-list" style="background-image: url({{burger.image}});"></div>
+
+      </div>
+      <div class="col">
+        <div class="d-flex text">
+          <h3 class="m-0 ms-1 me-4 fs-3">{{burger.name}}</h3>
+          <p class="text-warning m-0 mt-1 ms-auto"> € {{burger.price}}</p>
+        </div>
+        <div class="d-flex justify-content-between">
+          <p class="my-2">{{burger.ingredients}}</p>
+          <button [ngClass]="burger.disponibile ? 'btn myBtn' : 'btn myBtn disabled'"  class="mt-1">Add to Cart</button>
+        </div>
+        <span [ngClass]="burger.disponibile ? 'badge text-bg-success' : 'badge text-bg-danger' ">{{ burger.disponibile ? 'Disponibile' : 'Non disponibile'}}</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="container my-5">
+  <div class="row d-flex align-items-center">
+    <h2 class="text-center">DRINK:</h2>
+    <div class="col-12 col-lg-6 d-flex flex-column align-items-center">
+          <p class="m-3 text-center">Ordina per prezzo:</p>
+          <div class="col-12 col-lg-6 btn-group" role="group" aria-label="Basic outlined example">
+            <button type="button" class="btn myBtn orderBtn" (click)="discendenteDrink()">Crescente</button>
+            <button type="button" class="btn myBtn orderBtn" (click)="ascendenteDrink()">Decrescente</button>
+          </div>
+    </div>
+    <div class="col-12 col-lg-6 d-flex flex-column align-items-center">
+      <p class="m-3 text-center">Filtra per disponibilità</p>
+          <div class="btn-group" role="group" aria-label="Basic outlined example">
+            <button type="button" class="btn btn-outline myBtn orderBtn" (click)="ngOnInit()">Tutte</button>
+            <button type="button" class="btn btn-outline myBtn orderBtn" (click)="disponibiliDrink()">Disponibili</button>
+            <button type="button" class="btn btn-outline myBtn orderBtn" (click)="nonDisponibiliDrink()">Non Disponibili</button>
+          </div>
+    </div>
+  </div>
+</div>
+
+<div class="row px-1">
+
+  <div class="col-12 col-lg-6 flex-wrap py-3" *ngFor="let drink of drinks">
+    <div class="row">
+      <div class="col-2 me-4">
+          <div class="bg-list" style="background-image: url({{drink.image}});"></div>
+
+      </div>
+      <div class="col">
+        <div class="d-flex text">
+          <h3 class="m-0 ms-1 me-4 fs-3">{{drink.name}}</h3>
+          <p class="text-warning m-0 mt-1 ms-auto"> € {{drink.price}}</p>
+        </div>
+        <div class="d-flex justify-content-between">
+
+          <button [ngClass]="drink.disponibile ? 'btn myBtn' : 'btn myBtn disabled'"  class="mt-1">Add to Cart</button>
+        </div>
+        <span [ngClass]="drink.disponibile ? 'badge text-bg-success' : 'badge text-bg-danger' ">{{ drink.disponibile ? 'Disponibile' : 'Non disponibile'}}</span>
+      </div>
+    </div>
+  </div>
+
+</div>
